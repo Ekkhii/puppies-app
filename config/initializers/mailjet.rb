@@ -1,4 +1,4 @@
-require 'dotenv/load'
+require 'dotenv-rails'
 
     Mailjet.configure do |config|
 
@@ -6,6 +6,6 @@ require 'dotenv/load'
 
       config.secret_key = ENV['CONFIG_MAILJET_SECRET_KEY']
 
-      config.default_from = ENV['CONFIG_MAILJET_DEFAULT_FROM']
+
 
     end
