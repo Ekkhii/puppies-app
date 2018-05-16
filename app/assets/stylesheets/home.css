@@ -1,0 +1,53 @@
+body, html {
+    height: 100%;
+    margin: 0;
+
+}
+
+.bg {
+    /* The image used */
+    background-image: url('header.jpg');
+
+    /* Full height */
+    height: 100%; 
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.title {
+	font-family: 'Lobster', cursive;
+}
+
+/* HEADER */
+
+header {
+	padding-top: 50px;
+}
+
+header .header_title {
+	font-size: 10em;
+}
+
+header .header_info {
+	font-size: 5em;
+	padding-top: 50px;
+	font-style: italic;
+	font-family: 'Questrial', sans-serif;
+}
+
+.connect_button  {
+	margin-top: 150px;
+	margin-left: 250px;
+}
+
+/* CONTACT FORM*/
+
+.contact_form {
+	padding-top: 100px;
+}
+
+.form_title {
+	font-size: 3em;
+}
