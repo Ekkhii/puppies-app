@@ -3,11 +3,12 @@
 		<div class="row">
 			<h1 class="title text-center header_title">Puppies</h1>
 			<h2 class="text-center header_info">Trouvez votre dog sitter</h2>
+			
 		</div>
 		<div class="row">
 			<div class="col-lg-offset-7 col-lg-4 contact_form ">
 	
-				<form class="form-horizontal" action="" method="post">
+				<form class="form-horizontal" action="<%= send_mail_path %>" method="get">
 			        <fieldset>
 			           <legend class="text-center title text-center form_title">S'inscrire</legend>
 			    
@@ -30,7 +31,7 @@
 			            <!-- Form actions -->
 			            <div class="form-group">
 			              <div class="col-md-9 text-right">
-			                <button type="submit" class="btn btn-default btn-lg title">S'inscrire</button>
+			              	<button type="submit" class="btn btn-default btn-lg title">S'inscrire</button>
 			              </div>
 			            </div>
 			        </fieldset>

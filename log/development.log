@@ -1976,3 +1976,3841 @@ Processing by HomeController#index as HTML
 Completed 200 OK in 16ms (Views: 14.8ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/rails/mailers/contact_mailer" for 127.0.0.1 at 2018-05-16 14:53:41 +0200
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"path"=>"contact_mailer"}
+  Rendering /home/ekkhi/.rvm/gems/ruby-2.5.1/gems/railties-5.2.0/lib/rails/templates/rails/mailers/mailer.html.erb within layouts/application
+  Rendered /home/ekkhi/.rvm/gems/ruby-2.5.1/gems/railties-5.2.0/lib/rails/templates/rails/mailers/mailer.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 178ms (Views: 4.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/mailers/contact_mailer/contact" for 127.0.0.1 at 2018-05-16 14:55:21 +0200
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"path"=>"contact_mailer/contact"}
+  Rendering contact_mailer/contact.html.erb within layouts/mailer
+  Rendered contact_mailer/contact.html.erb within layouts/mailer (0.2ms)
+  Rendering contact_mailer/contact.text.erb within layouts/mailer
+  Rendered contact_mailer/contact.text.erb within layouts/mailer (0.2ms)
+ContactMailer#contact: processed outbound mail in 577.9ms
+  Rendering /home/ekkhi/.rvm/gems/ruby-2.5.1/gems/railties-5.2.0/lib/rails/templates/rails/mailers/email.html.erb
+  Rendered /home/ekkhi/.rvm/gems/ruby-2.5.1/gems/railties-5.2.0/lib/rails/templates/rails/mailers/email.html.erb (18.5ms)
+Completed 200 OK in 628ms (Views: 20.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/mailers/contact_mailer/contact?part=text%2Fhtml" for 127.0.0.1 at 2018-05-16 14:55:21 +0200
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"part"=>"text/html", "path"=>"contact_mailer/contact"}
+  Rendering contact_mailer/contact.html.erb within layouts/mailer
+  Rendered contact_mailer/contact.html.erb within layouts/mailer (0.3ms)
+  Rendering contact_mailer/contact.text.erb within layouts/mailer
+  Rendered contact_mailer/contact.text.erb within layouts/mailer (0.2ms)
+ContactMailer#contact: processed outbound mail in 11.5ms
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 16ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/mailers/contact_mailer/contact?part=text%2Fplain" for 127.0.0.1 at 2018-05-16 14:55:23 +0200
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"part"=>"text/plain", "path"=>"contact_mailer/contact"}
+  Rendering contact_mailer/contact.html.erb within layouts/mailer
+  Rendered contact_mailer/contact.html.erb within layouts/mailer (0.4ms)
+  Rendering contact_mailer/contact.text.erb within layouts/mailer
+  Rendered contact_mailer/contact.text.erb within layouts/mailer (0.2ms)
+ContactMailer#contact: processed outbound mail in 15.8ms
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 24ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/mailers/contact_mailer/contact.txt?part=text%2Fhtml" for 127.0.0.1 at 2018-05-16 14:55:25 +0200
+Processing by Rails::MailersController#preview as TEXT
+  Parameters: {"part"=>"text/html", "path"=>"contact_mailer/contact"}
+  Rendering contact_mailer/contact.html.erb within layouts/mailer
+  Rendered contact_mailer/contact.html.erb within layouts/mailer (0.2ms)
+  Rendering contact_mailer/contact.text.erb within layouts/mailer
+  Rendered contact_mailer/contact.text.erb within layouts/mailer (0.2ms)
+ContactMailer#contact: processed outbound mail in 19.1ms
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 33ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-16 15:10:35 +0200
+Processing by HomeController#index as HTML
+  Rendering contact_mailer/contact.html.erb within layouts/mailer
+  Rendered contact_mailer/contact.html.erb within layouts/mailer (0.3ms)
+  Rendering contact_mailer/contact.text.erb within layouts/mailer
+  Rendered contact_mailer/contact.text.erb within layouts/mailer (0.2ms)
+ContactMailer#contact: processed outbound mail in 19.4ms
+Sent mail to contact@test.fr (133.4ms)
+Date: Wed, 16 May 2018 15:10:35 +0200
+From: from@example.com
+To: contact@test.fr
+Message-ID: <5afc2dcb9a496_418226de654895d@BMHPOMEN.mail>
+Subject: sujt de test
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5afc2dcb978e2_418226de654894d8";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5afc2dcb978e2_418226de654894d8
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Bonjour ca va ?
+
+----==_mimepart_5afc2dcb978e2_418226de654894d8
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Bonjour</h1>
+
+<p>
+	Ca va ?
+</p>
+  </body>
+</html>
+
+----==_mimepart_5afc2dcb978e2_418226de654894d8--
+
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (175.2ms)
+Completed 200 OK in 420ms (Views: 196.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home/send" for 127.0.0.1 at 2018-05-16 16:37:03 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/home/send"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-05-16 16:37:23 +0200
+Processing by HomeController#index as HTML
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms)
+
+
+
+ArgumentError - wrong number of arguments (given 1, expected 0):
+  app/controllers/home_controller.rb:7:in `send'
+
+Started POST "/__better_errors/a064a15f6b8e455b/variables" for 127.0.0.1 at 2018-05-16 16:37:23 +0200
+Started GET "/" for 127.0.0.1 at 2018-05-16 16:37:46 +0200
+Processing by HomeController#index as HTML
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms)
+
+
+
+ArgumentError - wrong number of arguments (given 1, expected 0):
+  app/controllers/home_controller.rb:7:in `send'
+
+Started POST "/__better_errors/f7b0161638a430ca/variables" for 127.0.0.1 at 2018-05-16 16:37:46 +0200
+Started GET "/" for 127.0.0.1 at 2018-05-16 17:07:45 +0200
+Processing by HomeController#index as HTML
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms)
+
+
+
+ArgumentError - wrong number of arguments (given 1, expected 0):
+  app/controllers/home_controller.rb:7:in `send'
+
+Started POST "/__better_errors/c54812d1c3bfcae1/variables" for 127.0.0.1 at 2018-05-16 17:07:45 +0200
+Started GET "/" for 127.0.0.1 at 2018-05-16 17:08:05 +0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (133.1ms)
+Completed 200 OK in 167ms (Views: 166.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-16 17:09:53 +0200
+Processing by HomeController#index as HTML
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms)
+
+
+
+ArgumentError - wrong number of arguments (given 1, expected 0):
+  app/controllers/home_controller.rb:7:in `send'
+
+Started POST "/__better_errors/2854340c4fc4b9f3/variables" for 127.0.0.1 at 2018-05-16 17:09:53 +0200
+Started GET "/" for 127.0.0.1 at 2018-05-16 17:10:17 +0200
+Processing by HomeController#index as HTML
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms)
+
+
+
+ArgumentError - wrong number of arguments (given 1, expected 0):
+  app/controllers/home_controller.rb:7:in `send'
+
+Started POST "/__better_errors/f5302a1cb145ddfd/variables" for 127.0.0.1 at 2018-05-16 17:10:18 +0200
+Started GET "/" for 127.0.0.1 at 2018-05-16 17:11:04 +0200
+Processing by HomeController#index as HTML
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms)
+
+
+
+ArgumentError - wrong number of arguments (given 1, expected 0):
+  app/controllers/home_controller.rb:7:in `send'
+
+Started POST "/__better_errors/1a60701d74cdc5c6/variables" for 127.0.0.1 at 2018-05-16 17:11:04 +0200
+Started GET "/" for 127.0.0.1 at 2018-05-16 17:12:50 +0200
+Processing by HomeController#index as HTML
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms)
+
+
+
+ArgumentError - wrong number of arguments (given 1, expected 0):
+  app/controllers/home_controller.rb:7:in `send'
+
+Started POST "/__better_errors/db7d01ed905c538f/variables" for 127.0.0.1 at 2018-05-16 17:12:50 +0200
+Started GET "/" for 127.0.0.1 at 2018-05-16 17:13:29 +0200
+Processing by HomeController#index as HTML
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms)
+
+
+
+ArgumentError - wrong number of arguments (given 1, expected 0):
+  app/controllers/home_controller.rb:7:in `send'
+
+Started POST "/__better_errors/b8042cfb57ed5698/variables" for 127.0.0.1 at 2018-05-16 17:13:29 +0200
+Started GET "/" for 127.0.0.1 at 2018-05-16 17:13:32 +0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 22ms (Views: 21.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home/send" for 127.0.0.1 at 2018-05-16 17:13:38 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/home/send"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-05-16 17:16:06 +0200
+Processing by HomeController#index as HTML
+  Rendering contact_mailer/contact.html.erb within layouts/mailer
+  Rendered contact_mailer/contact.html.erb within layouts/mailer (0.2ms)
+  Rendering contact_mailer/contact.text.erb within layouts/mailer
+  Rendered contact_mailer/contact.text.erb within layouts/mailer (0.6ms)
+ContactMailer#contact: processed outbound mail in 23.4ms
+Sent mail to contact@test.fr (13.4ms)
+Date: Wed, 16 May 2018 17:16:06 +0200
+From: from@example.com
+To: contact@test.fr
+Message-ID: <5afc4b363f317_4a0324d3350825f9@BMHPOMEN.mail>
+Subject: sujt de test
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5afc4b363e1ac_4a0324d3350824fb";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5afc4b363e1ac_4a0324d3350824fb
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Bonjour ca va ?
+
+----==_mimepart_5afc4b363e1ac_4a0324d3350824fb
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Bonjour</h1>
+
+<p>
+	Ca va ?
+</p>
+  </body>
+</html>
+
+----==_mimepart_5afc4b363e1ac_4a0324d3350824fb--
+
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 135ms (Views: 24.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-16 17:21:00 +0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 26ms (Views: 25.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-16 17:21:34 +0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 23ms (Views: 21.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home/send" for 127.0.0.1 at 2018-05-16 17:22:01 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/home/send"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-05-16 17:25:53 +0200
+Processing by HomeController#index as HTML
+  Rendering contact_mailer/contact.html.erb within layouts/mailer
+  Rendered contact_mailer/contact.html.erb within layouts/mailer (0.5ms)
+  Rendering contact_mailer/contact.text.erb within layouts/mailer
+  Rendered contact_mailer/contact.text.erb within layouts/mailer (0.2ms)
+ContactMailer#contact: processed outbound mail in 26.4ms
+Sent mail to contact@test.fr (10.7ms)
+Date: Wed, 16 May 2018 17:25:53 +0200
+From: from@example.com
+To: contact@test.fr
+Message-ID: <5afc4d81e27d8_4a0324d323882761@BMHPOMEN.mail>
+Subject: sujt de test
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5afc4d81de43b_4a0324d323882638";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5afc4d81de43b_4a0324d323882638
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Bonjour ca va ?
+
+----==_mimepart_5afc4d81de43b_4a0324d323882638
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Bonjour</h1>
+
+<p>
+	Ca va ?
+</p>
+  </body>
+</html>
+
+----==_mimepart_5afc4d81de43b_4a0324d323882638--
+
+  Rendering contact_mailer/contact.html.erb within layouts/mailer
+  Rendered contact_mailer/contact.html.erb within layouts/mailer (0.1ms)
+  Rendering contact_mailer/contact.text.erb within layouts/mailer
+  Rendered contact_mailer/contact.text.erb within layouts/mailer (0.0ms)
+ContactMailer#contact: processed outbound mail in 11.9ms
+Sent mail to contact@test.fr (11.8ms)
+Date: Wed, 16 May 2018 17:25:53 +0200
+From: from@example.com
+To: contact@test.fr
+Message-ID: <5afc4d81e853b_4a0324d3238829d0@BMHPOMEN.mail>
+Subject: sujt de test
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5afc4d81e6fde_4a0324d32388284b";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5afc4d81e6fde_4a0324d32388284b
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Bonjour ca va ?
+
+----==_mimepart_5afc4d81e6fde_4a0324d32388284b
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Bonjour</h1>
+
+<p>
+	Ca va ?
+</p>
+  </body>
+</html>
+
+----==_mimepart_5afc4d81e6fde_4a0324d32388284b--
+
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (4.8ms)
+  Rendering contact_mailer/contact.html.erb within layouts/mailer
+  Rendered contact_mailer/contact.html.erb within layouts/mailer (0.1ms)
+  Rendering contact_mailer/contact.text.erb within layouts/mailer
+  Rendered contact_mailer/contact.text.erb within layouts/mailer (0.0ms)
+ContactMailer#contact: processed outbound mail in 13.8ms
+Sent mail to contact@test.fr (11.3ms)
+Date: Wed, 16 May 2018 17:25:53 +0200
+From: from@example.com
+To: contact@test.fr
+Message-ID: <5afc4d81f0e56_4a0324d3238831b1@BMHPOMEN.mail>
+Subject: sujt de test
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5afc4d81ef3ad_4a0324d3238830ea";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5afc4d81ef3ad_4a0324d3238830ea
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Bonjour ca va ?
+
+----==_mimepart_5afc4d81ef3ad_4a0324d3238830ea
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Bonjour</h1>
+
+<p>
+	Ca va ?
+</p>
+  </body>
+</html>
+
+----==_mimepart_5afc4d81ef3ad_4a0324d3238830ea--
+
+  Rendering contact_mailer/contact.html.erb within layouts/mailer
+  Rendered contact_mailer/contact.html.erb within layouts/mailer (0.1ms)
+  Rendering contact_mailer/contact.text.erb within layouts/mailer
+  Rendered contact_mailer/contact.text.erb within layouts/mailer (0.0ms)
+ContactMailer#contact: processed outbound mail in 12.8ms
+Sent mail to contact@test.fr (13.4ms)
+Date: Wed, 16 May 2018 17:25:54 +0200
+From: from@example.com
+To: contact@test.fr
+Message-ID: <5afc4d823017_4a0324d323883356@BMHPOMEN.mail>
+Subject: sujt de test
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5afc4d821be8_4a0324d3238832b5";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5afc4d821be8_4a0324d3238832b5
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Bonjour ca va ?
+
+----==_mimepart_5afc4d821be8_4a0324d3238832b5
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Bonjour</h1>
+
+<p>
+	Ca va ?
+</p>
+  </body>
+</html>
+
+----==_mimepart_5afc4d821be8_4a0324d3238832b5--
+
+  Rendering contact_mailer/contact.html.erb within layouts/mailer
+  Rendered contact_mailer/contact.html.erb within layouts/mailer (0.1ms)
+  Rendering contact_mailer/contact.text.erb within layouts/mailer
+  Rendered contact_mailer/contact.text.erb within layouts/mailer (0.0ms)
+ContactMailer#contact: processed outbound mail in 12.7ms
+Sent mail to contact@test.fr (12.1ms)
+Date: Wed, 16 May 2018 17:25:54 +0200
+From: from@example.com
+To: contact@test.fr
+Message-ID: <5afc4d82a5bc_4a0324d32388357c@BMHPOMEN.mail>
+Subject: sujt de test
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5afc4d8295a1_4a0324d3238834ef";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5afc4d8295a1_4a0324d3238834ef
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Bonjour ca va ?
+
+----==_mimepart_5afc4d8295a1_4a0324d3238834ef
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Bonjour</h1>
+
+<p>
+	Ca va ?
+</p>
+  </body>
+</html>
+
+----==_mimepart_5afc4d8295a1_4a0324d3238834ef--
+
+  Rendering contact_mailer/contact.html.erb within layouts/mailer
+  Rendered contact_mailer/contact.html.erb within layouts/mailer (0.1ms)
+  Rendering contact_mailer/contact.text.erb within layouts/mailer
+  Rendered contact_mailer/contact.text.erb within layouts/mailer (0.1ms)
+ContactMailer#contact: processed outbound mail in 12.8ms
+Sent mail to contact@test.fr (10.5ms)
+Date: Wed, 16 May 2018 17:25:54 +0200
+From: from@example.com
+To: contact@test.fr
+Message-ID: <5afc4d8210a85_4a0324d323883718@BMHPOMEN.mail>
+Subject: sujt de test
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5afc4d82f729_4a0324d32388367";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5afc4d82f729_4a0324d32388367
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Bonjour ca va ?
+
+----==_mimepart_5afc4d82f729_4a0324d32388367
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Bonjour</h1>
+
+<p>
+	Ca va ?
+</p>
+  </body>
+</html>
+
+----==_mimepart_5afc4d82f729_4a0324d32388367--
+
+  Rendering contact_mailer/contact.html.erb within layouts/mailer
+  Rendered contact_mailer/contact.html.erb within layouts/mailer (0.1ms)
+  Rendering contact_mailer/contact.text.erb within layouts/mailer
+  Rendered contact_mailer/contact.text.erb within layouts/mailer (0.0ms)
+ContactMailer#contact: processed outbound mail in 11.3ms
+Sent mail to contact@test.fr (16.1ms)
+Date: Wed, 16 May 2018 17:25:54 +0200
+From: from@example.com
+To: contact@test.fr
+Message-ID: <5afc4d821a97d_4a0324d323883952@BMHPOMEN.mail>
+Subject: sujt de test
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5afc4d8219a43_4a0324d32388381";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5afc4d8219a43_4a0324d32388381
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Bonjour ca va ?
+
+----==_mimepart_5afc4d8219a43_4a0324d32388381
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Bonjour</h1>
+
+<p>
+	Ca va ?
+</p>
+  </body>
+</html>
+
+----==_mimepart_5afc4d8219a43_4a0324d32388381--
+
+Completed 200 OK in 232ms (Views: 132.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home/send" for 127.0.0.1 at 2018-05-16 17:25:58 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/home/send"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-05-16 17:28:16 +0200
+Processing by HomeController#index as HTML
+  Rendering contact_mailer/contact.html.erb within layouts/mailer
+  Rendered contact_mailer/contact.html.erb within layouts/mailer (0.2ms)
+  Rendering contact_mailer/contact.text.erb within layouts/mailer
+  Rendered contact_mailer/contact.text.erb within layouts/mailer (0.2ms)
+ContactMailer#contact: processed outbound mail in 11.4ms
+Sent mail to contact@test.fr (11.0ms)
+Date: Wed, 16 May 2018 17:28:16 +0200
+From: from@example.com
+To: contact@test.fr
+Message-ID: <5afc4e10d5350_4a0324d33dc8419a@BMHPOMEN.mail>
+Subject: sujt de test
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5afc4e10d436b_4a0324d33dc84047";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5afc4e10d436b_4a0324d33dc84047
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Bonjour ca va ?
+
+----==_mimepart_5afc4e10d436b_4a0324d33dc84047
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Bonjour</h1>
+
+<p>
+	Ca va ?
+</p>
+  </body>
+</html>
+
+----==_mimepart_5afc4e10d436b_4a0324d33dc84047--
+
+  Rendering contact_mailer/contact.html.erb within layouts/mailer
+  Rendered contact_mailer/contact.html.erb within layouts/mailer (0.1ms)
+  Rendering contact_mailer/contact.text.erb within layouts/mailer
+  Rendered contact_mailer/contact.text.erb within layouts/mailer (0.0ms)
+ContactMailer#contact: processed outbound mail in 12.3ms
+Sent mail to contact@test.fr (10.9ms)
+Date: Wed, 16 May 2018 17:28:16 +0200
+From: from@example.com
+To: contact@test.fr
+Message-ID: <5afc4e10db14b_4a0324d33dc8438d@BMHPOMEN.mail>
+Subject: sujt de test
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5afc4e10da163_4a0324d33dc8424f";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5afc4e10da163_4a0324d33dc8424f
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Bonjour ca va ?
+
+----==_mimepart_5afc4e10da163_4a0324d33dc8424f
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Bonjour</h1>
+
+<p>
+	Ca va ?
+</p>
+  </body>
+</html>
+
+----==_mimepart_5afc4e10da163_4a0324d33dc8424f--
+
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (4.7ms)
+  Rendering contact_mailer/contact.html.erb within layouts/mailer
+  Rendered contact_mailer/contact.html.erb within layouts/mailer (0.0ms)
+  Rendering contact_mailer/contact.text.erb within layouts/mailer
+  Rendered contact_mailer/contact.text.erb within layouts/mailer (0.0ms)
+ContactMailer#contact: processed outbound mail in 12.4ms
+Sent mail to contact@test.fr (10.6ms)
+Date: Wed, 16 May 2018 17:28:16 +0200
+From: from@example.com
+To: contact@test.fr
+Message-ID: <5afc4e10e2c12_4a0324d33dc8454f@BMHPOMEN.mail>
+Subject: sujt de test
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5afc4e10e197e_4a0324d33dc8443f";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5afc4e10e197e_4a0324d33dc8443f
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Bonjour ca va ?
+
+----==_mimepart_5afc4e10e197e_4a0324d33dc8443f
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Bonjour</h1>
+
+<p>
+	Ca va ?
+</p>
+  </body>
+</html>
+
+----==_mimepart_5afc4e10e197e_4a0324d33dc8443f--
+
+  Rendering contact_mailer/contact.html.erb within layouts/mailer
+  Rendered contact_mailer/contact.html.erb within layouts/mailer (0.1ms)
+  Rendering contact_mailer/contact.text.erb within layouts/mailer
+  Rendered contact_mailer/contact.text.erb within layouts/mailer (0.0ms)
+ContactMailer#contact: processed outbound mail in 12.5ms
+Sent mail to contact@test.fr (12.4ms)
+Date: Wed, 16 May 2018 17:28:16 +0200
+From: from@example.com
+To: contact@test.fr
+Message-ID: <5afc4e10e8bb4_4a0324d33dc847cc@BMHPOMEN.mail>
+Subject: sujt de test
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5afc4e10e7865_4a0324d33dc8465c";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5afc4e10e7865_4a0324d33dc8465c
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Bonjour ca va ?
+
+----==_mimepart_5afc4e10e7865_4a0324d33dc8465c
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Bonjour</h1>
+
+<p>
+	Ca va ?
+</p>
+  </body>
+</html>
+
+----==_mimepart_5afc4e10e7865_4a0324d33dc8465c--
+
+  Rendering contact_mailer/contact.html.erb within layouts/mailer
+  Rendered contact_mailer/contact.html.erb within layouts/mailer (0.1ms)
+  Rendering contact_mailer/contact.text.erb within layouts/mailer
+  Rendered contact_mailer/contact.text.erb within layouts/mailer (0.0ms)
+ContactMailer#contact: processed outbound mail in 14.0ms
+Sent mail to contact@test.fr (10.8ms)
+Date: Wed, 16 May 2018 17:28:16 +0200
+From: from@example.com
+To: contact@test.fr
+Message-ID: <5afc4e10f03ce_4a0324d33dc8495a@BMHPOMEN.mail>
+Subject: sujt de test
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5afc4e10eeca7_4a0324d33dc8488";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5afc4e10eeca7_4a0324d33dc8488
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Bonjour ca va ?
+
+----==_mimepart_5afc4e10eeca7_4a0324d33dc8488
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Bonjour</h1>
+
+<p>
+	Ca va ?
+</p>
+  </body>
+</html>
+
+----==_mimepart_5afc4e10eeca7_4a0324d33dc8488--
+
+  Rendering contact_mailer/contact.html.erb within layouts/mailer
+  Rendered contact_mailer/contact.html.erb within layouts/mailer (0.0ms)
+  Rendering contact_mailer/contact.text.erb within layouts/mailer
+  Rendered contact_mailer/contact.text.erb within layouts/mailer (0.0ms)
+ContactMailer#contact: processed outbound mail in 11.9ms
+Sent mail to contact@test.fr (18.9ms)
+Date: Wed, 16 May 2018 17:28:17 +0200
+From: from@example.com
+To: contact@test.fr
+Message-ID: <5afc4e112032_4a0324d33dc851fc@BMHPOMEN.mail>
+Subject: sujt de test
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5afc4e11ae9_4a0324d33dc85043";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5afc4e11ae9_4a0324d33dc85043
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Bonjour ca va ?
+
+----==_mimepart_5afc4e11ae9_4a0324d33dc85043
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Bonjour</h1>
+
+<p>
+	Ca va ?
+</p>
+  </body>
+</html>
+
+----==_mimepart_5afc4e11ae9_4a0324d33dc85043--
+
+  Rendering contact_mailer/contact.html.erb within layouts/mailer
+  Rendered contact_mailer/contact.html.erb within layouts/mailer (0.0ms)
+  Rendering contact_mailer/contact.text.erb within layouts/mailer
+  Rendered contact_mailer/contact.text.erb within layouts/mailer (0.0ms)
+ContactMailer#contact: processed outbound mail in 10.5ms
+Sent mail to contact@test.fr (13.4ms)
+Date: Wed, 16 May 2018 17:28:17 +0200
+From: from@example.com
+To: contact@test.fr
+Message-ID: <5afc4e11e274_4a0324d33dc85323@BMHPOMEN.mail>
+Subject: sujt de test
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5afc4e11d153_4a0324d33dc8524b";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5afc4e11d153_4a0324d33dc8524b
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Bonjour ca va ?
+
+----==_mimepart_5afc4e11d153_4a0324d33dc8524b
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Bonjour</h1>
+
+<p>
+	Ca va ?
+</p>
+  </body>
+</html>
+
+----==_mimepart_5afc4e11d153_4a0324d33dc8524b--
+
+Completed 200 OK in 210ms (Views: 137.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/home/send" for 127.0.0.1 at 2018-05-16 17:28:19 +0200
+Processing by HomeController#send as HTML
+  Parameters: {"name"=>"", "email"=>""}
+  Rendering contact_mailer/contact.html.erb within layouts/mailer
+  Rendered contact_mailer/contact.html.erb within layouts/mailer (0.3ms)
+  Rendering contact_mailer/contact.text.erb within layouts/mailer
+  Rendered contact_mailer/contact.text.erb within layouts/mailer (0.2ms)
+ContactMailer#contact: processed outbound mail in 12.4ms
+Sent mail to contact@test.fr (11.4ms)
+Date: Wed, 16 May 2018 17:28:19 +0200
+From: from@example.com
+To: contact@test.fr
+Message-ID: <5afc4e139a1a8_4a0324d3468855e2@BMHPOMEN.mail>
+Subject: sujt de test
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5afc4e13990ef_4a0324d346885470";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5afc4e13990ef_4a0324d346885470
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Bonjour ca va ?
+
+----==_mimepart_5afc4e13990ef_4a0324d346885470
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Bonjour</h1>
+
+<p>
+	Ca va ?
+</p>
+  </body>
+</html>
+
+----==_mimepart_5afc4e13990ef_4a0324d346885470--
+
+  Rendering contact_mailer/contact.html.erb within layouts/mailer
+  Rendered contact_mailer/contact.html.erb within layouts/mailer (0.1ms)
+  Rendering contact_mailer/contact.text.erb within layouts/mailer
+  Rendered contact_mailer/contact.text.erb within layouts/mailer (0.0ms)
+ContactMailer#contact: processed outbound mail in 11.9ms
+Sent mail to contact@test.fr (9.9ms)
+Date: Wed, 16 May 2018 17:28:19 +0200
+From: from@example.com
+To: contact@test.fr
+Message-ID: <5afc4e13a007f_4a0324d3468857a6@BMHPOMEN.mail>
+Subject: sujt de test
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5afc4e139ee30_4a0324d346885625";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5afc4e139ee30_4a0324d346885625
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Bonjour ca va ?
+
+----==_mimepart_5afc4e139ee30_4a0324d346885625
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Bonjour</h1>
+
+<p>
+	Ca va ?
+</p>
+  </body>
+</html>
+
+----==_mimepart_5afc4e139ee30_4a0324d346885625--
+
+Completed 500 Internal Server Error in 48ms (ActiveRecord: 0.0ms)
+
+
+
+ArgumentError - wrong number of arguments (given 0, expected 1):
+  app/controllers/home_controller.rb:6:in `send'
+
+Started POST "/__better_errors/3a59dfe6bbe9fdb0/variables" for 127.0.0.1 at 2018-05-16 17:28:19 +0200
+Started POST "/home/send" for 127.0.0.1 at 2018-05-16 17:28:32 +0200
+Processing by HomeController#send as HTML
+  Parameters: {"name"=>"", "email"=>""}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms)
+
+
+
+ArgumentError - wrong number of arguments (given 1, expected 0):
+  app/controllers/home_controller.rb:6:in `send'
+
+Started POST "/__better_errors/d0351c0afb53e1a9/variables" for 127.0.0.1 at 2018-05-16 17:28:33 +0200
+Started POST "/home/send" for 127.0.0.1 at 2018-05-16 17:28:44 +0200
+Processing by HomeController#send as HTML
+  Parameters: {"name"=>"", "email"=>""}
+  Rendering contact_mailer/contact.html.erb within layouts/mailer
+  Rendered contact_mailer/contact.html.erb within layouts/mailer (0.3ms)
+  Rendering contact_mailer/contact.text.erb within layouts/mailer
+  Rendered contact_mailer/contact.text.erb within layouts/mailer (0.3ms)
+ContactMailer#contact: processed outbound mail in 11.8ms
+Sent mail to contact@test.fr (16.3ms)
+Date: Wed, 16 May 2018 17:28:44 +0200
+From: from@example.com
+To: contact@test.fr
+Message-ID: <5afc4e2c584f6_4a0324d33dc859c1@BMHPOMEN.mail>
+Subject: sujt de test
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5afc4e2c5737b_4a0324d33dc8586c";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5afc4e2c5737b_4a0324d33dc8586c
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Bonjour ca va ?
+
+----==_mimepart_5afc4e2c5737b_4a0324d33dc8586c
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Bonjour</h1>
+
+<p>
+	Ca va ?
+</p>
+  </body>
+</html>
+
+----==_mimepart_5afc4e2c5737b_4a0324d33dc8586c--
+
+  Rendering contact_mailer/contact.html.erb within layouts/mailer
+  Rendered contact_mailer/contact.html.erb within layouts/mailer (0.1ms)
+  Rendering contact_mailer/contact.text.erb within layouts/mailer
+  Rendered contact_mailer/contact.text.erb within layouts/mailer (0.0ms)
+ContactMailer#contact: processed outbound mail in 11.1ms
+Sent mail to contact@test.fr (12.3ms)
+Date: Wed, 16 May 2018 17:28:44 +0200
+From: from@example.com
+To: contact@test.fr
+Message-ID: <5afc4e2c5f185_4a0324d33dc86165@BMHPOMEN.mail>
+Subject: sujt de test
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5afc4e2c5e457_4a0324d33dc86099";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5afc4e2c5e457_4a0324d33dc86099
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Bonjour ca va ?
+
+----==_mimepart_5afc4e2c5e457_4a0324d33dc86099
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Bonjour</h1>
+
+<p>
+	Ca va ?
+</p>
+  </body>
+</html>
+
+----==_mimepart_5afc4e2c5e457_4a0324d33dc86099--
+
+Completed 500 Internal Server Error in 59ms (ActiveRecord: 0.0ms)
+
+
+
+ArgumentError - wrong number of arguments (given 0, expected 1):
+  app/controllers/home_controller.rb:6:in `send'
+
+Started POST "/__better_errors/76ecfbb66348a07a/variables" for 127.0.0.1 at 2018-05-16 17:28:44 +0200
+Started GET "/" for 127.0.0.1 at 2018-05-16 17:30:31 +0200
+Processing by HomeController#index as HTML
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms)
+
+
+
+ArgumentError - wrong number of arguments (given 1, expected 0):
+  app/controllers/home_controller.rb:6:in `send'
+
+Started POST "/__better_errors/842c3c55d616529b/variables" for 127.0.0.1 at 2018-05-16 17:30:31 +0200
+Started GET "/" for 127.0.0.1 at 2018-05-16 17:31:28 +0200
+Processing by HomeController#index as HTML
+  Rendering contact_mailer/contact.html.erb within layouts/mailer
+  Rendered contact_mailer/contact.html.erb within layouts/mailer (0.3ms)
+  Rendering contact_mailer/contact.text.erb within layouts/mailer
+  Rendered contact_mailer/contact.text.erb within layouts/mailer (0.2ms)
+ContactMailer#contact: processed outbound mail in 11.0ms
+Sent mail to contact@test.fr (9.2ms)
+Date: Wed, 16 May 2018 17:31:29 +0200
+From: from@example.com
+To: contact@test.fr
+Message-ID: <5afc4ed19a61_4a0324d33dc8635f@BMHPOMEN.mail>
+Subject: sujt de test
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5afc4ed18e93_4a0324d33dc86238";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5afc4ed18e93_4a0324d33dc86238
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Bonjour ca va ?
+
+----==_mimepart_5afc4ed18e93_4a0324d33dc86238
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Bonjour</h1>
+
+<p>
+	Ca va ?
+</p>
+  </body>
+</html>
+
+----==_mimepart_5afc4ed18e93_4a0324d33dc86238--
+
+  Rendering contact_mailer/contact.html.erb within layouts/mailer
+  Rendered contact_mailer/contact.html.erb within layouts/mailer (0.1ms)
+  Rendering contact_mailer/contact.text.erb within layouts/mailer
+  Rendered contact_mailer/contact.text.erb within layouts/mailer (0.1ms)
+ContactMailer#contact: processed outbound mail in 11.3ms
+Sent mail to contact@test.fr (11.6ms)
+Date: Wed, 16 May 2018 17:31:29 +0200
+From: from@example.com
+To: contact@test.fr
+Message-ID: <5afc4ed1ee78_4a0324d33dc86511@BMHPOMEN.mail>
+Subject: sujt de test
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5afc4ed1df9f_4a0324d33dc8648a";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5afc4ed1df9f_4a0324d33dc8648a
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Bonjour ca va ?
+
+----==_mimepart_5afc4ed1df9f_4a0324d33dc8648a
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Bonjour</h1>
+
+<p>
+	Ca va ?
+</p>
+  </body>
+</html>
+
+----==_mimepart_5afc4ed1df9f_4a0324d33dc8648a--
+
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (4.0ms)
+  Rendering contact_mailer/contact.html.erb within layouts/mailer
+  Rendered contact_mailer/contact.html.erb within layouts/mailer (0.0ms)
+  Rendering contact_mailer/contact.text.erb within layouts/mailer
+  Rendered contact_mailer/contact.text.erb within layouts/mailer (0.0ms)
+ContactMailer#contact: processed outbound mail in 12.9ms
+Sent mail to contact@test.fr (12.4ms)
+Date: Wed, 16 May 2018 17:31:29 +0200
+From: from@example.com
+To: contact@test.fr
+Message-ID: <5afc4ed116c64_4a0324d33dc867d4@BMHPOMEN.mail>
+Subject: sujt de test
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5afc4ed115a2d_4a0324d33dc866f9";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5afc4ed115a2d_4a0324d33dc866f9
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Bonjour ca va ?
+
+----==_mimepart_5afc4ed115a2d_4a0324d33dc866f9
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Bonjour</h1>
+
+<p>
+	Ca va ?
+</p>
+  </body>
+</html>
+
+----==_mimepart_5afc4ed115a2d_4a0324d33dc866f9--
+
+  Rendering contact_mailer/contact.html.erb within layouts/mailer
+  Rendered contact_mailer/contact.html.erb within layouts/mailer (0.0ms)
+  Rendering contact_mailer/contact.text.erb within layouts/mailer
+  Rendered contact_mailer/contact.text.erb within layouts/mailer (0.1ms)
+ContactMailer#contact: processed outbound mail in 14.5ms
+Sent mail to contact@test.fr (15.5ms)
+Date: Wed, 16 May 2018 17:31:29 +0200
+From: from@example.com
+To: contact@test.fr
+Message-ID: <5afc4ed11dab8_4a0324d33dc8691d@BMHPOMEN.mail>
+Subject: sujt de test
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5afc4ed11bf0b_4a0324d33dc868dc";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5afc4ed11bf0b_4a0324d33dc868dc
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Bonjour ca va ?
+
+----==_mimepart_5afc4ed11bf0b_4a0324d33dc868dc
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Bonjour</h1>
+
+<p>
+	Ca va ?
+</p>
+  </body>
+</html>
+
+----==_mimepart_5afc4ed11bf0b_4a0324d33dc868dc--
+
+  Rendering contact_mailer/contact.html.erb within layouts/mailer
+  Rendered contact_mailer/contact.html.erb within layouts/mailer (0.0ms)
+  Rendering contact_mailer/contact.text.erb within layouts/mailer
+  Rendered contact_mailer/contact.text.erb within layouts/mailer (0.0ms)
+ContactMailer#contact: processed outbound mail in 11.4ms
+Sent mail to contact@test.fr (11.1ms)
+Date: Wed, 16 May 2018 17:31:29 +0200
+From: from@example.com
+To: contact@test.fr
+Message-ID: <5afc4ed12526e_4a0324d33dc87113@BMHPOMEN.mail>
+Subject: sujt de test
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5afc4ed123ca3_4a0324d33dc870dc";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5afc4ed123ca3_4a0324d33dc870dc
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Bonjour ca va ?
+
+----==_mimepart_5afc4ed123ca3_4a0324d33dc870dc
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Bonjour</h1>
+
+<p>
+	Ca va ?
+</p>
+  </body>
+</html>
+
+----==_mimepart_5afc4ed123ca3_4a0324d33dc870dc--
+
+  Rendering contact_mailer/contact.html.erb within layouts/mailer
+  Rendered contact_mailer/contact.html.erb within layouts/mailer (0.1ms)
+  Rendering contact_mailer/contact.text.erb within layouts/mailer
+  Rendered contact_mailer/contact.text.erb within layouts/mailer (0.0ms)
+ContactMailer#contact: processed outbound mail in 11.1ms
+Sent mail to contact@test.fr (13.1ms)
+Date: Wed, 16 May 2018 17:31:29 +0200
+From: from@example.com
+To: contact@test.fr
+Message-ID: <5afc4ed12ac77_4a0324d33dc8735d@BMHPOMEN.mail>
+Subject: sujt de test
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5afc4ed129e65_4a0324d33dc872d6";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5afc4ed129e65_4a0324d33dc872d6
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Bonjour ca va ?
+
+----==_mimepart_5afc4ed129e65_4a0324d33dc872d6
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Bonjour</h1>
+
+<p>
+	Ca va ?
+</p>
+  </body>
+</html>
+
+----==_mimepart_5afc4ed129e65_4a0324d33dc872d6--
+
+  Rendering contact_mailer/contact.html.erb within layouts/mailer
+  Rendered contact_mailer/contact.html.erb within layouts/mailer (0.1ms)
+  Rendering contact_mailer/contact.text.erb within layouts/mailer
+  Rendered contact_mailer/contact.text.erb within layouts/mailer (0.0ms)
+ContactMailer#contact: processed outbound mail in 11.0ms
+Sent mail to contact@test.fr (10.0ms)
+Date: Wed, 16 May 2018 17:31:29 +0200
+From: from@example.com
+To: contact@test.fr
+Message-ID: <5afc4ed134fee_4a0324d33dc875b7@BMHPOMEN.mail>
+Subject: sujt de test
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5afc4ed133e44_4a0324d33dc874e";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5afc4ed133e44_4a0324d33dc874e
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Bonjour ca va ?
+
+----==_mimepart_5afc4ed133e44_4a0324d33dc874e
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Bonjour</h1>
+
+<p>
+	Ca va ?
+</p>
+  </body>
+</html>
+
+----==_mimepart_5afc4ed133e44_4a0324d33dc874e--
+
+Completed 200 OK in 204ms (Views: 131.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/home/send" for 127.0.0.1 at 2018-05-16 17:32:05 +0200
+Processing by HomeController#send as HTML
+  Parameters: {"name"=>"Bob", "email"=>""}
+  Rendering contact_mailer/contact.html.erb within layouts/mailer
+  Rendered contact_mailer/contact.html.erb within layouts/mailer (0.3ms)
+  Rendering contact_mailer/contact.text.erb within layouts/mailer
+  Rendered contact_mailer/contact.text.erb within layouts/mailer (0.2ms)
+ContactMailer#contact: processed outbound mail in 11.6ms
+Sent mail to contact@test.fr (11.0ms)
+Date: Wed, 16 May 2018 17:32:05 +0200
+From: from@example.com
+To: contact@test.fr
+Message-ID: <5afc4ef51cd86_4a0324d32c48775a@BMHPOMEN.mail>
+Subject: sujt de test
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5afc4ef51b9e5_4a0324d32c4876be";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5afc4ef51b9e5_4a0324d32c4876be
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Bonjour ca va ?
+
+----==_mimepart_5afc4ef51b9e5_4a0324d32c4876be
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Bonjour</h1>
+
+<p>
+	Ca va ?
+</p>
+  </body>
+</html>
+
+----==_mimepart_5afc4ef51b9e5_4a0324d32c4876be--
+
+  Rendering contact_mailer/contact.html.erb within layouts/mailer
+  Rendered contact_mailer/contact.html.erb within layouts/mailer (0.1ms)
+  Rendering contact_mailer/contact.text.erb within layouts/mailer
+  Rendered contact_mailer/contact.text.erb within layouts/mailer (0.0ms)
+ContactMailer#contact: processed outbound mail in 13.5ms
+Sent mail to contact@test.fr (16.2ms)
+Date: Wed, 16 May 2018 17:32:05 +0200
+From: from@example.com
+To: contact@test.fr
+Message-ID: <5afc4ef5243c0_4a0324d32c487944@BMHPOMEN.mail>
+Subject: sujt de test
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5afc4ef522198_4a0324d32c487849";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5afc4ef522198_4a0324d32c487849
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Bonjour ca va ?
+
+----==_mimepart_5afc4ef522198_4a0324d32c487849
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Bonjour</h1>
+
+<p>
+	Ca va ?
+</p>
+  </body>
+</html>
+
+----==_mimepart_5afc4ef522198_4a0324d32c487849--
+
+Completed 500 Internal Server Error in 59ms (ActiveRecord: 0.0ms)
+
+
+
+ArgumentError - wrong number of arguments (given 0, expected 1):
+  app/controllers/home_controller.rb:6:in `send'
+
+Started POST "/__better_errors/6f4fe306fbdfd495/variables" for 127.0.0.1 at 2018-05-16 17:32:05 +0200
+Started GET "/" for 127.0.0.1 at 2018-05-16 17:33:53 +0200
+Processing by HomeController#index as HTML
+  Rendering contact_mailer/contact.html.erb within layouts/mailer
+  Rendered contact_mailer/contact.html.erb within layouts/mailer (0.2ms)
+  Rendering contact_mailer/contact.text.erb within layouts/mailer
+  Rendered contact_mailer/contact.text.erb within layouts/mailer (0.2ms)
+ContactMailer#contact: processed outbound mail in 10.8ms
+Sent mail to contact@test.fr (10.7ms)
+Date: Wed, 16 May 2018 17:33:53 +0200
+From: from@example.com
+To: contact@test.fr
+Message-ID: <5afc4f612e2ef_4a0324d335088137@BMHPOMEN.mail>
+Subject: sujt de test
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5afc4f612d390_4a0324d3350880f0";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5afc4f612d390_4a0324d3350880f0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Bonjour ca va ?
+
+----==_mimepart_5afc4f612d390_4a0324d3350880f0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Bonjour </h1>
+
+<p>
+	Ca va ?
+</p>
+  </body>
+</html>
+
+----==_mimepart_5afc4f612d390_4a0324d3350880f0--
+
+  Rendering contact_mailer/contact.html.erb within layouts/mailer
+  Rendered contact_mailer/contact.html.erb within layouts/mailer (0.0ms)
+  Rendering contact_mailer/contact.text.erb within layouts/mailer
+  Rendered contact_mailer/contact.text.erb within layouts/mailer (0.0ms)
+ContactMailer#contact: processed outbound mail in 14.4ms
+Sent mail to contact@test.fr (11.5ms)
+Date: Wed, 16 May 2018 17:33:53 +0200
+From: from@example.com
+To: contact@test.fr
+Message-ID: <5afc4f6134951_4a0324d3350883fb@BMHPOMEN.mail>
+Subject: sujt de test
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5afc4f61333e3_4a0324d3350882d5";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5afc4f61333e3_4a0324d3350882d5
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Bonjour ca va ?
+
+----==_mimepart_5afc4f61333e3_4a0324d3350882d5
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Bonjour </h1>
+
+<p>
+	Ca va ?
+</p>
+  </body>
+</html>
+
+----==_mimepart_5afc4f61333e3_4a0324d3350882d5--
+
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (5.0ms)
+  Rendering contact_mailer/contact.html.erb within layouts/mailer
+  Rendered contact_mailer/contact.html.erb within layouts/mailer (0.0ms)
+  Rendering contact_mailer/contact.text.erb within layouts/mailer
+  Rendered contact_mailer/contact.text.erb within layouts/mailer (0.0ms)
+ContactMailer#contact: processed outbound mail in 11.2ms
+Sent mail to contact@test.fr (11.2ms)
+Date: Wed, 16 May 2018 17:33:53 +0200
+From: from@example.com
+To: contact@test.fr
+Message-ID: <5afc4f613c64f_4a0324d3350885c3@BMHPOMEN.mail>
+Subject: sujt de test
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5afc4f613b6a2_4a0324d3350884a5";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5afc4f613b6a2_4a0324d3350884a5
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Bonjour ca va ?
+
+----==_mimepart_5afc4f613b6a2_4a0324d3350884a5
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Bonjour </h1>
+
+<p>
+	Ca va ?
+</p>
+  </body>
+</html>
+
+----==_mimepart_5afc4f613b6a2_4a0324d3350884a5--
+
+  Rendering contact_mailer/contact.html.erb within layouts/mailer
+  Rendered contact_mailer/contact.html.erb within layouts/mailer (0.0ms)
+  Rendering contact_mailer/contact.text.erb within layouts/mailer
+  Rendered contact_mailer/contact.text.erb within layouts/mailer (0.0ms)
+ContactMailer#contact: processed outbound mail in 14.8ms
+Sent mail to contact@test.fr (10.0ms)
+Date: Wed, 16 May 2018 17:33:53 +0200
+From: from@example.com
+To: contact@test.fr
+Message-ID: <5afc4f61432a3_4a0324d3350887f1@BMHPOMEN.mail>
+Subject: sujt de test
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5afc4f6141c90_4a0324d3350886fd";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5afc4f6141c90_4a0324d3350886fd
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Bonjour ca va ?
+
+----==_mimepart_5afc4f6141c90_4a0324d3350886fd
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Bonjour </h1>
+
+<p>
+	Ca va ?
+</p>
+  </body>
+</html>
+
+----==_mimepart_5afc4f6141c90_4a0324d3350886fd--
+
+  Rendering contact_mailer/contact.html.erb within layouts/mailer
+  Rendered contact_mailer/contact.html.erb within layouts/mailer (0.1ms)
+  Rendering contact_mailer/contact.text.erb within layouts/mailer
+  Rendered contact_mailer/contact.text.erb within layouts/mailer (0.0ms)
+ContactMailer#contact: processed outbound mail in 18.1ms
+Sent mail to contact@test.fr (9.8ms)
+Date: Wed, 16 May 2018 17:33:53 +0200
+From: from@example.com
+To: contact@test.fr
+Message-ID: <5afc4f614b756_4a0324d335088983@BMHPOMEN.mail>
+Subject: sujt de test
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5afc4f6148e03_4a0324d3350888b2";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5afc4f6148e03_4a0324d3350888b2
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Bonjour ca va ?
+
+----==_mimepart_5afc4f6148e03_4a0324d3350888b2
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Bonjour </h1>
+
+<p>
+	Ca va ?
+</p>
+  </body>
+</html>
+
+----==_mimepart_5afc4f6148e03_4a0324d3350888b2--
+
+  Rendering contact_mailer/contact.html.erb within layouts/mailer
+  Rendered contact_mailer/contact.html.erb within layouts/mailer (0.0ms)
+  Rendering contact_mailer/contact.text.erb within layouts/mailer
+  Rendered contact_mailer/contact.text.erb within layouts/mailer (0.1ms)
+ContactMailer#contact: processed outbound mail in 13.2ms
+Sent mail to contact@test.fr (11.3ms)
+Date: Wed, 16 May 2018 17:33:53 +0200
+From: from@example.com
+To: contact@test.fr
+Message-ID: <5afc4f61515ee_4a0324d335089134@BMHPOMEN.mail>
+Subject: sujt de test
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5afc4f6150626_4a0324d3350890c0";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5afc4f6150626_4a0324d3350890c0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Bonjour ca va ?
+
+----==_mimepart_5afc4f6150626_4a0324d3350890c0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Bonjour </h1>
+
+<p>
+	Ca va ?
+</p>
+  </body>
+</html>
+
+----==_mimepart_5afc4f6150626_4a0324d3350890c0--
+
+  Rendering contact_mailer/contact.html.erb within layouts/mailer
+  Rendered contact_mailer/contact.html.erb within layouts/mailer (0.0ms)
+  Rendering contact_mailer/contact.text.erb within layouts/mailer
+  Rendered contact_mailer/contact.text.erb within layouts/mailer (0.0ms)
+ContactMailer#contact: processed outbound mail in 10.4ms
+Sent mail to contact@test.fr (9.1ms)
+Date: Wed, 16 May 2018 17:33:53 +0200
+From: from@example.com
+To: contact@test.fr
+Message-ID: <5afc4f615b1b8_4a0324d3350893b2@BMHPOMEN.mail>
+Subject: sujt de test
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5afc4f615a1dc_4a0324d33508926b";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5afc4f615a1dc_4a0324d33508926b
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Bonjour ca va ?
+
+----==_mimepart_5afc4f615a1dc_4a0324d33508926b
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Bonjour </h1>
+
+<p>
+	Ca va ?
+</p>
+  </body>
+</html>
+
+----==_mimepart_5afc4f615a1dc_4a0324d33508926b--
+
+Completed 200 OK in 210ms (Views: 134.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/home/send" for 127.0.0.1 at 2018-05-16 17:34:06 +0200
+Processing by HomeController#send as HTML
+  Parameters: {"name"=>"Helene", "email"=>"helene@free.fr"}
+  Rendering contact_mailer/contact.html.erb within layouts/mailer
+  Rendered contact_mailer/contact.html.erb within layouts/mailer (0.3ms)
+  Rendering contact_mailer/contact.text.erb within layouts/mailer
+  Rendered contact_mailer/contact.text.erb within layouts/mailer (0.2ms)
+ContactMailer#contact: processed outbound mail in 12.3ms
+Sent mail to contact@test.fr (12.1ms)
+Date: Wed, 16 May 2018 17:34:06 +0200
+From: from@example.com
+To: contact@test.fr
+Message-ID: <5afc4f6e2d043_4a0324d33dc8951f@BMHPOMEN.mail>
+Subject: sujt de test
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5afc4f6e2c102_4a0324d33dc8949f";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5afc4f6e2c102_4a0324d33dc8949f
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Bonjour ca va ?
+
+----==_mimepart_5afc4f6e2c102_4a0324d33dc8949f
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Bonjour </h1>
+
+<p>
+	Ca va ?
+</p>
+  </body>
+</html>
+
+----==_mimepart_5afc4f6e2c102_4a0324d33dc8949f--
+
+  Rendering contact_mailer/contact.html.erb within layouts/mailer
+  Rendered contact_mailer/contact.html.erb within layouts/mailer (0.0ms)
+  Rendering contact_mailer/contact.text.erb within layouts/mailer
+  Rendered contact_mailer/contact.text.erb within layouts/mailer (0.0ms)
+ContactMailer#contact: processed outbound mail in 12.3ms
+Sent mail to contact@test.fr (11.2ms)
+Date: Wed, 16 May 2018 17:34:06 +0200
+From: from@example.com
+To: contact@test.fr
+Message-ID: <5afc4f6e334fe_4a0324d33dc897f5@BMHPOMEN.mail>
+Subject: sujt de test
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5afc4f6e32330_4a0324d33dc8968f";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5afc4f6e32330_4a0324d33dc8968f
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Bonjour ca va ?
+
+----==_mimepart_5afc4f6e32330_4a0324d33dc8968f
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Bonjour </h1>
+
+<p>
+	Ca va ?
+</p>
+  </body>
+</html>
+
+----==_mimepart_5afc4f6e32330_4a0324d33dc8968f--
+
+Completed 500 Internal Server Error in 50ms (ActiveRecord: 0.0ms)
+
+
+
+ArgumentError - wrong number of arguments (given 0, expected 1):
+  app/controllers/home_controller.rb:6:in `send'
+
+Started POST "/__better_errors/bf87448b3a9870fc/variables" for 127.0.0.1 at 2018-05-16 17:34:06 +0200
+Started GET "/" for 127.0.0.1 at 2018-05-16 17:36:27 +0200
+Processing by HomeController#index as HTML
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms)
+
+
+
+ArgumentError - wrong number of arguments (given 1, expected 0):
+  app/controllers/home_controller.rb:6:in `send'
+
+Started POST "/__better_errors/8328dfdd8c485085/variables" for 127.0.0.1 at 2018-05-16 17:36:28 +0200
+Started GET "/" for 127.0.0.1 at 2018-05-16 17:41:59 +0200
+Processing by HomeController#index as HTML
+  Rendering contact_mailer/contact.html.erb within layouts/mailer
+  Rendered contact_mailer/contact.html.erb within layouts/mailer (0.3ms)
+  Rendering contact_mailer/contact.text.erb within layouts/mailer
+  Rendered contact_mailer/contact.text.erb within layouts/mailer (0.2ms)
+ContactMailer#contact: processed outbound mail in 9.6ms
+Sent mail to contact@test.fr (10.3ms)
+Date: Wed, 16 May 2018 17:41:59 +0200
+From: from@example.com
+To: contact@test.fr
+Message-ID: <5afc514792796_4a0324d335089960@BMHPOMEN.mail>
+Subject: sujt de test
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5afc514791be5_4a0324d3350898b9";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5afc514791be5_4a0324d3350898b9
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Bonjour ca va ?
+
+----==_mimepart_5afc514791be5_4a0324d3350898b9
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Bonjour </h1>
+
+<p>
+	Ca va ?
+</p>
+  </body>
+</html>
+
+----==_mimepart_5afc514791be5_4a0324d3350898b9--
+
+  Rendering contact_mailer/contact.html.erb within layouts/mailer
+  Rendered contact_mailer/contact.html.erb within layouts/mailer (0.1ms)
+  Rendering contact_mailer/contact.text.erb within layouts/mailer
+  Rendered contact_mailer/contact.text.erb within layouts/mailer (0.1ms)
+ContactMailer#contact: processed outbound mail in 11.2ms
+Sent mail to contact@test.fr (9.6ms)
+Date: Wed, 16 May 2018 17:41:59 +0200
+From: from@example.com
+To: contact@test.fr
+Message-ID: <5afc514797fcc_4a0324d3350901c9@BMHPOMEN.mail>
+Subject: sujt de test
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5afc514796fa1_4a0324d33509004e";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5afc514796fa1_4a0324d33509004e
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Bonjour ca va ?
+
+----==_mimepart_5afc514796fa1_4a0324d33509004e
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Bonjour </h1>
+
+<p>
+	Ca va ?
+</p>
+  </body>
+</html>
+
+----==_mimepart_5afc514796fa1_4a0324d33509004e--
+
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (4.7ms)
+  Rendering contact_mailer/contact.html.erb within layouts/mailer
+  Rendered contact_mailer/contact.html.erb within layouts/mailer (0.1ms)
+  Rendering contact_mailer/contact.text.erb within layouts/mailer
+  Rendered contact_mailer/contact.text.erb within layouts/mailer (0.0ms)
+ContactMailer#contact: processed outbound mail in 11.2ms
+Sent mail to contact@test.fr (10.4ms)
+Date: Wed, 16 May 2018 17:41:59 +0200
+From: from@example.com
+To: contact@test.fr
+Message-ID: <5afc51479f202_4a0324d3350903d6@BMHPOMEN.mail>
+Subject: sujt de test
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5afc51479e08f_4a0324d33509026a";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5afc51479e08f_4a0324d33509026a
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Bonjour ca va ?
+
+----==_mimepart_5afc51479e08f_4a0324d33509026a
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Bonjour </h1>
+
+<p>
+	Ca va ?
+</p>
+  </body>
+</html>
+
+----==_mimepart_5afc51479e08f_4a0324d33509026a--
+
+  Rendering contact_mailer/contact.html.erb within layouts/mailer
+  Rendered contact_mailer/contact.html.erb within layouts/mailer (0.1ms)
+  Rendering contact_mailer/contact.text.erb within layouts/mailer
+  Rendered contact_mailer/contact.text.erb within layouts/mailer (0.1ms)
+ContactMailer#contact: processed outbound mail in 12.8ms
+Sent mail to contact@test.fr (10.9ms)
+Date: Wed, 16 May 2018 17:41:59 +0200
+From: from@example.com
+To: contact@test.fr
+Message-ID: <5afc5147a5215_4a0324d335090544@BMHPOMEN.mail>
+Subject: sujt de test
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5afc5147a4374_4a0324d3350904ad";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5afc5147a4374_4a0324d3350904ad
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Bonjour ca va ?
+
+----==_mimepart_5afc5147a4374_4a0324d3350904ad
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Bonjour </h1>
+
+<p>
+	Ca va ?
+</p>
+  </body>
+</html>
+
+----==_mimepart_5afc5147a4374_4a0324d3350904ad--
+
+  Rendering contact_mailer/contact.html.erb within layouts/mailer
+  Rendered contact_mailer/contact.html.erb within layouts/mailer (0.0ms)
+  Rendering contact_mailer/contact.text.erb within layouts/mailer
+  Rendered contact_mailer/contact.text.erb within layouts/mailer (0.0ms)
+ContactMailer#contact: processed outbound mail in 16.2ms
+Sent mail to contact@test.fr (11.8ms)
+Date: Wed, 16 May 2018 17:41:59 +0200
+From: from@example.com
+To: contact@test.fr
+Message-ID: <5afc5147ad11c_4a0324d33509074a@BMHPOMEN.mail>
+Subject: sujt de test
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5afc5147abddb_4a0324d3350906e8";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5afc5147abddb_4a0324d3350906e8
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Bonjour ca va ?
+
+----==_mimepart_5afc5147abddb_4a0324d3350906e8
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Bonjour </h1>
+
+<p>
+	Ca va ?
+</p>
+  </body>
+</html>
+
+----==_mimepart_5afc5147abddb_4a0324d3350906e8--
+
+  Rendering contact_mailer/contact.html.erb within layouts/mailer
+  Rendered contact_mailer/contact.html.erb within layouts/mailer (0.0ms)
+  Rendering contact_mailer/contact.text.erb within layouts/mailer
+  Rendered contact_mailer/contact.text.erb within layouts/mailer (0.0ms)
+ContactMailer#contact: processed outbound mail in 12.0ms
+Sent mail to contact@test.fr (12.3ms)
+Date: Wed, 16 May 2018 17:41:59 +0200
+From: from@example.com
+To: contact@test.fr
+Message-ID: <5afc5147b3334_4a0324d3350909f5@BMHPOMEN.mail>
+Subject: sujt de test
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5afc5147b221a_4a0324d33509089";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5afc5147b221a_4a0324d33509089
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Bonjour ca va ?
+
+----==_mimepart_5afc5147b221a_4a0324d33509089
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Bonjour </h1>
+
+<p>
+	Ca va ?
+</p>
+  </body>
+</html>
+
+----==_mimepart_5afc5147b221a_4a0324d33509089--
+
+  Rendering contact_mailer/contact.html.erb within layouts/mailer
+  Rendered contact_mailer/contact.html.erb within layouts/mailer (0.0ms)
+  Rendering contact_mailer/contact.text.erb within layouts/mailer
+  Rendered contact_mailer/contact.text.erb within layouts/mailer (0.0ms)
+ContactMailer#contact: processed outbound mail in 11.1ms
+Sent mail to contact@test.fr (9.7ms)
+Date: Wed, 16 May 2018 17:41:59 +0200
+From: from@example.com
+To: contact@test.fr
+Message-ID: <5afc5147bdb12_4a0324d3350911d2@BMHPOMEN.mail>
+Subject: sujt de test
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5afc5147bcbb1_4a0324d335091094";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5afc5147bcbb1_4a0324d335091094
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Bonjour ca va ?
+
+----==_mimepart_5afc5147bcbb1_4a0324d335091094
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Bonjour </h1>
+
+<p>
+	Ca va ?
+</p>
+  </body>
+</html>
+
+----==_mimepart_5afc5147bcbb1_4a0324d335091094--
+
+Completed 200 OK in 202ms (Views: 132.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-16 17:42:12 +0200
+Processing by HomeController#index as HTML
+  Rendering contact_mailer/contact.html.erb within layouts/mailer
+  Rendered contact_mailer/contact.html.erb within layouts/mailer (0.3ms)
+  Rendering contact_mailer/contact.text.erb within layouts/mailer
+  Rendered contact_mailer/contact.text.erb within layouts/mailer (0.2ms)
+ContactMailer#contact: processed outbound mail in 12.4ms
+Sent mail to contact@test.fr (10.5ms)
+Date: Wed, 16 May 2018 17:42:12 +0200
+From: from@example.com
+To: contact@test.fr
+Message-ID: <5afc51541c64f_4a0324d33dc913d8@BMHPOMEN.mail>
+Subject: sujt de test
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5afc51541b4e8_4a0324d33dc912b6";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5afc51541b4e8_4a0324d33dc912b6
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Bonjour ca va ?
+
+----==_mimepart_5afc51541b4e8_4a0324d33dc912b6
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Bonjour </h1>
+
+<p>
+	Ca va ?
+</p>
+  </body>
+</html>
+
+----==_mimepart_5afc51541b4e8_4a0324d33dc912b6--
+
+  Rendering contact_mailer/contact.html.erb within layouts/mailer
+  Rendered contact_mailer/contact.html.erb within layouts/mailer (0.0ms)
+  Rendering contact_mailer/contact.text.erb within layouts/mailer
+  Rendered contact_mailer/contact.text.erb within layouts/mailer (0.0ms)
+ContactMailer#contact: processed outbound mail in 11.7ms
+Sent mail to contact@test.fr (11.4ms)
+Date: Wed, 16 May 2018 17:42:12 +0200
+From: from@example.com
+To: contact@test.fr
+Message-ID: <5afc5154220db_4a0324d33dc915ef@BMHPOMEN.mail>
+Subject: sujt de test
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5afc515421191_4a0324d33dc914dc";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5afc515421191_4a0324d33dc914dc
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Bonjour ca va ?
+
+----==_mimepart_5afc515421191_4a0324d33dc914dc
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Bonjour </h1>
+
+<p>
+	Ca va ?
+</p>
+  </body>
+</html>
+
+----==_mimepart_5afc515421191_4a0324d33dc914dc--
+
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (9.2ms)
+  Rendering contact_mailer/contact.html.erb within layouts/mailer
+  Rendered contact_mailer/contact.html.erb within layouts/mailer (0.1ms)
+  Rendering contact_mailer/contact.text.erb within layouts/mailer
+  Rendered contact_mailer/contact.text.erb within layouts/mailer (0.0ms)
+ContactMailer#contact: processed outbound mail in 10.0ms
+Sent mail to contact@test.fr (11.6ms)
+Date: Wed, 16 May 2018 17:42:12 +0200
+From: from@example.com
+To: contact@test.fr
+Message-ID: <5afc51542a65e_4a0324d33dc917a5@BMHPOMEN.mail>
+Subject: sujt de test
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5afc515429843_4a0324d33dc916aa";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5afc515429843_4a0324d33dc916aa
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Bonjour ca va ?
+
+----==_mimepart_5afc515429843_4a0324d33dc916aa
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Bonjour </h1>
+
+<p>
+	Ca va ?
+</p>
+  </body>
+</html>
+
+----==_mimepart_5afc515429843_4a0324d33dc916aa--
+
+  Rendering contact_mailer/contact.html.erb within layouts/mailer
+  Rendered contact_mailer/contact.html.erb within layouts/mailer (0.0ms)
+  Rendering contact_mailer/contact.text.erb within layouts/mailer
+  Rendered contact_mailer/contact.text.erb within layouts/mailer (0.0ms)
+ContactMailer#contact: processed outbound mail in 13.6ms
+Sent mail to contact@test.fr (10.4ms)
+Date: Wed, 16 May 2018 17:42:12 +0200
+From: from@example.com
+To: contact@test.fr
+Message-ID: <5afc515430e5d_4a0324d33dc91960@BMHPOMEN.mail>
+Subject: sujt de test
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5afc51542faa4_4a0324d33dc9189a";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5afc51542faa4_4a0324d33dc9189a
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Bonjour ca va ?
+
+----==_mimepart_5afc51542faa4_4a0324d33dc9189a
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Bonjour </h1>
+
+<p>
+	Ca va ?
+</p>
+  </body>
+</html>
+
+----==_mimepart_5afc51542faa4_4a0324d33dc9189a--
+
+  Rendering contact_mailer/contact.html.erb within layouts/mailer
+  Rendered contact_mailer/contact.html.erb within layouts/mailer (0.0ms)
+  Rendering contact_mailer/contact.text.erb within layouts/mailer
+  Rendered contact_mailer/contact.text.erb within layouts/mailer (0.1ms)
+ContactMailer#contact: processed outbound mail in 12.0ms
+Sent mail to contact@test.fr (12.4ms)
+Date: Wed, 16 May 2018 17:42:12 +0200
+From: from@example.com
+To: contact@test.fr
+Message-ID: <5afc5154375a1_4a0324d33dc9211e@BMHPOMEN.mail>
+Subject: sujt de test
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5afc515436549_4a0324d33dc920bf";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5afc515436549_4a0324d33dc920bf
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Bonjour ca va ?
+
+----==_mimepart_5afc515436549_4a0324d33dc920bf
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Bonjour </h1>
+
+<p>
+	Ca va ?
+</p>
+  </body>
+</html>
+
+----==_mimepart_5afc515436549_4a0324d33dc920bf--
+
+  Rendering contact_mailer/contact.html.erb within layouts/mailer
+  Rendered contact_mailer/contact.html.erb within layouts/mailer (0.0ms)
+  Rendering contact_mailer/contact.text.erb within layouts/mailer
+  Rendered contact_mailer/contact.text.erb within layouts/mailer (0.0ms)
+ContactMailer#contact: processed outbound mail in 12.7ms
+Sent mail to contact@test.fr (12.1ms)
+Date: Wed, 16 May 2018 17:42:12 +0200
+From: from@example.com
+To: contact@test.fr
+Message-ID: <5afc51543db4c_4a0324d33dc92378@BMHPOMEN.mail>
+Subject: sujt de test
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5afc51543c828_4a0324d33dc922a8";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5afc51543c828_4a0324d33dc922a8
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Bonjour ca va ?
+
+----==_mimepart_5afc51543c828_4a0324d33dc922a8
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Bonjour </h1>
+
+<p>
+	Ca va ?
+</p>
+  </body>
+</html>
+
+----==_mimepart_5afc51543c828_4a0324d33dc922a8--
+
+  Rendering contact_mailer/contact.html.erb within layouts/mailer
+  Rendered contact_mailer/contact.html.erb within layouts/mailer (0.1ms)
+  Rendering contact_mailer/contact.text.erb within layouts/mailer
+  Rendered contact_mailer/contact.text.erb within layouts/mailer (0.0ms)
+ContactMailer#contact: processed outbound mail in 15.3ms
+Sent mail to contact@test.fr (10.0ms)
+Date: Wed, 16 May 2018 17:42:12 +0200
+From: from@example.com
+To: contact@test.fr
+Message-ID: <5afc515448d42_4a0324d33dc92584@BMHPOMEN.mail>
+Subject: sujt de test
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5afc515446956_4a0324d33dc92437";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5afc515446956_4a0324d33dc92437
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Bonjour ca va ?
+
+----==_mimepart_5afc515446956_4a0324d33dc92437
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Bonjour </h1>
+
+<p>
+	Ca va ?
+</p>
+  </body>
+</html>
+
+----==_mimepart_5afc515446956_4a0324d33dc92437--
+
+Completed 200 OK in 205ms (Views: 130.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-16 17:46:51 +0200
+Processing by HomeController#index as HTML
+  Rendering contact_mailer/contact.html.erb within layouts/mailer
+  Rendered contact_mailer/contact.html.erb within layouts/mailer (0.3ms)
+  Rendering contact_mailer/contact.text.erb within layouts/mailer
+  Rendered contact_mailer/contact.text.erb within layouts/mailer (0.1ms)
+ContactMailer#contact: processed outbound mail in 9.0ms
+Sent mail to contact@test.fr (10.5ms)
+Date: Wed, 16 May 2018 17:46:51 +0200
+From: from@example.com
+To: contact@test.fr
+Message-ID: <5afc526b9df88_4a0324d32c49277d@BMHPOMEN.mail>
+Subject: sujt de test
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5afc526b9d457_4a0324d32c492695";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5afc526b9d457_4a0324d32c492695
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Bonjour ca va ?
+
+----==_mimepart_5afc526b9d457_4a0324d32c492695
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Bonjour </h1>
+
+<p>
+	Ca va ?
+</p>
+  </body>
+</html>
+
+----==_mimepart_5afc526b9d457_4a0324d32c492695--
+
+  Rendering contact_mailer/contact.html.erb within layouts/mailer
+  Rendered contact_mailer/contact.html.erb within layouts/mailer (0.0ms)
+  Rendering contact_mailer/contact.text.erb within layouts/mailer
+  Rendered contact_mailer/contact.text.erb within layouts/mailer (0.0ms)
+ContactMailer#contact: processed outbound mail in 9.3ms
+Sent mail to contact@test.fr (9.5ms)
+Date: Wed, 16 May 2018 17:46:51 +0200
+From: from@example.com
+To: contact@test.fr
+Message-ID: <5afc526ba3070_4a0324d32c4929c0@BMHPOMEN.mail>
+Subject: sujt de test
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5afc526ba218a_4a0324d32c492838";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5afc526ba218a_4a0324d32c492838
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Bonjour ca va ?
+
+----==_mimepart_5afc526ba218a_4a0324d32c492838
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Bonjour </h1>
+
+<p>
+	Ca va ?
+</p>
+  </body>
+</html>
+
+----==_mimepart_5afc526ba218a_4a0324d32c492838--
+
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (4.3ms)
+  Rendering contact_mailer/contact.html.erb within layouts/mailer
+  Rendered contact_mailer/contact.html.erb within layouts/mailer (0.1ms)
+  Rendering contact_mailer/contact.text.erb within layouts/mailer
+  Rendered contact_mailer/contact.text.erb within layouts/mailer (0.0ms)
+ContactMailer#contact: processed outbound mail in 10.8ms
+Sent mail to contact@test.fr (10.7ms)
+Date: Wed, 16 May 2018 17:46:51 +0200
+From: from@example.com
+To: contact@test.fr
+Message-ID: <5afc526ba9e53_4a0324d32c493196@BMHPOMEN.mail>
+Subject: sujt de test
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5afc526ba8fdd_4a0324d32c493014";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5afc526ba8fdd_4a0324d32c493014
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Bonjour ca va ?
+
+----==_mimepart_5afc526ba8fdd_4a0324d32c493014
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Bonjour </h1>
+
+<p>
+	Ca va ?
+</p>
+  </body>
+</html>
+
+----==_mimepart_5afc526ba8fdd_4a0324d32c493014--
+
+  Rendering contact_mailer/contact.html.erb within layouts/mailer
+  Rendered contact_mailer/contact.html.erb within layouts/mailer (0.0ms)
+  Rendering contact_mailer/contact.text.erb within layouts/mailer
+  Rendered contact_mailer/contact.text.erb within layouts/mailer (0.0ms)
+ContactMailer#contact: processed outbound mail in 14.6ms
+Sent mail to contact@test.fr (10.4ms)
+Date: Wed, 16 May 2018 17:46:51 +0200
+From: from@example.com
+To: contact@test.fr
+Message-ID: <5afc526bb0516_4a0324d32c493395@BMHPOMEN.mail>
+Subject: sujt de test
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5afc526baed4b_4a0324d32c49326b";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5afc526baed4b_4a0324d32c49326b
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Bonjour ca va ?
+
+----==_mimepart_5afc526baed4b_4a0324d32c49326b
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Bonjour </h1>
+
+<p>
+	Ca va ?
+</p>
+  </body>
+</html>
+
+----==_mimepart_5afc526baed4b_4a0324d32c49326b--
+
+  Rendering contact_mailer/contact.html.erb within layouts/mailer
+  Rendered contact_mailer/contact.html.erb within layouts/mailer (0.1ms)
+  Rendering contact_mailer/contact.text.erb within layouts/mailer
+  Rendered contact_mailer/contact.text.erb within layouts/mailer (0.0ms)
+ContactMailer#contact: processed outbound mail in 17.1ms
+Sent mail to contact@test.fr (10.0ms)
+Date: Wed, 16 May 2018 17:46:51 +0200
+From: from@example.com
+To: contact@test.fr
+Message-ID: <5afc526bb7eb7_4a0324d32c493567@BMHPOMEN.mail>
+Subject: sujt de test
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5afc526bb59bb_4a0324d32c49344b";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5afc526bb59bb_4a0324d32c49344b
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Bonjour ca va ?
+
+----==_mimepart_5afc526bb59bb_4a0324d32c49344b
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Bonjour </h1>
+
+<p>
+	Ca va ?
+</p>
+  </body>
+</html>
+
+----==_mimepart_5afc526bb59bb_4a0324d32c49344b--
+
+  Rendering contact_mailer/contact.html.erb within layouts/mailer
+  Rendered contact_mailer/contact.html.erb within layouts/mailer (0.0ms)
+  Rendering contact_mailer/contact.text.erb within layouts/mailer
+  Rendered contact_mailer/contact.text.erb within layouts/mailer (0.0ms)
+ContactMailer#contact: processed outbound mail in 11.4ms
+Sent mail to contact@test.fr (9.9ms)
+Date: Wed, 16 May 2018 17:46:51 +0200
+From: from@example.com
+To: contact@test.fr
+Message-ID: <5afc526bbd5b2_4a0324d32c4937c6@BMHPOMEN.mail>
+Subject: sujt de test
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5afc526bbc7cb_4a0324d32c493647";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5afc526bbc7cb_4a0324d32c493647
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Bonjour ca va ?
+
+----==_mimepart_5afc526bbc7cb_4a0324d32c493647
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Bonjour </h1>
+
+<p>
+	Ca va ?
+</p>
+  </body>
+</html>
+
+----==_mimepart_5afc526bbc7cb_4a0324d32c493647--
+
+  Rendering contact_mailer/contact.html.erb within layouts/mailer
+  Rendered contact_mailer/contact.html.erb within layouts/mailer (0.0ms)
+  Rendering contact_mailer/contact.text.erb within layouts/mailer
+  Rendered contact_mailer/contact.text.erb within layouts/mailer (0.0ms)
+ContactMailer#contact: processed outbound mail in 9.1ms
+Sent mail to contact@test.fr (9.4ms)
+Date: Wed, 16 May 2018 17:46:51 +0200
+From: from@example.com
+To: contact@test.fr
+Message-ID: <5afc526bc5540_4a0324d32c493984@BMHPOMEN.mail>
+Subject: sujt de test
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5afc526bc4a2d_4a0324d32c49381a";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5afc526bc4a2d_4a0324d32c49381a
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Bonjour ca va ?
+
+----==_mimepart_5afc526bc4a2d_4a0324d32c49381a
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Bonjour </h1>
+
+<p>
+	Ca va ?
+</p>
+  </body>
+</html>
+
+----==_mimepart_5afc526bc4a2d_4a0324d32c49381a--
+
+Completed 200 OK in 181ms (Views: 121.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-16 17:46:55 +0200
+Processing by HomeController#index as HTML
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms)
+
+
+
+ArgumentError - wrong number of arguments (given 1, expected 0):
+  app/controllers/home_controller.rb:6:in `send'
+
+Started POST "/__better_errors/823fc404eac1b7d7/variables" for 127.0.0.1 at 2018-05-16 17:46:55 +0200
+Started GET "/" for 127.0.0.1 at 2018-05-16 17:47:30 +0200
+Processing by HomeController#index as HTML
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms)
+
+
+
+ArgumentError - wrong number of arguments (given 1, expected 0):
+  app/controllers/home_controller.rb:6:in `send'
+
+Started POST "/__better_errors/15976bcc94ef807f/variables" for 127.0.0.1 at 2018-05-16 17:47:30 +0200
+Started GET "/" for 127.0.0.1 at 2018-05-16 17:47:41 +0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 23ms (Views: 21.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-16 17:48:18 +0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 19ms (Views: 17.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-16 17:50:09 +0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 19ms (Views: 17.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-16 17:50:45 +0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 16ms (Views: 15.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home/send" for 127.0.0.1 at 2018-05-16 17:50:47 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/home/send"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-05-16 17:51:16 +0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 17ms (Views: 16.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-16 17:51:18 +0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 17ms (Views: 16.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home/send" for 127.0.0.1 at 2018-05-16 17:51:21 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/home/send"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-05-16 17:51:23 +0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 17ms (Views: 16.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-16 17:51:37 +0200
+Processing by HomeController#index as HTML
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms)
+
+
+
+ArgumentError - wrong number of arguments (given 1, expected 0):
+  app/controllers/home_controller.rb:6:in `send'
+
+Started POST "/__better_errors/403391cde3c81876/variables" for 127.0.0.1 at 2018-05-16 17:51:37 +0200
+Started GET "/" for 127.0.0.1 at 2018-05-16 18:02:31 +0200
+Processing by HomeController#index as HTML
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms)
+
+
+
+ArgumentError - wrong number of arguments (given 1, expected 0):
+  app/controllers/home_controller.rb:6:in `send'
+
+Started POST "/__better_errors/5d314b613f664711/variables" for 127.0.0.1 at 2018-05-16 18:02:31 +0200
+Started GET "/" for 127.0.0.1 at 2018-05-16 18:06:13 +0200
+Processing by HomeController#index as HTML
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms)
+
+
+
+ArgumentError - wrong number of arguments (given 1, expected 0):
+  app/controllers/home_controller.rb:6:in `send'
+
+Started POST "/__better_errors/2c912603b9c7f418/variables" for 127.0.0.1 at 2018-05-16 18:06:13 +0200
+Started GET "/" for 127.0.0.1 at 2018-05-16 18:06:29 +0200
+Processing by HomeController#index as HTML
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms)
+
+
+
+ArgumentError - wrong number of arguments (given 1, expected 0):
+  app/controllers/home_controller.rb:6:in `send'
+
+Started POST "/__better_errors/8e019612b43665b2/variables" for 127.0.0.1 at 2018-05-16 18:06:29 +0200
+Started GET "/" for 127.0.0.1 at 2018-05-16 18:09:45 +0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (179.3ms)
+Completed 500 Internal Server Error in 188ms (ActiveRecord: 0.0ms)
+
+
+
+NameError - undefined local variable or method `send_mail_path' for #<#<Class:0x00007f8dc41a2670>:0x0000000004d53960>:
+  app/views/home/index.html.erb:7:in `_app_views_home_index_html_erb__1043207723706094031_70123428583840'
+
+Started POST "/__better_errors/01bd3dc968305c1f/variables" for 127.0.0.1 at 2018-05-16 18:09:45 +0200
+Started GET "/" for 127.0.0.1 at 2018-05-16 18:10:30 +0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (92.5ms)
+Completed 200 OK in 121ms (Views: 120.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/send_mail" for 127.0.0.1 at 2018-05-16 18:10:34 +0200
+Processing by HomeController#send_mail as HTML
+  Rendering contact_mailer/contact.html.erb within layouts/mailer
+  Rendered contact_mailer/contact.html.erb within layouts/mailer (0.3ms)
+  Rendering contact_mailer/contact.text.erb within layouts/mailer
+  Rendered contact_mailer/contact.text.erb within layouts/mailer (0.2ms)
+ContactMailer#contact: processed outbound mail in 37.8ms
+Sent mail to contact@test.fr (10.6ms)
+Date: Wed, 16 May 2018 18:10:35 +0200
+From: from@example.com
+To: contact@test.fr
+Message-ID: <5afc57fb4798_57362771544196d0@BMHPOMEN.mail>
+Subject: sujt de test
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5afc57fb8c8_573627715441954f";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5afc57fb8c8_573627715441954f
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Bonjour ca va ?
+
+----==_mimepart_5afc57fb8c8_573627715441954f
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Bonjour </h1>
+
+<p>
+	Ca va ?
+</p>
+  </body>
+</html>
+
+----==_mimepart_5afc57fb8c8_573627715441954f--
+
+Redirected to http://localhost:3000/
+Completed 302 Found in 146ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-16 18:10:35 +0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 15ms (Views: 14.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/send_mail" for 127.0.0.1 at 2018-05-16 18:10:36 +0200
+Processing by HomeController#send_mail as HTML
+  Rendering contact_mailer/contact.html.erb within layouts/mailer
+  Rendered contact_mailer/contact.html.erb within layouts/mailer (0.4ms)
+  Rendering contact_mailer/contact.text.erb within layouts/mailer
+  Rendered contact_mailer/contact.text.erb within layouts/mailer (0.2ms)
+ContactMailer#contact: processed outbound mail in 18.2ms
+Sent mail to contact@test.fr (10.9ms)
+Date: Wed, 16 May 2018 18:10:36 +0200
+From: from@example.com
+To: contact@test.fr
+Message-ID: <5afc57fce31d5_573627714b8198f8@BMHPOMEN.mail>
+Subject: sujt de test
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5afc57fce20be_573627714b8197e6";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5afc57fce20be_573627714b8197e6
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Bonjour ca va ?
+
+----==_mimepart_5afc57fce20be_573627714b8197e6
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Bonjour </h1>
+
+<p>
+	Ca va ?
+</p>
+  </body>
+</html>
+
+----==_mimepart_5afc57fce20be_573627714b8197e6--
+
+Redirected to http://localhost:3000/
+Completed 302 Found in 32ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-16 18:10:36 +0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 15ms (Views: 14.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-16 18:11:12 +0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 17ms (Views: 15.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/send_mail?name=&email=" for 127.0.0.1 at 2018-05-16 18:11:16 +0200
+Processing by HomeController#send_mail as HTML
+  Parameters: {"name"=>"", "email"=>""}
+  Rendering contact_mailer/contact.html.erb within layouts/mailer
+  Rendered contact_mailer/contact.html.erb within layouts/mailer (0.4ms)
+  Rendering contact_mailer/contact.text.erb within layouts/mailer
+  Rendered contact_mailer/contact.text.erb within layouts/mailer (0.2ms)
+ContactMailer#contact: processed outbound mail in 11.4ms
+Sent mail to contact@test.fr (9.2ms)
+Date: Wed, 16 May 2018 18:11:16 +0200
+From: from@example.com
+To: contact@test.fr
+Message-ID: <5afc5824b4bf0_573627715d0200e2@BMHPOMEN.mail>
+Subject: sujt de test
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5afc5824b3af3_573627715d01992";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5afc5824b3af3_573627715d01992
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Bonjour ca va ?
+
+----==_mimepart_5afc5824b3af3_573627715d01992
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Bonjour </h1>
+
+<p>
+	Ca va ?
+</p>
+  </body>
+</html>
+
+----==_mimepart_5afc5824b3af3_573627715d01992--
+
+Redirected to http://localhost:3000/
+Completed 302 Found in 22ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-16 18:11:16 +0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 15ms (Views: 14.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-16 18:27:05 +0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 16ms (Views: 15.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/send_mail?name=&email=" for 127.0.0.1 at 2018-05-16 18:27:07 +0200
+Processing by HomeController#send_mail as HTML
+  Parameters: {"name"=>"", "email"=>""}
+  Rendering contact_mailer/contact.html.erb within layouts/mailer
+  Rendered contact_mailer/contact.html.erb within layouts/mailer (0.4ms)
+  Rendering contact_mailer/contact.text.erb within layouts/mailer
+  Rendered contact_mailer/contact.text.erb within layouts/mailer (0.3ms)
+ContactMailer#contact: processed outbound mail in 11.2ms
+Sent mail to contact@test.fr (8.6ms)
+Date: Wed, 16 May 2018 18:27:07 +0200
+From: from@example.com
+To: contact@test.fr
+Message-ID: <5afc5bdb5d53_5736277142c20270@BMHPOMEN.mail>
+Subject: sujt de test
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5afc5bdb5141_5736277142c201b1";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5afc5bdb5141_5736277142c201b1
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Bonjour ca va ?
+
+----==_mimepart_5afc5bdb5141_5736277142c201b1
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Bonjour </h1>
+
+<p>
+	Ca va ?
+</p>
+  </body>
+</html>
+
+----==_mimepart_5afc5bdb5141_5736277142c201b1--
+
+Redirected to http://localhost:3000/
+Completed 302 Found in 21ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-16 18:27:07 +0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 15ms (Views: 14.3ms | ActiveRecord: 0.0ms)
+
+

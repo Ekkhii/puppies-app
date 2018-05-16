@@ -91,4 +91,17 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  # MAILER
+
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+   :address        => 'in-v3.mailjet.com',
+   :enable_starttls_auto => true,
+   :port           => 587,
+   :authentication => :plain,
+   :user_name      => ENV['MAILJET_API_KEY'],
+   :password       => ENV['MAILJET_SECRET_KEY'],
+   :domain         => 'https://agile-anchorage-86029.herokuapp.com/'
+   }
 end

@@ -28,6 +28,9 @@ gem 'jbuilder', '~> 2.5'
 # Use Devise
 # gem 'devise'
 
+# Use DotEnv
+gem 'dotenv-rails'
+
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
@@ -39,14 +42,14 @@ gem 'bootsnap', '>= 1.1.0', require: false
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-   gem 'sqlite3'
+  gem 'sqlite3'
   gem 'byebug',  '9.0.6', platform: :mri
   gem 'rspec-rails'
   gem 'pry-rails'
   gem 'pry-byebug'
   gem 'database_cleaner'
   gem "factory_bot_rails"
-gem 'simplecov'
+  gem 'simplecov'
 end
 
 group :development do
@@ -58,7 +61,7 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem "better_errors"
   gem "binding_of_caller"
-gem 'letter_opener'
+  gem 'letter_opener'
 end
 
 group :test do
@@ -68,11 +71,12 @@ group :test do
   # Easy installation and use of chromedriver to run system tests with Chrome
   gem 'chromedriver-helper'
   gem 'poltergeist'
-gem 'shoulda-matchers'
+  gem 'shoulda-matchers'
 end
 
 group :production do
-gem 'pg', '~> 0.20'
+  gem 'pg', '~> 0.20'
+  gem 'mailjet', :git => 'https://github.com/mailjet/mailjet-gem.git'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
