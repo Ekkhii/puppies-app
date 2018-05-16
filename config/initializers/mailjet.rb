@@ -1,4 +1,4 @@
-require 'dotenv-rails'
+require 'dotenv/load'
 
     Mailjet.configure do |config|
 
