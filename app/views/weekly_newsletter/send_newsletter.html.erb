@@ -4,10 +4,6 @@
 	Wahou!
 </p>
 <% user = User.find_by_email(@email) %>
-<%= user.email %>
-<%= user.id %>
+
 
 <a href="/user/unsubscribe/<%= user.id %>">Se desinscrire</a>
-<%= url_for(host: 'https://agile-anchorage-86029.herokuapp.com/',
-            controller: 'user',
-            action: 'unsubscribe') %>
