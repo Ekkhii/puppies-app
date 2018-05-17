@@ -4,6 +4,8 @@ class UserController < ApplicationController
     	@user = User.new
     	@user.email = params[:email]
     	@user.newsletter = true
+        @user.random_string = (0...30).map { ('a'..'z').to_a[rand(26)] }.join
+        puts @user.random_string
     	@user.save
     	if @user.save
     		flash[:notice] = "Vous etes inscrit à la newsletter"
@@ -16,7 +18,7 @@ class UserController < ApplicationController
 
     def unsubscribe
 
-        @user = User.find(params[:id])
+        @user = User.find_by(random_string: params[:random_string])
         @user.newsletter = false
         @user.save
     end

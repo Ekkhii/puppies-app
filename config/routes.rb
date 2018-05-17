@@ -11,7 +11,7 @@ Rails.application.routes.draw do
 
   get :send_newsletter, to: 'home#send_newsletter', as: :send_newsletter
 
-  get 'user/unsubscribe/:id', to: 'user#unsubscribe', as: :unsubscribe
+  get 'user/unsubscribe/:random_string', to: 'user#unsubscribe', as: :unsubscribe
   
   post :insta, to: "home#insta", as: :insta
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

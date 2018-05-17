@@ -13862,3 +13862,366 @@ Processing by HomeController#index as HTML
 Completed 200 OK in 24ms (Views: 23.7ms | ActiveRecord: 0.0ms)
 
 
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to AddRandomStringToUsers (20180517163029)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "users" ADD "random_string" varchar[0m
+  ↳ db/migrate/20180517163029_add_random_string_to_users.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180517163029"]]
+  ↳ bin/rails:9
+  [1m[35m (4.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/subscribe?name=Jean&email=vfv%40ligeVd.fr" for 127.0.0.1 at 2018-05-17 18:34:21 +0200
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ekkhi/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by UserController#subscribe as HTML
+  Parameters: {"name"=>"Jean", "email"=>"vfv@ligeVd.fr"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/user_controller.rb:9
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "vfv@ligeVd.fr"], ["LIMIT", 1]]
+  ↳ app/controllers/user_controller.rb:9
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "newsletter", "created_at", "updated_at", "random_string") VALUES (?, ?, ?, ?, ?)[0m  [["email", "vfv@ligeVd.fr"], ["newsletter", 1], ["created_at", "2018-05-17 16:34:21.228839"], ["updated_at", "2018-05-17 16:34:21.228839"], ["random_string", "rrhscokncnaaxubkuwoqwkzxhnnypt"]]
+  ↳ app/controllers/user_controller.rb:9
+  [1m[35m (3.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/user_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/user_controller.rb:10
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."id" != ? LIMIT ?[0m  [["email", "vfv@ligeVd.fr"], ["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/user_controller.rb:10
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/user_controller.rb:10
+Redirected to http://localhost:3000/
+Completed 302 Found in 34ms (ActiveRecord: 5.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-17 18:34:21 +0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (103.1ms)
+Completed 200 OK in 126ms (Views: 125.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/services" for 127.0.0.1 at 2018-05-17 18:35:45 +0200
+Processing by HomeController#services as HTML
+  Rendering home/services.html.erb within layouts/application
+  Rendered home/services.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 14ms (Views: 13.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/send_newsletter" for 127.0.0.1 at 2018-05-17 18:35:46 +0200
+Processing by HomeController#send_newsletter as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/home_controller.rb:19
+  Rendering weekly_newsletter/send_newsletter.html.erb within layouts/mailer
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "karine@thp.com"], ["LIMIT", 1]]
+  ↳ app/views/weekly_newsletter/send_newsletter.html.erb:6
+  Rendered weekly_newsletter/send_newsletter.html.erb within layouts/mailer (3.3ms)
+WeeklyNewsletter#send_newsletter: processed outbound mail in 9.1ms
+Completed 500 Internal Server Error in 96ms (ActiveRecord: 0.8ms)
+
+
+
+ActionController::UrlGenerationError - No route matches {:action=>"unsubscribe", :controller=>"user", :random_string=>nil}, possible unmatched constraints: [:random_string]:
+  app/views/weekly_newsletter/send_newsletter.html.erb:14:in `_app_views_weekly_newsletter_send_newsletter_html_erb___2897156295642906757_70075598699640'
+  app/services/weekly_newsletter.rb:5:in `send_newsletter'
+  app/controllers/home_controller.rb:22:in `block in send_newsletter'
+  app/controllers/home_controller.rb:19:in `send_newsletter'
+
+Started POST "/__better_errors/652645756fb07828/variables" for 127.0.0.1 at 2018-05-17 18:35:47 +0200
+Started GET "/services" for 127.0.0.1 at 2018-05-17 18:36:22 +0200
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ekkhi/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by HomeController#services as HTML
+  Rendering home/services.html.erb within layouts/application
+  Rendered home/services.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 143ms (Views: 136.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/send_newsletter" for 127.0.0.1 at 2018-05-17 18:36:24 +0200
+Processing by HomeController#send_newsletter as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/home_controller.rb:19
+  Rendering weekly_newsletter/send_newsletter.html.erb within layouts/mailer
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "vfv@ligeVd.fr"], ["LIMIT", 1]]
+  ↳ app/views/weekly_newsletter/send_newsletter.html.erb:6
+  Rendered weekly_newsletter/send_newsletter.html.erb within layouts/mailer (1.7ms)
+  Rendering weekly_newsletter/send_newsletter.text.erb within layouts/mailer
+  Rendered weekly_newsletter/send_newsletter.text.erb within layouts/mailer (0.2ms)
+WeeklyNewsletter#send_newsletter: processed outbound mail in 38.6ms
+Sent mail to vfv@ligeVd.fr (11.9ms)
+Date: Thu, 17 May 2018 18:36:24 +0200
+From: martin.berangere@live.fr
+To: vfv@ligeVd.fr
+Message-ID: <5afdaf8851061_71e92bd52487606f@BMHPOMEN.mail>
+Subject: Newsletter
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5afdaf884fe76_71e92bd524875946";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5afdaf884fe76_71e92bd524875946
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Newsletter
+
+wahou!
+
+----==_mimepart_5afdaf884fe76_71e92bd524875946
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Newsletter</h1>
+
+<p>
+	Wahou!
+</p>
+
+
+<p>Bouton Local</p>
+	<a href="http://localhost:3000/user/unsubscribe/rrhscokncnaaxubkuwoqwkzxhnnypt" method='get'>Se desinscrire </a>
+
+  </body>
+</html>
+
+----==_mimepart_5afdaf884fe76_71e92bd524875946--
+
+Redirected to http://localhost:3000/
+Completed 302 Found in 121ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-17 18:36:24 +0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 17ms (Views: 15.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user/unsubscribe/rrhscokncnaaxubkuwoqwkzxhnnypt" for 127.0.0.1 at 2018-05-17 18:36:32 +0200
+Processing by UserController#unsubscribe as HTML
+  Parameters: {"random_string"=>"rrhscokncnaaxubkuwoqwkzxhnnypt"}
+Completed 404 Not Found in 1ms (ActiveRecord: 0.0ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find User without an ID:
+  app/controllers/user_controller.rb:21:in `unsubscribe'
+
+Started POST "/__better_errors/8d3c6176a28cd8ec/variables" for 127.0.0.1 at 2018-05-17 18:36:32 +0200
+Started GET "/services" for 127.0.0.1 at 2018-05-17 18:36:59 +0200
+Processing by HomeController#services as HTML
+  Rendering home/services.html.erb within layouts/application
+  Rendered home/services.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 16ms (Views: 14.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/send_newsletter" for 127.0.0.1 at 2018-05-17 18:37:00 +0200
+Processing by HomeController#send_newsletter as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/home_controller.rb:19
+  Rendering weekly_newsletter/send_newsletter.html.erb within layouts/mailer
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "vfv@ligeVd.fr"], ["LIMIT", 1]]
+  ↳ app/views/weekly_newsletter/send_newsletter.html.erb:6
+  Rendered weekly_newsletter/send_newsletter.html.erb within layouts/mailer (1.6ms)
+  Rendering weekly_newsletter/send_newsletter.text.erb within layouts/mailer
+  Rendered weekly_newsletter/send_newsletter.text.erb within layouts/mailer (0.2ms)
+WeeklyNewsletter#send_newsletter: processed outbound mail in 14.9ms
+Sent mail to vfv@ligeVd.fr (9.2ms)
+Date: Thu, 17 May 2018 18:37:00 +0200
+From: martin.berangere@live.fr
+To: vfv@ligeVd.fr
+Message-ID: <5afdafacc3f6c_71e92bd52487623a@BMHPOMEN.mail>
+Subject: Newsletter
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5afdafacc338d_71e92bd524876166";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5afdafacc338d_71e92bd524876166
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Newsletter
+
+wahou!
+
+----==_mimepart_5afdafacc338d_71e92bd524876166
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Newsletter</h1>
+
+<p>
+	Wahou!
+</p>
+
+
+<p>Bouton Local</p>
+	<a href="http://localhost:3000/user/unsubscribe/rrhscokncnaaxubkuwoqwkzxhnnypt" method='get'>Se desinscrire </a>
+
+  </body>
+</html>
+
+----==_mimepart_5afdafacc338d_71e92bd524876166--
+
+Redirected to http://localhost:3000/
+Completed 302 Found in 48ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-17 18:37:00 +0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 19ms (Views: 18.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user/unsubscribe/rrhscokncnaaxubkuwoqwkzxhnnypt" for 127.0.0.1 at 2018-05-17 18:37:30 +0200
+Processing by UserController#unsubscribe as HTML
+  Parameters: {"random_string"=>"rrhscokncnaaxubkuwoqwkzxhnnypt"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/user_controller.rb:21
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find User with 'id'=rrhscokncnaaxubkuwoqwkzxhnnypt:
+  app/controllers/user_controller.rb:21:in `unsubscribe'
+
+Started POST "/__better_errors/41ee72365b4ac528/variables" for 127.0.0.1 at 2018-05-17 18:37:30 +0200
+Started GET "/services" for 127.0.0.1 at 2018-05-17 18:40:01 +0200
+Processing by HomeController#services as HTML
+  Rendering home/services.html.erb within layouts/application
+  Rendered home/services.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 14ms (Views: 13.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/send_newsletter" for 127.0.0.1 at 2018-05-17 18:40:02 +0200
+Processing by HomeController#send_newsletter as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/home_controller.rb:19
+  Rendering weekly_newsletter/send_newsletter.html.erb within layouts/mailer
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "vfv@ligeVd.fr"], ["LIMIT", 1]]
+  ↳ app/views/weekly_newsletter/send_newsletter.html.erb:6
+  Rendered weekly_newsletter/send_newsletter.html.erb within layouts/mailer (1.7ms)
+  Rendering weekly_newsletter/send_newsletter.text.erb within layouts/mailer
+  Rendered weekly_newsletter/send_newsletter.text.erb within layouts/mailer (0.3ms)
+WeeklyNewsletter#send_newsletter: processed outbound mail in 14.0ms
+Sent mail to vfv@ligeVd.fr (9.7ms)
+Date: Thu, 17 May 2018 18:40:02 +0200
+From: martin.berangere@live.fr
+To: vfv@ligeVd.fr
+Message-ID: <5afdb062da8a5_71e92bd5248764a4@BMHPOMEN.mail>
+Subject: Newsletter
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5afdb062d9bb8_71e92bd52487634";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5afdb062d9bb8_71e92bd52487634
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Newsletter
+
+wahou!
+
+----==_mimepart_5afdb062d9bb8_71e92bd52487634
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Newsletter</h1>
+
+<p>
+	Wahou!
+</p>
+
+
+<p>Bouton Local</p>
+	<a href="http://localhost:3000/user/unsubscribe/rrhscokncnaaxubkuwoqwkzxhnnypt" method='get'>Se desinscrire </a>
+
+  </body>
+</html>
+
+----==_mimepart_5afdb062d9bb8_71e92bd52487634--
+
+Redirected to http://localhost:3000/
+Completed 302 Found in 47ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-17 18:40:02 +0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 16ms (Views: 15.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user/unsubscribe/rrhscokncnaaxubkuwoqwkzxhnnypt" for 127.0.0.1 at 2018-05-17 18:40:06 +0200
+Processing by UserController#unsubscribe as HTML
+  Parameters: {"random_string"=>"rrhscokncnaaxubkuwoqwkzxhnnypt"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."random_string" = ? LIMIT ?[0m  [["random_string", "rrhscokncnaaxubkuwoqwkzxhnnypt"], ["LIMIT", 1]]
+  ↳ app/controllers/user_controller.rb:21
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/user_controller.rb:23
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."id" != ? LIMIT ?[0m  [["email", "vfv@ligeVd.fr"], ["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/user_controller.rb:23
+  [1m[36mUser Update (0.8ms)[0m  [1m[33mUPDATE "users" SET "newsletter" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["newsletter", 0], ["updated_at", "2018-05-17 16:40:06.466777"], ["id", 18]]
+  ↳ app/controllers/user_controller.rb:23
+  [1m[35m (3.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/user_controller.rb:23
+  Rendering user/unsubscribe.html.erb within layouts/application
+  Rendered user/unsubscribe.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 28ms (Views: 17.1ms | ActiveRecord: 4.9ms)
+
+
