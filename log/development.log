@@ -5814,3 +5814,270 @@ Processing by HomeController#index as HTML
 Completed 200 OK in 15ms (Views: 14.3ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-05-17 09:59:49 +0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (111.9ms)
+Completed 200 OK in 160ms (Views: 154.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/send_mail?name=Helene&email=martin.berangere%40live.fr" for 127.0.0.1 at 2018-05-17 10:02:27 +0200
+Processing by HomeController#send_mail as HTML
+  Parameters: {"name"=>"Helene", "email"=>"martin.berangere@live.fr"}
+  Rendering contact_mailer/contact.html.erb within layouts/mailer
+  Rendered contact_mailer/contact.html.erb within layouts/mailer (0.3ms)
+  Rendering contact_mailer/contact.text.erb within layouts/mailer
+  Rendered contact_mailer/contact.text.erb within layouts/mailer (0.2ms)
+ContactMailer#contact: processed outbound mail in 37.8ms
+Sent mail to martin.berangere0@gmail.com (124.0ms)
+Date: Thu, 17 May 2018 10:02:27 +0200
+From: martin.berangere@live.fr
+To: martin.berangere0@gmail.com
+Message-ID: <5afd3713f2396_1d071e39b4850947@BMHPOMEN.mail>
+Subject: sujet de test
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5afd3713f10f3_1d071e39b485085e";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5afd3713f10f3_1d071e39b485085e
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Bonjour ca va ?
+
+----==_mimepart_5afd3713f10f3_1d071e39b485085e
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Bonjour </h1>
+
+<p>
+	Ca va ?
+</p>
+  </body>
+</html>
+
+----==_mimepart_5afd3713f10f3_1d071e39b485085e--
+
+Redirected to http://localhost:3000/
+Completed 302 Found in 290ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-17 10:02:28 +0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 16ms (Views: 14.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/send_mail?name=Helene&email=martin.berangere%40live.fr" for 127.0.0.1 at 2018-05-17 10:03:39 +0200
+Processing by HomeController#send_mail as HTML
+  Parameters: {"name"=>"Helene", "email"=>"martin.berangere@live.fr"}
+  Rendering contact_mailer/contact.html.erb within layouts/mailer
+  Rendered contact_mailer/contact.html.erb within layouts/mailer (0.3ms)
+  Rendering contact_mailer/contact.text.erb within layouts/mailer
+  Rendered contact_mailer/contact.text.erb within layouts/mailer (0.2ms)
+ContactMailer#contact: processed outbound mail in 10.4ms
+Sent mail to martin.berangere0@gmail.com (12.2ms)
+Date: Thu, 17 May 2018 10:03:39 +0200
+From: martin.berangere@live.fr
+To: martin.berangere0@gmail.com
+Message-ID: <5afd375b3cdcf_1d071e39a30511bf@BMHPOMEN.mail>
+Subject: sujet de test
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5afd375b3c2e7_1d071e39a30510e2";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5afd375b3c2e7_1d071e39a30510e2
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Bonjour ca va ?
+
+----==_mimepart_5afd375b3c2e7_1d071e39a30510e2
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Bonjour </h1>
+
+<p>
+	Ca va ?
+</p>
+  </body>
+</html>
+
+----==_mimepart_5afd375b3c2e7_1d071e39a30510e2--
+
+Redirected to http://localhost:3000/
+Completed 302 Found in 28ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-17 10:03:39 +0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 16ms (Views: 14.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/send_mail?name=Helene&email=martin.berangere%40live.fr" for 127.0.0.1 at 2018-05-17 10:04:41 +0200
+Processing by HomeController#send_mail as HTML
+  Parameters: {"name"=>"Helene", "email"=>"martin.berangere@live.fr"}
+Unpermitted parameter: :email
+Unpermitted parameter: :name
+  Rendering contact_mailer/contact.html.erb within layouts/mailer
+  Rendered contact_mailer/contact.html.erb within layouts/mailer (0.3ms)
+  Rendering contact_mailer/contact.text.erb within layouts/mailer
+  Rendered contact_mailer/contact.text.erb within layouts/mailer (0.2ms)
+ContactMailer#contact: processed outbound mail in 11.4ms
+Sent mail to martin.berangere0@gmail.com (9.8ms)
+Date: Thu, 17 May 2018 10:04:41 +0200
+From: martin.berangere@live.fr
+To: martin.berangere0@gmail.com
+Message-ID: <5afd37991283f_1d071e399a4513c5@BMHPOMEN.mail>
+Subject: sujet de test
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5afd37991183d_1d071e399a4512aa";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5afd37991183d_1d071e399a4512aa
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Bonjour ca va ?
+
+----==_mimepart_5afd37991183d_1d071e399a4512aa
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Bonjour </h1>
+
+<p>
+	Ca va ?
+</p>
+  </body>
+</html>
+
+----==_mimepart_5afd37991183d_1d071e399a4512aa--
+
+Redirected to http://localhost:3000/
+Completed 302 Found in 27ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-17 10:04:41 +0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 16ms (Views: 15.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/send_mail?name=Jean&email=martin.berangere%40live.fr" for 127.0.0.1 at 2018-05-17 10:06:14 +0200
+Processing by HomeController#send_mail as HTML
+  Parameters: {"name"=>"Jean", "email"=>"martin.berangere@live.fr"}
+Unpermitted parameter: :email
+Unpermitted parameter: :name
+  Rendering contact_mailer/contact.html.erb within layouts/mailer
+  Rendered contact_mailer/contact.html.erb within layouts/mailer (0.3ms)
+  Rendering contact_mailer/contact.text.erb within layouts/mailer
+  Rendered contact_mailer/contact.text.erb within layouts/mailer (0.2ms)
+ContactMailer#contact: processed outbound mail in 11.8ms
+Sent mail to martin.berangere0@gmail.com (9.8ms)
+Date: Thu, 17 May 2018 10:06:14 +0200
+From: martin.berangere@live.fr
+To: martin.berangere0@gmail.com
+Message-ID: <5afd37f61ab25_1d071e39bd4515bd@BMHPOMEN.mail>
+Subject: sujet de test
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5afd37f619bf9_1d071e39bd451471";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5afd37f619bf9_1d071e39bd451471
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Bonjour ca va ?
+
+----==_mimepart_5afd37f619bf9_1d071e39bd451471
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Bonjour </h1>
+
+<p>
+	Ca va ?
+</p>
+  </body>
+</html>
+
+----==_mimepart_5afd37f619bf9_1d071e39bd451471--
+
+Redirected to http://localhost:3000/
+Completed 302 Found in 28ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-17 10:06:14 +0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 17ms (Views: 15.7ms | ActiveRecord: 0.0ms)
+
+
