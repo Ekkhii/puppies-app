@@ -5,9 +5,13 @@ Rails.application.routes.draw do
 
   get '/city', to: 'home#city', as: :city
 
+  get '/check_mail', to: 'home#check_mail', as: :check_mail
+
   get :send_mail, to: 'home#send_mail', as: :send_mail
 
-  get :subscribe , to: 'user#subscribe', as: :subscribe
+  get :confirm_newsletter, to: 'home#confirm_newsletter', as: :confirm_newsletter
+
+  get 'subscribe/:random_string' , to: 'user#subscribe', as: :subscribe
 
   get :send_newsletter, to: 'home#send_newsletter', as: :send_newsletter
 

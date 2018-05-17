@@ -1,19 +1,14 @@
 class UserController < ApplicationController
 	def subscribe
+        puts ' on est dans subscribe'
+        puts params.inspect
+        @user = User.find_by(random_string: params[:random_string])
+        puts @user.email
+        @user.newsletter = true
+        @user.save
+        redirect_to root_path
 
-    	@user = User.new
-    	@user.email = params[:email]
-    	@user.newsletter = true
-        @user.random_string = (0...30).map { ('a'..'z').to_a[rand(26)] }.join
-        puts @user.random_string
-    	@user.save
-    	if @user.save
-    		flash[:notice] = "Vous etes inscrit à la newsletter"
-       		
-    	else
-    		flash[:alert] = "Vous etes deja inscrit à la newsletter"
-    	end
-    	redirect_to root_path
+
     end
 
     def unsubscribe

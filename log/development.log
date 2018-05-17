@@ -14235,3 +14235,1490 @@ Completed 200 OK in 28ms (Views: 17.1ms | ActiveRecord: 4.9ms)
   ↳ db/seeds.rb:10
   [1m[35m (10.2ms)[0m  [1m[36mcommit transaction[0m
   ↳ db/seeds.rb:10
+Started GET "/" for 127.0.0.1 at 2018-05-17 19:05:18 +0200
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ekkhi/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (109.2ms)
+Completed 200 OK in 135ms (Views: 129.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/confirm_newsletter?name=Bob&email=bobleponge%40thp.com" for 127.0.0.1 at 2018-05-17 19:05:30 +0200
+Processing by HomeController#confirm_newsletter as HTML
+  Parameters: {"name"=>"Bob", "email"=>"bobleponge@thp.com"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/home_controller.rb:23
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "bobleponge@thp.com"], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:23
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "newsletter", "created_at", "updated_at", "random_string") VALUES (?, ?, ?, ?, ?)[0m  [["email", "bobleponge@thp.com"], ["newsletter", 0], ["created_at", "2018-05-17 17:05:30.386538"], ["updated_at", "2018-05-17 17:05:30.386538"], ["random_string", "kskyaidumrqlryhbkbxkmjawirnrxp"]]
+  ↳ app/controllers/home_controller.rb:23
+  [1m[35m (3.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/home_controller.rb:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/home_controller.rb:24
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."id" != ? LIMIT ?[0m  [["email", "bobleponge@thp.com"], ["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:24
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/home_controller.rb:24
+ConfirmNewsletter#send_newsletter: processed outbound mail in 7.2ms
+Completed 500 Internal Server Error in 114ms (ActiveRecord: 4.5ms)
+
+
+
+ActionView::MissingTemplate - Missing template confirm_newsletter/send_newsletter with "mailer". Searched in:
+  * "confirm_newsletter"
+:
+  app/services/confirm_newsletter.rb:5:in `send_newsletter'
+  app/controllers/home_controller.rb:25:in `confirm_newsletter'
+
+Started POST "/__better_errors/427f77b31cf1abae/variables" for 127.0.0.1 at 2018-05-17 19:05:30 +0200
+Started GET "/confirm_newsletter?name=Bob&email=bobleponge%40thp.com" for 127.0.0.1 at 2018-05-17 19:07:35 +0200
+Processing by HomeController#confirm_newsletter as HTML
+  Parameters: {"name"=>"Bob", "email"=>"bobleponge@thp.com"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/home_controller.rb:23
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "bobleponge@thp.com"], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:23
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/home_controller.rb:23
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/home_controller.rb:24
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "bobleponge@thp.com"], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:24
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/home_controller.rb:24
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-17 19:07:35 +0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 19ms (Views: 18.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/confirm_newsletter?name=Martin+Berangere&email=scarpahugo%40gmail.com" for 127.0.0.1 at 2018-05-17 19:08:01 +0200
+Processing by HomeController#confirm_newsletter as HTML
+  Parameters: {"name"=>"Martin Berangere", "email"=>"scarpahugo@gmail.com"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/home_controller.rb:23
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "scarpahugo@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:23
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "newsletter", "created_at", "updated_at", "random_string") VALUES (?, ?, ?, ?, ?)[0m  [["email", "scarpahugo@gmail.com"], ["newsletter", 0], ["created_at", "2018-05-17 17:08:01.139006"], ["updated_at", "2018-05-17 17:08:01.139006"], ["random_string", "ddvntybunflryioefdawjorlvvrsap"]]
+  ↳ app/controllers/home_controller.rb:23
+  [1m[35m (14.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/home_controller.rb:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/home_controller.rb:24
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."id" != ? LIMIT ?[0m  [["email", "scarpahugo@gmail.com"], ["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:24
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/home_controller.rb:24
+  Rendering confirm_newsletter/send_newsletter.html.erb within layouts/mailer
+  Rendered confirm_newsletter/send_newsletter.html.erb within layouts/mailer (21.4ms)
+ConfirmNewsletter#send_newsletter: processed outbound mail in 28.5ms
+Completed 500 Internal Server Error in 50ms (ActiveRecord: 15.5ms)
+
+
+
+NameError - undefined local variable or method `subscribe_path' for #<#<Class:0x00007f434d234118>:0x00007f434d1ee190>
+Did you mean?  subscribe_url:
+  app/views/confirm_newsletter/send_newsletter.html.erb:3:in `_app_views_confirm_newsletter_send_newsletter_html_erb___1953070254342992279_69963516897600'
+  app/services/confirm_newsletter.rb:5:in `send_newsletter'
+  app/controllers/home_controller.rb:25:in `confirm_newsletter'
+
+Started POST "/__better_errors/f65aa49e3e1d13e7/variables" for 127.0.0.1 at 2018-05-17 19:08:01 +0200
+Started GET "/confirm_newsletter?name=Martin+Berangere&email=bobleponge%40thp.com" for 127.0.0.1 at 2018-05-17 19:09:07 +0200
+Processing by HomeController#confirm_newsletter as HTML
+  Parameters: {"name"=>"Martin Berangere", "email"=>"bobleponge@thp.com"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/home_controller.rb:23
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "bobleponge@thp.com"], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:23
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/home_controller.rb:23
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/home_controller.rb:24
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "bobleponge@thp.com"], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:24
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/home_controller.rb:24
+Redirected to http://localhost:3000/
+Completed 302 Found in 7ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-17 19:09:07 +0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 38ms (Views: 37.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/confirm_newsletter?name=gerf&email=hygt%40jet.ccom" for 127.0.0.1 at 2018-05-17 19:09:19 +0200
+Processing by HomeController#confirm_newsletter as HTML
+  Parameters: {"name"=>"gerf", "email"=>"hygt@jet.ccom"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/home_controller.rb:23
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "hygt@jet.ccom"], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:23
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("email", "newsletter", "created_at", "updated_at", "random_string") VALUES (?, ?, ?, ?, ?)[0m  [["email", "hygt@jet.ccom"], ["newsletter", 0], ["created_at", "2018-05-17 17:09:19.233094"], ["updated_at", "2018-05-17 17:09:19.233094"], ["random_string", "kpzztdvwuapeafgywoczmajybsfjew"]]
+  ↳ app/controllers/home_controller.rb:23
+  [1m[35m (3.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/home_controller.rb:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/home_controller.rb:24
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."id" != ? LIMIT ?[0m  [["email", "hygt@jet.ccom"], ["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:24
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/home_controller.rb:24
+  Rendering confirm_newsletter/send_newsletter.html.erb within layouts/mailer
+  Rendered confirm_newsletter/send_newsletter.html.erb within layouts/mailer (0.4ms)
+  Rendering confirm_newsletter/send_newsletter.text.erb within layouts/mailer
+  Rendered confirm_newsletter/send_newsletter.text.erb within layouts/mailer (0.2ms)
+ConfirmNewsletter#send_newsletter: processed outbound mail in 22.0ms
+Sent mail to hygt@jet.ccom (10.4ms)
+Date: Thu, 17 May 2018 19:09:19 +0200
+From: martin.berangere@live.fr
+To: hygt@jet.ccom
+Message-ID: <5afdb73f40be0_76612e58cb813ab@BMHPOMEN.mail>
+Subject: Newsletter
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5afdb73f3fc13_76612e58cb81294";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5afdb73f3fc13_76612e58cb81294
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Confirmez votre inscription 
+
+
+----==_mimepart_5afdb73f3fc13_76612e58cb81294
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Confirmez votre inscription</h1>
+
+<a href="http://localhost/subscribe" method='get'>ICI</a>
+  </body>
+</html>
+
+----==_mimepart_5afdb73f3fc13_76612e58cb81294--
+
+Completed 500 Internal Server Error in 291ms (ActiveRecord: 5.0ms)
+
+
+
+NameError - undefined local variable or method `newsletter_path' for #<HomeController:0x00007f4340b42f28>:
+  app/controllers/home_controller.rb:26:in `confirm_newsletter'
+
+Started POST "/__better_errors/18224febec9bfc72/variables" for 127.0.0.1 at 2018-05-17 19:09:19 +0200
+Started GET "/confirm_newsletter?name=Henri&email=geroje%40jtp.ce" for 127.0.0.1 at 2018-05-17 19:15:09 +0200
+Processing by HomeController#confirm_newsletter as HTML
+  Parameters: {"name"=>"Henri", "email"=>"geroje@jtp.ce"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/home_controller.rb:23
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "geroje@jtp.ce"], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:23
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "newsletter", "created_at", "updated_at", "random_string") VALUES (?, ?, ?, ?, ?)[0m  [["email", "geroje@jtp.ce"], ["newsletter", 0], ["created_at", "2018-05-17 17:15:09.149348"], ["updated_at", "2018-05-17 17:15:09.149348"], ["random_string", "rfitqikvmmukcxksrjqsirgwggfpte"]]
+  ↳ app/controllers/home_controller.rb:23
+  [1m[35m (3.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/home_controller.rb:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/home_controller.rb:24
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."id" != ? LIMIT ?[0m  [["email", "geroje@jtp.ce"], ["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:24
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/home_controller.rb:24
+  Rendering confirm_newsletter/send_newsletter.html.erb within layouts/mailer
+  Rendered confirm_newsletter/send_newsletter.html.erb within layouts/mailer (0.3ms)
+  Rendering confirm_newsletter/send_newsletter.text.erb within layouts/mailer
+  Rendered confirm_newsletter/send_newsletter.text.erb within layouts/mailer (0.1ms)
+ConfirmNewsletter#send_newsletter: processed outbound mail in 10.2ms
+Sent mail to geroje@jtp.ce (14.7ms)
+Date: Thu, 17 May 2018 19:15:09 +0200
+From: martin.berangere@live.fr
+To: geroje@jtp.ce
+Message-ID: <5afdb89d2a086_76612e58c1815b7@BMHPOMEN.mail>
+Subject: Newsletter
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5afdb89d29177_76612e58c181491";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5afdb89d29177_76612e58c181491
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Confirmez votre inscription 
+
+
+----==_mimepart_5afdb89d29177_76612e58c181491
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Confirmez votre inscription</h1>
+
+<a href="http://localhost/subscribe" method='get'>ICI</a>
+  </body>
+</html>
+
+----==_mimepart_5afdb89d29177_76612e58c181491--
+
+Redirected to http://localhost:3000/confirm_newsletter
+Completed 302 Found in 44ms (ActiveRecord: 5.1ms)
+
+
+Started GET "/confirm_newsletter" for 127.0.0.1 at 2018-05-17 19:15:09 +0200
+Processing by HomeController#confirm_newsletter as HTML
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/home_controller.rb:23
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:23
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/home_controller.rb:23
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/home_controller.rb:24
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:24
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/home_controller.rb:24
+Redirected to http://localhost:3000/
+Completed 302 Found in 9ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-17 19:15:09 +0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 30ms (Views: 29.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/confirm_newsletter?name=henriah&email=mape%40papa.apa" for 127.0.0.1 at 2018-05-17 19:16:15 +0200
+Processing by HomeController#confirm_newsletter as HTML
+  Parameters: {"name"=>"henriah", "email"=>"mape@papa.apa"}
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/home_controller.rb:23
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "mape@papa.apa"], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:23
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("email", "newsletter", "created_at", "updated_at", "random_string") VALUES (?, ?, ?, ?, ?)[0m  [["email", "mape@papa.apa"], ["newsletter", 0], ["created_at", "2018-05-17 17:16:15.264220"], ["updated_at", "2018-05-17 17:16:15.264220"], ["random_string", "smblguavlftbygohzgvdplusqsjcnk"]]
+  ↳ app/controllers/home_controller.rb:23
+  [1m[35m (3.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/home_controller.rb:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/home_controller.rb:24
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."id" != ? LIMIT ?[0m  [["email", "mape@papa.apa"], ["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:24
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/home_controller.rb:24
+  Rendering confirm_newsletter/send_newsletter.html.erb within layouts/mailer
+  Rendered confirm_newsletter/send_newsletter.html.erb within layouts/mailer (0.7ms)
+  Rendering confirm_newsletter/send_newsletter.text.erb within layouts/mailer
+  Rendered confirm_newsletter/send_newsletter.text.erb within layouts/mailer (0.2ms)
+ConfirmNewsletter#send_newsletter: processed outbound mail in 15.1ms
+Sent mail to mape@papa.apa (12.7ms)
+Date: Thu, 17 May 2018 19:16:15 +0200
+From: martin.berangere@live.fr
+To: mape@papa.apa
+Message-ID: <5afdb8df46fc8_76612e58f381742@BMHPOMEN.mail>
+Subject: Newsletter
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5afdb8df4547a_76612e58f3816d7";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5afdb8df4547a_76612e58f3816d7
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Confirmez votre inscription 
+
+
+----==_mimepart_5afdb8df4547a_76612e58f3816d7
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Confirmez votre inscription</h1>
+
+<a href="http://localhost/subscribe" method='get'>ICI</a>
+  </body>
+</html>
+
+----==_mimepart_5afdb8df4547a_76612e58f3816d7--
+
+Redirected to http://localhost:3000/confirm_newsletter
+Completed 302 Found in 41ms (ActiveRecord: 5.3ms)
+
+
+Started GET "/confirm_newsletter" for 127.0.0.1 at 2018-05-17 19:16:15 +0200
+Processing by HomeController#confirm_newsletter as HTML
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/home_controller.rb:23
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:23
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/home_controller.rb:23
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/home_controller.rb:24
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:24
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/home_controller.rb:24
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-17 19:16:15 +0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 30ms (Views: 29.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/confirm_newsletter?name=Marie&email=maire%40thp.com" for 127.0.0.1 at 2018-05-17 19:18:28 +0200
+Processing by HomeController#confirm_newsletter as HTML
+  Parameters: {"name"=>"Marie", "email"=>"maire@thp.com"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/home_controller.rb:23
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "maire@thp.com"], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:23
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "newsletter", "created_at", "updated_at", "random_string") VALUES (?, ?, ?, ?, ?)[0m  [["email", "maire@thp.com"], ["newsletter", 0], ["created_at", "2018-05-17 17:18:28.656592"], ["updated_at", "2018-05-17 17:18:28.656592"], ["random_string", "dbzbqtdeyhxuurwnqdtapsrkfglkum"]]
+  ↳ app/controllers/home_controller.rb:23
+  [1m[35m (3.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/home_controller.rb:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/home_controller.rb:24
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."id" != ? LIMIT ?[0m  [["email", "maire@thp.com"], ["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:24
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/home_controller.rb:24
+ConfirmNewsletter#confirm_newsletter: processed outbound mail in 6.3ms
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 5.1ms)
+
+
+
+ActionView::MissingTemplate - Missing template confirm_newsletter/confirm_newsletter with "mailer". Searched in:
+  * "confirm_newsletter"
+:
+  app/services/confirm_newsletter.rb:5:in `confirm_newsletter'
+  app/controllers/home_controller.rb:25:in `confirm_newsletter'
+
+Started POST "/__better_errors/5fa1a9f9b2a36328/variables" for 127.0.0.1 at 2018-05-17 19:18:28 +0200
+Started GET "/confirm_newsletter?name=Marie&email=aureli%40thp.com" for 127.0.0.1 at 2018-05-17 19:20:58 +0200
+Processing by HomeController#confirm_newsletter as HTML
+  Parameters: {"name"=>"Marie", "email"=>"aureli@thp.com"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/home_controller.rb:23
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "aureli@thp.com"], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:23
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "newsletter", "created_at", "updated_at", "random_string") VALUES (?, ?, ?, ?, ?)[0m  [["email", "aureli@thp.com"], ["newsletter", 0], ["created_at", "2018-05-17 17:20:58.881478"], ["updated_at", "2018-05-17 17:20:58.881478"], ["random_string", "nnrvmtcmevukgtfyevzhfozwrqwpcn"]]
+  ↳ app/controllers/home_controller.rb:23
+  [1m[35m (4.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/home_controller.rb:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/home_controller.rb:24
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."id" != ? LIMIT ?[0m  [["email", "aureli@thp.com"], ["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:24
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/home_controller.rb:24
+ConfirmNewsletter#confirm_newsletter: processed outbound mail in 4.2ms
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 5.4ms)
+
+
+
+ActionView::MissingTemplate - Missing template confirm_newsletter/confirm_newsletter with "mailer". Searched in:
+  * "confirm_newsletter"
+:
+  app/services/confirm_newsletter.rb:5:in `confirm_newsletter'
+  app/controllers/home_controller.rb:26:in `confirm_newsletter'
+
+Started POST "/__better_errors/efa6a4f8a3489f70/variables" for 127.0.0.1 at 2018-05-17 19:20:59 +0200
+Started GET "/confirm_newsletter?name=Marie&email=takrenbgbs%40thp.com" for 127.0.0.1 at 2018-05-17 19:22:22 +0200
+Processing by HomeController#confirm_newsletter as HTML
+  Parameters: {"name"=>"Marie", "email"=>"takrenbgbs@thp.com"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/home_controller.rb:23
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "takrenbgbs@thp.com"], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:23
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "newsletter", "created_at", "updated_at", "random_string") VALUES (?, ?, ?, ?, ?)[0m  [["email", "takrenbgbs@thp.com"], ["newsletter", 0], ["created_at", "2018-05-17 17:22:22.871453"], ["updated_at", "2018-05-17 17:22:22.871453"], ["random_string", "ndwpruomplpqjqnsdfnsglrebjfbla"]]
+  ↳ app/controllers/home_controller.rb:23
+  [1m[35m (3.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/home_controller.rb:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/home_controller.rb:24
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."id" != ? LIMIT ?[0m  [["email", "takrenbgbs@thp.com"], ["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:24
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/home_controller.rb:24
+  Rendering confirm_newsletter/confirm_newsletter.html.erb within layouts/mailer
+  Rendered confirm_newsletter/confirm_newsletter.html.erb within layouts/mailer (0.3ms)
+  Rendering confirm_newsletter/confirm_newsletter.text.erb within layouts/mailer
+  Rendered confirm_newsletter/confirm_newsletter.text.erb within layouts/mailer (0.3ms)
+ConfirmNewsletter#confirm_newsletter: processed outbound mail in 12.1ms
+Sent mail to takrenbgbs@thp.com (10.8ms)
+Date: Thu, 17 May 2018 19:22:22 +0200
+From: martin.berangere@live.fr
+To: takrenbgbs@thp.com
+Message-ID: <5afdba4ed9df2_76612e58ab01967@BMHPOMEN.mail>
+Subject: Confirm Newsletter
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5afdba4ed8e52_76612e58ab01859";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5afdba4ed8e52_76612e58ab01859
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Confirmez votre inscription 
+
+
+----==_mimepart_5afdba4ed8e52_76612e58ab01859
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Confirmez votre inscription</h1>
+
+<a href="http://localhost/subscribe" method='get'>ICI</a>
+  </body>
+</html>
+
+----==_mimepart_5afdba4ed8e52_76612e58ab01859--
+
+Redirected to http://localhost:3000/confirm_newsletter
+Completed 302 Found in 33ms (ActiveRecord: 4.3ms)
+
+
+Started GET "/confirm_newsletter" for 127.0.0.1 at 2018-05-17 19:22:22 +0200
+Processing by HomeController#confirm_newsletter as HTML
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/home_controller.rb:23
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:23
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/home_controller.rb:23
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/home_controller.rb:24
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:24
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/home_controller.rb:24
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-17 19:22:22 +0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 19ms (Views: 18.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/confirm_newsletter?name=Henri&email=Jacque%40htppp.com" for 127.0.0.1 at 2018-05-17 19:23:53 +0200
+Processing by HomeController#confirm_newsletter as HTML
+  Parameters: {"name"=>"Henri", "email"=>"Jacque@htppp.com"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/home_controller.rb:23
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "Jacque@htppp.com"], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:23
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "newsletter", "created_at", "updated_at", "random_string") VALUES (?, ?, ?, ?, ?)[0m  [["email", "Jacque@htppp.com"], ["newsletter", 0], ["created_at", "2018-05-17 17:23:53.412534"], ["updated_at", "2018-05-17 17:23:53.412534"], ["random_string", "qefrhgzsnemrcasuvpmcmrlcmptdeo"]]
+  ↳ app/controllers/home_controller.rb:23
+  [1m[35m (4.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/home_controller.rb:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/home_controller.rb:24
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."id" != ? LIMIT ?[0m  [["email", "Jacque@htppp.com"], ["id", 27], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:24
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/home_controller.rb:24
+  Rendering confirm_newsletter/confirm_newsletter.html.erb within layouts/mailer
+  Rendered confirm_newsletter/confirm_newsletter.html.erb within layouts/mailer (0.3ms)
+  Rendering confirm_newsletter/confirm_newsletter.text.erb within layouts/mailer
+  Rendered confirm_newsletter/confirm_newsletter.text.erb within layouts/mailer (0.2ms)
+ConfirmNewsletter#confirm_newsletter: processed outbound mail in 12.4ms
+Sent mail to Jacque@htppp.com (15.3ms)
+Date: Thu, 17 May 2018 19:23:53 +0200
+From: martin.berangere@live.fr
+To: Jacque@htppp.com
+Message-ID: <5afdbaa96b3bc_76612e58df821bc@BMHPOMEN.mail>
+Subject: Confirm Newsletter
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5afdbaa96a109_76612e58df82064";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5afdbaa96a109_76612e58df82064
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Confirmez votre inscription 
+
+
+----==_mimepart_5afdbaa96a109_76612e58df82064
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Confirmez votre inscription</h1>
+
+<a href="http://localhost/subscribe" method='get'>ICI</a>
+  </body>
+</html>
+
+----==_mimepart_5afdbaa96a109_76612e58df82064--
+
+Redirected to http://localhost:3000/confirm_newsletter
+Completed 302 Found in 51ms (ActiveRecord: 5.6ms)
+
+
+Started GET "/confirm_newsletter" for 127.0.0.1 at 2018-05-17 19:23:53 +0200
+Processing by HomeController#confirm_newsletter as HTML
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/home_controller.rb:23
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:23
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/home_controller.rb:23
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/home_controller.rb:24
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:24
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/home_controller.rb:24
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-17 19:23:53 +0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 21ms (Views: 20.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/confirm_newsletter?name=Henri&email=bobobobo%40thp.com" for 127.0.0.1 at 2018-05-17 19:26:19 +0200
+Processing by HomeController#confirm_newsletter as HTML
+  Parameters: {"name"=>"Henri", "email"=>"bobobobo@thp.com"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/home_controller.rb:27
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "bobobobo@thp.com"], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:27
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "newsletter", "created_at", "updated_at", "random_string") VALUES (?, ?, ?, ?, ?)[0m  [["email", "bobobobo@thp.com"], ["newsletter", 0], ["created_at", "2018-05-17 17:26:19.597922"], ["updated_at", "2018-05-17 17:26:19.597922"], ["random_string", "jyzauyvkjyhrqkzdcxvbpedighdoit"]]
+  ↳ app/controllers/home_controller.rb:27
+  [1m[35m (4.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/home_controller.rb:27
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/home_controller.rb:28
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."id" != ? LIMIT ?[0m  [["email", "bobobobo@thp.com"], ["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:28
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/home_controller.rb:28
+  Rendering confirm_newsletter/confirm_newsletter.html.erb within layouts/mailer
+  Rendered confirm_newsletter/confirm_newsletter.html.erb within layouts/mailer (0.4ms)
+  Rendering confirm_newsletter/confirm_newsletter.text.erb within layouts/mailer
+  Rendered confirm_newsletter/confirm_newsletter.text.erb within layouts/mailer (0.2ms)
+ConfirmNewsletter#confirm_newsletter: processed outbound mail in 10.4ms
+Sent mail to bobobobo@thp.com (11.4ms)
+Date: Thu, 17 May 2018 19:26:19 +0200
+From: martin.berangere@live.fr
+To: bobobobo@thp.com
+Message-ID: <5afdbb3b97e00_76612e58c1823a0@BMHPOMEN.mail>
+Subject: Confirm Newsletter
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5afdbb3b970be_76612e58c182258";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5afdbb3b970be_76612e58c182258
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Confirmez votre inscription 
+
+
+----==_mimepart_5afdbb3b970be_76612e58c182258
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Confirmez votre inscription</h1>
+
+<a href="http://localhost/subscribe" method='get'>ICI</a>
+  </body>
+</html>
+
+----==_mimepart_5afdbb3b970be_76612e58c182258--
+
+Redirected to http://localhost:3000/check_mail
+Completed 302 Found in 42ms (ActiveRecord: 5.8ms)
+
+
+Started GET "/check_mail" for 127.0.0.1 at 2018-05-17 19:26:19 +0200
+Processing by HomeController#check_mail as HTML
+  Rendering home/check_mail.erb within layouts/application
+  Rendered home/check_mail.erb within layouts/application (0.3ms)
+Completed 200 OK in 19ms (Views: 18.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/confirm_newsletter?name=Henri&email=fgfgsdibdqsjsh%40thp.com" for 127.0.0.1 at 2018-05-17 19:28:35 +0200
+Processing by HomeController#confirm_newsletter as HTML
+  Parameters: {"name"=>"Henri", "email"=>"fgfgsdibdqsjsh@thp.com"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/home_controller.rb:27
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "fgfgsdibdqsjsh@thp.com"], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:27
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "newsletter", "created_at", "updated_at", "random_string") VALUES (?, ?, ?, ?, ?)[0m  [["email", "fgfgsdibdqsjsh@thp.com"], ["newsletter", 0], ["created_at", "2018-05-17 17:28:35.908266"], ["updated_at", "2018-05-17 17:28:35.908266"], ["random_string", "ovkmlyfpqjkvcihojkzcdwaggcjofr"]]
+  ↳ app/controllers/home_controller.rb:27
+  [1m[35m (6.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/home_controller.rb:27
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/home_controller.rb:28
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."id" != ? LIMIT ?[0m  [["email", "fgfgsdibdqsjsh@thp.com"], ["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:28
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/home_controller.rb:28
+  Rendering confirm_newsletter/confirm_newsletter.html.erb within layouts/mailer
+  Rendered confirm_newsletter/confirm_newsletter.html.erb within layouts/mailer (0.4ms)
+  Rendering confirm_newsletter/confirm_newsletter.text.erb within layouts/mailer
+  Rendered confirm_newsletter/confirm_newsletter.text.erb within layouts/mailer (0.2ms)
+ConfirmNewsletter#confirm_newsletter: processed outbound mail in 11.1ms
+Sent mail to fgfgsdibdqsjsh@thp.com (10.3ms)
+Date: Thu, 17 May 2018 19:28:35 +0200
+From: martin.berangere@live.fr
+To: fgfgsdibdqsjsh@thp.com
+Message-ID: <5afdbbc3e4975_76612e58f3825a6@BMHPOMEN.mail>
+Subject: Confirm Newsletter
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5afdbbc3e3a44_76612e58f382467";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5afdbbc3e3a44_76612e58f382467
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Confirmez votre inscription 
+
+
+----==_mimepart_5afdbbc3e3a44_76612e58f382467
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Confirmez votre inscription</h1>
+
+<a href="http://localhost/subscribe" method='get'>ICI</a>
+  </body>
+</html>
+
+----==_mimepart_5afdbbc3e3a44_76612e58f382467--
+
+Redirected to http://localhost:3000/check_mail
+Completed 302 Found in 46ms (ActiveRecord: 8.6ms)
+
+
+Started GET "/check_mail" for 127.0.0.1 at 2018-05-17 19:28:35 +0200
+Processing by HomeController#check_mail as HTML
+  Rendering home/check_mail.erb within layouts/application
+  Rendered home/check_mail.erb within layouts/application (0.2ms)
+Completed 200 OK in 18ms (Views: 17.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/confirm_newsletter?name=Henri&email=dshdsqkj%40thp.com" for 127.0.0.1 at 2018-05-17 19:29:41 +0200
+Processing by HomeController#confirm_newsletter as HTML
+  Parameters: {"name"=>"Henri", "email"=>"dshdsqkj@thp.com"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/home_controller.rb:27
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "dshdsqkj@thp.com"], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:27
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "newsletter", "created_at", "updated_at", "random_string") VALUES (?, ?, ?, ?, ?)[0m  [["email", "dshdsqkj@thp.com"], ["newsletter", 0], ["created_at", "2018-05-17 17:29:41.256380"], ["updated_at", "2018-05-17 17:29:41.256380"], ["random_string", "tcatmoicmfsqumlhbgkmzogrlsxhxc"]]
+  ↳ app/controllers/home_controller.rb:27
+  [1m[35m (3.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/home_controller.rb:27
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/home_controller.rb:28
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."id" != ? LIMIT ?[0m  [["email", "dshdsqkj@thp.com"], ["id", 30], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:28
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/home_controller.rb:28
+  Rendering confirm_newsletter/confirm_newsletter.html.erb within layouts/mailer
+  Rendered confirm_newsletter/confirm_newsletter.html.erb within layouts/mailer (0.3ms)
+  Rendering confirm_newsletter/confirm_newsletter.text.erb within layouts/mailer
+  Rendered confirm_newsletter/confirm_newsletter.text.erb within layouts/mailer (0.1ms)
+ConfirmNewsletter#confirm_newsletter: processed outbound mail in 16.3ms
+Sent mail to dshdsqkj@thp.com (10.6ms)
+Date: Thu, 17 May 2018 19:29:41 +0200
+From: martin.berangere@live.fr
+To: dshdsqkj@thp.com
+Message-ID: <5afdbc0545f76_76612e58cb82764@BMHPOMEN.mail>
+Subject: Confirm Newsletter
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5afdbc0543a52_76612e58cb82694";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5afdbc0543a52_76612e58cb82694
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Confirmez votre inscription 
+
+
+----==_mimepart_5afdbc0543a52_76612e58cb82694
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Confirmez votre inscription</h1>
+
+<a href="http://localhost/subscribe" method='get'>ICI</a>
+  </body>
+</html>
+
+----==_mimepart_5afdbc0543a52_76612e58cb82694--
+
+Redirected to http://localhost:3000/check_mail
+Completed 302 Found in 48ms (ActiveRecord: 4.8ms)
+
+
+Started GET "/check_mail" for 127.0.0.1 at 2018-05-17 19:29:41 +0200
+Processing by HomeController#check_mail as HTML
+  Rendering home/check_mail.erb within layouts/application
+  Rendered home/check_mail.erb within layouts/application (0.3ms)
+Completed 200 OK in 17ms (Views: 15.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-17 19:31:47 +0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 31ms (Views: 30.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/confirm_newsletter?name=geua&email=geyfsss%40thp.cde" for 127.0.0.1 at 2018-05-17 19:31:56 +0200
+Processing by HomeController#confirm_newsletter as HTML
+  Parameters: {"name"=>"geua", "email"=>"geyfsss@thp.cde"}
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/home_controller.rb:27
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "geyfsss@thp.cde"], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:27
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("email", "newsletter", "created_at", "updated_at", "random_string") VALUES (?, ?, ?, ?, ?)[0m  [["email", "geyfsss@thp.cde"], ["newsletter", 0], ["created_at", "2018-05-17 17:31:56.202386"], ["updated_at", "2018-05-17 17:31:56.202386"], ["random_string", "ahgksspdnyxohgwkfdavadmehytnhc"]]
+  ↳ app/controllers/home_controller.rb:27
+  [1m[35m (3.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/home_controller.rb:27
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/home_controller.rb:28
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."id" != ? LIMIT ?[0m  [["email", "geyfsss@thp.cde"], ["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:28
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/home_controller.rb:28
+  Rendering confirm_newsletter/confirm_newsletter.html.erb within layouts/mailer
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "geyfsss@thp.cde"], ["LIMIT", 1]]
+  ↳ app/views/confirm_newsletter/confirm_newsletter.html.erb:3
+  Rendered confirm_newsletter/confirm_newsletter.html.erb within layouts/mailer (20.2ms)
+  Rendering confirm_newsletter/confirm_newsletter.text.erb within layouts/mailer
+  Rendered confirm_newsletter/confirm_newsletter.text.erb within layouts/mailer (0.2ms)
+ConfirmNewsletter#confirm_newsletter: processed outbound mail in 38.9ms
+Sent mail to geyfsss@thp.cde (16.5ms)
+Date: Thu, 17 May 2018 19:31:56 +0200
+From: martin.berangere@live.fr
+To: geyfsss@thp.cde
+Message-ID: <5afdbc8c3daed_76612e58f382934@BMHPOMEN.mail>
+Subject: Confirm Newsletter
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5afdbc8c3b99c_76612e58f3828bd";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5afdbc8c3b99c_76612e58f3828bd
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Confirmez votre inscription 
+
+
+----==_mimepart_5afdbc8c3b99c_76612e58f3828bd
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Confirmez votre inscription</h1>
+
+
+
+<p>Bouton Local</p>
+	<a href="http://localhost:3000/subscribe.ahgksspdnyxohgwkfdavadmehytnhc" method='get'>confirmer </a>
+
+  </body>
+</html>
+
+----==_mimepart_5afdbc8c3b99c_76612e58f3828bd--
+
+Redirected to http://localhost:3000/check_mail
+Completed 302 Found in 69ms (ActiveRecord: 5.5ms)
+
+
+Started GET "/check_mail" for 127.0.0.1 at 2018-05-17 19:31:56 +0200
+Processing by HomeController#check_mail as HTML
+  Rendering home/check_mail.erb within layouts/application
+  Rendered home/check_mail.erb within layouts/application (0.3ms)
+Completed 200 OK in 31ms (Views: 29.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/subscribe.ahgksspdnyxohgwkfdavadmehytnhc" for 127.0.0.1 at 2018-05-17 19:32:02 +0200
+Processing by UserController#subscribe as 
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/user_controller.rb:9
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/user_controller.rb:9
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/user_controller.rb:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/user_controller.rb:10
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/user_controller.rb:10
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/user_controller.rb:10
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-17 19:32:03 +0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 18ms (Views: 17.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/confirm_newsletter?name=bobby&email=bobjjs%40etr.ee" for 127.0.0.1 at 2018-05-17 19:34:00 +0200
+Processing by HomeController#confirm_newsletter as HTML
+  Parameters: {"name"=>"bobby", "email"=>"bobjjs@etr.ee"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/home_controller.rb:27
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "bobjjs@etr.ee"], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:27
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "newsletter", "created_at", "updated_at", "random_string") VALUES (?, ?, ?, ?, ?)[0m  [["email", "bobjjs@etr.ee"], ["newsletter", 0], ["created_at", "2018-05-17 17:34:00.856837"], ["updated_at", "2018-05-17 17:34:00.856837"], ["random_string", "wrfrzyypcihgoinihlkxlosugnwvjt"]]
+  ↳ app/controllers/home_controller.rb:27
+  [1m[35m (3.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/home_controller.rb:27
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/home_controller.rb:28
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."id" != ? LIMIT ?[0m  [["email", "bobjjs@etr.ee"], ["id", 32], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:28
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/home_controller.rb:28
+  Rendering confirm_newsletter/confirm_newsletter.html.erb within layouts/mailer
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "bobjjs@etr.ee"], ["LIMIT", 1]]
+  ↳ app/views/confirm_newsletter/confirm_newsletter.html.erb:3
+  Rendered confirm_newsletter/confirm_newsletter.html.erb within layouts/mailer (1.3ms)
+  Rendering confirm_newsletter/confirm_newsletter.text.erb within layouts/mailer
+  Rendered confirm_newsletter/confirm_newsletter.text.erb within layouts/mailer (0.2ms)
+ConfirmNewsletter#confirm_newsletter: processed outbound mail in 12.0ms
+Sent mail to bobjjs@etr.ee (11.0ms)
+Date: Thu, 17 May 2018 19:34:00 +0200
+From: martin.berangere@live.fr
+To: bobjjs@etr.ee
+Message-ID: <5afdbd08d7910_76612e58c18315e@BMHPOMEN.mail>
+Subject: Confirm Newsletter
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5afdbd08d6bcb_76612e58c18303e";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5afdbd08d6bcb_76612e58c18303e
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Confirmez votre inscription 
+
+
+----==_mimepart_5afdbd08d6bcb_76612e58c18303e
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Confirmez votre inscription</h1>
+
+
+
+<p>Bouton Local</p>
+	<a href="http://localhost:3000/subscribe.wrfrzyypcihgoinihlkxlosugnwvjt" method='get'>confirmer </a>
+
+  </body>
+</html>
+
+----==_mimepart_5afdbd08d6bcb_76612e58c18303e--
+
+Redirected to http://localhost:3000/check_mail
+Completed 302 Found in 44ms (ActiveRecord: 5.0ms)
+
+
+Started GET "/check_mail" for 127.0.0.1 at 2018-05-17 19:34:00 +0200
+Processing by HomeController#check_mail as HTML
+  Rendering home/check_mail.erb within layouts/application
+  Rendered home/check_mail.erb within layouts/application (0.2ms)
+Completed 200 OK in 15ms (Views: 14.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/subscribe.wrfrzyypcihgoinihlkxlosugnwvjt" for 127.0.0.1 at 2018-05-17 19:34:06 +0200
+Processing by UserController#subscribe as 
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."random_string" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/user_controller.rb:4
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.2ms)
+
+
+
+NoMethodError - undefined method `newsletter=' for nil:NilClass:
+  app/controllers/user_controller.rb:5:in `subscribe'
+
+Started POST "/__better_errors/478f853b13dc24e7/variables" for 127.0.0.1 at 2018-05-17 19:34:06 +0200
+Started GET "/confirm_newsletter?name=Henri&email=fsldkfjsdl%40pele.fr" for 127.0.0.1 at 2018-05-17 19:36:54 +0200
+Processing by HomeController#confirm_newsletter as HTML
+  Parameters: {"name"=>"Henri", "email"=>"fsldkfjsdl@pele.fr"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/home_controller.rb:27
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "fsldkfjsdl@pele.fr"], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:27
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "newsletter", "created_at", "updated_at", "random_string") VALUES (?, ?, ?, ?, ?)[0m  [["email", "fsldkfjsdl@pele.fr"], ["newsletter", 0], ["created_at", "2018-05-17 17:36:54.368823"], ["updated_at", "2018-05-17 17:36:54.368823"], ["random_string", "cpcbpqcvkgaczqhnhuqfrnkenzescq"]]
+  ↳ app/controllers/home_controller.rb:27
+  [1m[35m (3.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/home_controller.rb:27
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/home_controller.rb:28
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."id" != ? LIMIT ?[0m  [["email", "fsldkfjsdl@pele.fr"], ["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:28
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/home_controller.rb:28
+  Rendering confirm_newsletter/confirm_newsletter.html.erb within layouts/mailer
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."random_string" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/confirm_newsletter/confirm_newsletter.html.erb:3
+  Rendered confirm_newsletter/confirm_newsletter.html.erb within layouts/mailer (3.2ms)
+ConfirmNewsletter#confirm_newsletter: processed outbound mail in 8.6ms
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 4.9ms)
+
+
+
+NoMethodError - undefined method `random_string' for nil:NilClass:
+  app/views/confirm_newsletter/confirm_newsletter.html.erb:11:in `_app_views_confirm_newsletter_confirm_newsletter_html_erb__1243361769895171057_69963521534160'
+  app/services/confirm_newsletter.rb:5:in `confirm_newsletter'
+  app/controllers/home_controller.rb:31:in `confirm_newsletter'
+
+Started POST "/__better_errors/9ea486f605524ff2/variables" for 127.0.0.1 at 2018-05-17 19:36:54 +0200
+Started GET "/confirm_newsletter?name=Henri&email=sqmhdsq%40ddqs.fr" for 127.0.0.1 at 2018-05-17 19:38:52 +0200
+Processing by HomeController#confirm_newsletter as HTML
+  Parameters: {"name"=>"Henri", "email"=>"sqmhdsq@ddqs.fr"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/home_controller.rb:27
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "sqmhdsq@ddqs.fr"], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:27
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("email", "newsletter", "created_at", "updated_at", "random_string") VALUES (?, ?, ?, ?, ?)[0m  [["email", "sqmhdsq@ddqs.fr"], ["newsletter", 0], ["created_at", "2018-05-17 17:38:52.745817"], ["updated_at", "2018-05-17 17:38:52.745817"], ["random_string", "ixhmtigzhdfyqebljxbbesdqtkikny"]]
+  ↳ app/controllers/home_controller.rb:27
+  [1m[35m (3.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/home_controller.rb:27
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/home_controller.rb:28
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."id" != ? LIMIT ?[0m  [["email", "sqmhdsq@ddqs.fr"], ["id", 34], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:28
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/home_controller.rb:28
+  Rendering confirm_newsletter/confirm_newsletter.html.erb within layouts/mailer
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."random_string" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/confirm_newsletter/confirm_newsletter.html.erb:3
+  Rendered confirm_newsletter/confirm_newsletter.html.erb within layouts/mailer (4.1ms)
+ConfirmNewsletter#confirm_newsletter: processed outbound mail in 11.3ms
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 5.4ms)
+
+
+
+NoMethodError - undefined method `random_string' for nil:NilClass:
+  app/views/confirm_newsletter/confirm_newsletter.html.erb:4:in `_app_views_confirm_newsletter_confirm_newsletter_html_erb__1243361769895171057_69963523857080'
+  app/services/confirm_newsletter.rb:5:in `confirm_newsletter'
+  app/controllers/home_controller.rb:31:in `confirm_newsletter'
+
+Started POST "/__better_errors/6273e6bc58f509a0/variables" for 127.0.0.1 at 2018-05-17 19:38:52 +0200
+Started GET "/confirm_newsletter?name=Henrifdfs&email=dsdssssqmhdsq%40ddqs.fr" for 127.0.0.1 at 2018-05-17 19:45:45 +0200
+Processing by HomeController#confirm_newsletter as HTML
+  Parameters: {"name"=>"Henrifdfs", "email"=>"dsdssssqmhdsq@ddqs.fr"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/home_controller.rb:27
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "dsdssssqmhdsq@ddqs.fr"], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:27
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("email", "newsletter", "created_at", "updated_at", "random_string") VALUES (?, ?, ?, ?, ?)[0m  [["email", "dsdssssqmhdsq@ddqs.fr"], ["newsletter", 0], ["created_at", "2018-05-17 17:45:45.895863"], ["updated_at", "2018-05-17 17:45:45.895863"], ["random_string", "hryhausbtpvaqtscpomcwlydhnakpk"]]
+  ↳ app/controllers/home_controller.rb:27
+  [1m[35m (3.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/home_controller.rb:27
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/home_controller.rb:28
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."id" != ? LIMIT ?[0m  [["email", "dsdssssqmhdsq@ddqs.fr"], ["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:28
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/home_controller.rb:28
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 5.4ms)
+
+
+
+NoMethodError - undefined method `confirm_newsletter' for ConfirmNewsletter:Class:
+  app/controllers/home_controller.rb:31:in `confirm_newsletter'
+
+Started POST "/__better_errors/b60ba24bda340bcc/variables" for 127.0.0.1 at 2018-05-17 19:45:46 +0200
+Started GET "/confirm_newsletter?name=Henrifdfs&email=dsdssssssqmhdsq%40ddqs.fr" for 127.0.0.1 at 2018-05-17 19:46:05 +0200
+Processing by HomeController#confirm_newsletter as HTML
+  Parameters: {"name"=>"Henrifdfs", "email"=>"dsdssssssqmhdsq@ddqs.fr"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/home_controller.rb:27
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "dsdssssssqmhdsq@ddqs.fr"], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:27
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "newsletter", "created_at", "updated_at", "random_string") VALUES (?, ?, ?, ?, ?)[0m  [["email", "dsdssssssqmhdsq@ddqs.fr"], ["newsletter", 0], ["created_at", "2018-05-17 17:46:05.649060"], ["updated_at", "2018-05-17 17:46:05.649060"], ["random_string", "blhlrxnvjvianvrlragsiluhartdbi"]]
+  ↳ app/controllers/home_controller.rb:27
+  [1m[35m (3.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/home_controller.rb:27
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/home_controller.rb:28
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."id" != ? LIMIT ?[0m  [["email", "dsdssssssqmhdsq@ddqs.fr"], ["id", 36], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:28
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/home_controller.rb:28
+  Rendering confirm_newsletter/send_confirm_newsletter.html.erb within layouts/mailer
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."random_string" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/confirm_newsletter/send_confirm_newsletter.html.erb:3
+  Rendered confirm_newsletter/send_confirm_newsletter.html.erb within layouts/mailer (4.2ms)
+ConfirmNewsletter#send_confirm_newsletter: processed outbound mail in 12.8ms
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 5.0ms)
+
+
+
+NoMethodError - undefined method `random_string' for nil:NilClass:
+  app/views/confirm_newsletter/send_confirm_newsletter.html.erb:4:in `_app_views_confirm_newsletter_send_confirm_newsletter_html_erb___1654388019717730360_69963526316940'
+  app/services/confirm_newsletter.rb:5:in `send_confirm_newsletter'
+  app/controllers/home_controller.rb:31:in `confirm_newsletter'
+
+Started POST "/__better_errors/c2d3485b12001235/variables" for 127.0.0.1 at 2018-05-17 19:46:05 +0200
+Started GET "/confirm_newsletter?name=Henrifdfs&email=dtytyhdsq%40ddqs.fr" for 127.0.0.1 at 2018-05-17 19:47:35 +0200
+Processing by HomeController#confirm_newsletter as HTML
+  Parameters: {"name"=>"Henrifdfs", "email"=>"dtytyhdsq@ddqs.fr"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/home_controller.rb:27
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "dtytyhdsq@ddqs.fr"], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:27
+  [1m[36mUser Create (1.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "newsletter", "created_at", "updated_at", "random_string") VALUES (?, ?, ?, ?, ?)[0m  [["email", "dtytyhdsq@ddqs.fr"], ["newsletter", 0], ["created_at", "2018-05-17 17:47:35.817051"], ["updated_at", "2018-05-17 17:47:35.817051"], ["random_string", "rzzjjrnvwyxubqnnhzziiftmievlee"]]
+  ↳ app/controllers/home_controller.rb:27
+  [1m[35m (3.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/home_controller.rb:27
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/home_controller.rb:28
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."id" != ? LIMIT ?[0m  [["email", "dtytyhdsq@ddqs.fr"], ["id", 37], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:28
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/home_controller.rb:28
+  Rendering confirm_newsletter/send_confirm_newsletter.html.erb within layouts/mailer
+  Rendered confirm_newsletter/send_confirm_newsletter.html.erb within layouts/mailer (16.6ms)
+ConfirmNewsletter#send_confirm_newsletter: processed outbound mail in 25.3ms
+Completed 500 Internal Server Error in 41ms (ActiveRecord: 5.9ms)
+
+
+
+NameError - undefined local variable or method `view' for #<#<Class:0x00007f434e443728>:0x00007f434cf530c0>:
+  app/views/confirm_newsletter/send_confirm_newsletter.html.erb:2:in `_app_views_confirm_newsletter_send_confirm_newsletter_html_erb___1654388019717730360_69963515357760'
+  app/services/confirm_newsletter.rb:5:in `send_confirm_newsletter'
+  app/controllers/home_controller.rb:31:in `confirm_newsletter'
+
+Started POST "/__better_errors/f1d823570537d19d/variables" for 127.0.0.1 at 2018-05-17 19:47:35 +0200
+Started GET "/confirm_newsletter?name=Henrifdfs&email=frdsshdsq%40ddqs.fr" for 127.0.0.1 at 2018-05-17 19:48:07 +0200
+Processing by HomeController#confirm_newsletter as HTML
+  Parameters: {"name"=>"Henrifdfs", "email"=>"frdsshdsq@ddqs.fr"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/home_controller.rb:27
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "frdsshdsq@ddqs.fr"], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:27
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "newsletter", "created_at", "updated_at", "random_string") VALUES (?, ?, ?, ?, ?)[0m  [["email", "frdsshdsq@ddqs.fr"], ["newsletter", 0], ["created_at", "2018-05-17 17:48:07.189126"], ["updated_at", "2018-05-17 17:48:07.189126"], ["random_string", "jdrcfgnxajuvokuatjbmsxyfpkiycq"]]
+  ↳ app/controllers/home_controller.rb:27
+  [1m[35m (3.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/home_controller.rb:27
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/home_controller.rb:28
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."id" != ? LIMIT ?[0m  [["email", "frdsshdsq@ddqs.fr"], ["id", 38], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:28
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/home_controller.rb:28
+  Rendering confirm_newsletter/send_confirm_newsletter.html.erb within layouts/mailer
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."random_string" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/confirm_newsletter/send_confirm_newsletter.html.erb:3
+  Rendered confirm_newsletter/send_confirm_newsletter.html.erb within layouts/mailer (2.8ms)
+ConfirmNewsletter#send_confirm_newsletter: processed outbound mail in 9.4ms
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 5.1ms)
+
+
+
+NoMethodError - undefined method `random_string' for nil:NilClass:
+  app/views/confirm_newsletter/send_confirm_newsletter.html.erb:4:in `_app_views_confirm_newsletter_send_confirm_newsletter_html_erb___1654388019717730360_69963408285620'
+  app/services/confirm_newsletter.rb:5:in `send_confirm_newsletter'
+  app/controllers/home_controller.rb:31:in `confirm_newsletter'
+
+Started POST "/__better_errors/6a1d9e91bf267021/variables" for 127.0.0.1 at 2018-05-17 19:48:07 +0200
+Started GET "/confirm_newsletter?name=Henrifdfs&email=mpm%40ddqs.fr" for 127.0.0.1 at 2018-05-17 19:48:38 +0200
+Processing by HomeController#confirm_newsletter as HTML
+  Parameters: {"name"=>"Henrifdfs", "email"=>"mpm@ddqs.fr"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/home_controller.rb:27
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "mpm@ddqs.fr"], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:27
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "newsletter", "created_at", "updated_at", "random_string") VALUES (?, ?, ?, ?, ?)[0m  [["email", "mpm@ddqs.fr"], ["newsletter", 0], ["created_at", "2018-05-17 17:48:38.344260"], ["updated_at", "2018-05-17 17:48:38.344260"], ["random_string", "ngdlnxucjwenwwvkwlyipncqwhcgth"]]
+  ↳ app/controllers/home_controller.rb:27
+  [1m[35m (3.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/home_controller.rb:27
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/home_controller.rb:28
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."id" != ? LIMIT ?[0m  [["email", "mpm@ddqs.fr"], ["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:28
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/home_controller.rb:28
+  Rendering confirm_newsletter/send_confirm_newsletter.html.erb within layouts/mailer
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."random_string" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/confirm_newsletter/send_confirm_newsletter.html.erb:4
+  Rendered confirm_newsletter/send_confirm_newsletter.html.erb within layouts/mailer (3.4ms)
+ConfirmNewsletter#send_confirm_newsletter: processed outbound mail in 10.1ms
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 4.7ms)
+
+
+
+NoMethodError - undefined method `random_string' for nil:NilClass:
+  app/views/confirm_newsletter/send_confirm_newsletter.html.erb:5:in `_app_views_confirm_newsletter_send_confirm_newsletter_html_erb___1654388019717730360_69963522115000'
+  app/services/confirm_newsletter.rb:5:in `send_confirm_newsletter'
+  app/controllers/home_controller.rb:31:in `confirm_newsletter'
+
+Started POST "/__better_errors/7090f5383c1ee603/variables" for 127.0.0.1 at 2018-05-17 19:48:38 +0200
+Started GET "/confirm_newsletter?name=Henrifdfs&email=dsmpm%40ddqs.fr" for 127.0.0.1 at 2018-05-17 19:49:23 +0200
+Processing by HomeController#confirm_newsletter as HTML
+  Parameters: {"name"=>"Henrifdfs", "email"=>"dsmpm@ddqs.fr"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/home_controller.rb:27
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "dsmpm@ddqs.fr"], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:27
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "newsletter", "created_at", "updated_at", "random_string") VALUES (?, ?, ?, ?, ?)[0m  [["email", "dsmpm@ddqs.fr"], ["newsletter", 0], ["created_at", "2018-05-17 17:49:23.573904"], ["updated_at", "2018-05-17 17:49:23.573904"], ["random_string", "cmrrrzctonrdugdryqaotvwwydnfpw"]]
+  ↳ app/controllers/home_controller.rb:27
+  [1m[35m (3.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/home_controller.rb:27
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/home_controller.rb:28
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."id" != ? LIMIT ?[0m  [["email", "dsmpm@ddqs.fr"], ["id", 40], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:28
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/home_controller.rb:28
+  Rendering confirm_newsletter/send_confirm_newsletter.html.erb within layouts/mailer
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "dsmpm@ddqs.fr"], ["LIMIT", 1]]
+  ↳ app/views/confirm_newsletter/send_confirm_newsletter.html.erb:4
+  Rendered confirm_newsletter/send_confirm_newsletter.html.erb within layouts/mailer (1.4ms)
+  Rendering confirm_newsletter/send_confirm_newsletter.text.erb within layouts/mailer
+  Rendered confirm_newsletter/send_confirm_newsletter.text.erb within layouts/mailer (0.2ms)
+ConfirmNewsletter#send_confirm_newsletter: processed outbound mail in 18.0ms
+Sent mail to dsmpm@ddqs.fr (10.3ms)
+Date: Thu, 17 May 2018 19:49:23 +0200
+From: martin.berangere@live.fr
+To: dsmpm@ddqs.fr
+Message-ID: <5afdc0a392f65_76612e58cb833f7@BMHPOMEN.mail>
+Subject: Confirm Newsletter
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5afdc0a3909b8_76612e58cb832c8";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5afdc0a3909b8_76612e58cb832c8
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Confirmez votre inscription 
+
+
+----==_mimepart_5afdc0a3909b8_76612e58cb832c8
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Confirmez votre inscription</h1>
+
+nil
+cmrrrzctonrdugdryqaotvwwydnfpw
+
+
+<p>Bouton Local</p>
+	<a href="http://localhost:3000/subscribe/cmrrrzctonrdugdryqaotvwwydnfpw" method='get'>confirmer </a>
+
+  </body>
+</html>
+
+----==_mimepart_5afdc0a3909b8_76612e58cb832c8--
+
+Redirected to http://localhost:3000/check_mail
+Completed 302 Found in 39ms (ActiveRecord: 4.6ms)
+
+
+Started GET "/check_mail" for 127.0.0.1 at 2018-05-17 19:49:23 +0200
+Processing by HomeController#check_mail as HTML
+  Rendering home/check_mail.erb within layouts/application
+  Rendered home/check_mail.erb within layouts/application (0.2ms)
+Completed 200 OK in 16ms (Views: 15.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/subscribe/cmrrrzctonrdugdryqaotvwwydnfpw" for 127.0.0.1 at 2018-05-17 19:50:08 +0200
+Processing by UserController#subscribe as HTML
+  Parameters: {"random_string"=>"cmrrrzctonrdugdryqaotvwwydnfpw"}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms)
+
+
+
+ArgumentError - wrong number of arguments (given 0, expected 1):
+  app/controllers/user_controller.rb:2:in `subscribe'
+
+Started POST "/__better_errors/d5d025c03ad48b80/variables" for 127.0.0.1 at 2018-05-17 19:50:08 +0200
+Started GET "/subscribe/cmrrrzctonrdugdryqaotvwwydnfpw" for 127.0.0.1 at 2018-05-17 19:51:57 +0200
+Processing by UserController#subscribe as HTML
+  Parameters: {"random_string"=>"cmrrrzctonrdugdryqaotvwwydnfpw"}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms)
+
+
+
+ArgumentError - wrong number of arguments (given 0, expected 1):
+  app/controllers/user_controller.rb:2:in `subscribe'
+
+Started POST "/__better_errors/00b3a34a82449989/variables" for 127.0.0.1 at 2018-05-17 19:51:57 +0200
+Started GET "/subscribe/cmrrrzctonrdugdryqaotvwwydnfpw" for 127.0.0.1 at 2018-05-17 19:52:15 +0200
+Processing by UserController#subscribe as HTML
+  Parameters: {"random_string"=>"cmrrrzctonrdugdryqaotvwwydnfpw"}
+Completed 500 Internal Server Error in 125ms (ActiveRecord: 0.0ms)
+
+
+
+NameError - undefined local variable or method `random_string' for #<UserController:0x00007f4340b6aaa0>:
+  app/controllers/user_controller.rb:3:in `subscribe'
+
+Started POST "/__better_errors/5c2cbc6f28bcce08/variables" for 127.0.0.1 at 2018-05-17 19:52:15 +0200
+Started GET "/subscribe/cmrrrzctonrdugdryqaotvwwydnfpw" for 127.0.0.1 at 2018-05-17 19:52:40 +0200
+Processing by UserController#subscribe as HTML
+  Parameters: {"random_string"=>"cmrrrzctonrdugdryqaotvwwydnfpw"}
+Completed 500 Internal Server Error in 181ms (ActiveRecord: 0.0ms)
+
+
+
+NameError - undefined local variable or method `random_string' for #<UserController:0x00007f435c098250>:
+  app/controllers/user_controller.rb:4:in `subscribe'
+
+Started POST "/__better_errors/47915dec5fa35ac5/variables" for 127.0.0.1 at 2018-05-17 19:52:40 +0200
+Started GET "/subscribe/cmrrrzctonrdugdryqaotvwwydnfpw" for 127.0.0.1 at 2018-05-17 19:53:41 +0200
+Processing by UserController#subscribe as HTML
+  Parameters: {"random_string"=>"cmrrrzctonrdugdryqaotvwwydnfpw"}
+Completed 500 Internal Server Error in 141ms (ActiveRecord: 0.0ms)
+
+
+
+NameError - undefined local variable or method `random_string' for #<UserController:0x00007f434d17d918>:
+  app/controllers/user_controller.rb:4:in `subscribe'
+
+Started POST "/__better_errors/9a35a84870e10204/variables" for 127.0.0.1 at 2018-05-17 19:53:41 +0200
+Started GET "/subscribe/cmrrrzctonrdugdryqaotvwwydnfpw" for 127.0.0.1 at 2018-05-17 19:54:00 +0200
+Processing by UserController#subscribe as HTML
+  Parameters: {"random_string"=>"cmrrrzctonrdugdryqaotvwwydnfpw"}
+Completed 406 Not Acceptable in 22ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::UnknownFormat - UserController#subscribe is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.:
+
+Started POST "/__better_errors/9938686158b81709/variables" for 127.0.0.1 at 2018-05-17 19:54:00 +0200
+Started POST "/__better_errors/9938686158b81709/variables" for 127.0.0.1 at 2018-05-17 19:54:32 +0200
+Started POST "/__better_errors/9938686158b81709/variables" for 127.0.0.1 at 2018-05-17 19:54:36 +0200
+Started GET "/subscribe/cmrrrzctonrdugdryqaotvwwydnfpw" for 127.0.0.1 at 2018-05-17 19:54:39 +0200
+Processing by UserController#subscribe as HTML
+  Parameters: {"random_string"=>"cmrrrzctonrdugdryqaotvwwydnfpw"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."random_string" = ? LIMIT ?[0m  [["random_string", "cmrrrzctonrdugdryqaotvwwydnfpw"], ["LIMIT", 1]]
+  ↳ app/controllers/user_controller.rb:5
+Completed 406 Not Acceptable in 21ms (ActiveRecord: 0.5ms)
+
+
+
+ActionController::UnknownFormat - UserController#subscribe is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.:
+
+Started POST "/__better_errors/28f0143b77bbb2a3/variables" for 127.0.0.1 at 2018-05-17 19:54:39 +0200
+Started GET "/subscribe/cmrrrzctonrdugdryqaotvwwydnfpw" for 127.0.0.1 at 2018-05-17 19:55:22 +0200
+Processing by UserController#subscribe as HTML
+  Parameters: {"random_string"=>"cmrrrzctonrdugdryqaotvwwydnfpw"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."random_string" = ? LIMIT ?[0m  [["random_string", "cmrrrzctonrdugdryqaotvwwydnfpw"], ["LIMIT", 1]]
+  ↳ app/controllers/user_controller.rb:5
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/user_controller.rb:8
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."id" != ? LIMIT ?[0m  [["email", "dsmpm@ddqs.fr"], ["id", 40], ["LIMIT", 1]]
+  ↳ app/controllers/user_controller.rb:8
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "newsletter" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["newsletter", 1], ["updated_at", "2018-05-17 17:55:22.869910"], ["id", 40]]
+  ↳ app/controllers/user_controller.rb:8
+  [1m[35m (4.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/user_controller.rb:8
+Redirected to http://localhost:3000/
+Completed 302 Found in 16ms (ActiveRecord: 6.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-17 19:55:22 +0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 30ms (Views: 28.9ms | ActiveRecord: 0.0ms)
+
+

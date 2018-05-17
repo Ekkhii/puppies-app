@@ -1,0 +1,13 @@
+<h1>Confirmez votre inscription</h1>
+
+<% user = User.find_by_email(@email) %>
+
+
+
+<% if Rails.env.production? %>
+<p>Bouton prod</p>
+	<a href="<%= subscribe_url(user.random_string, host: 'https://agile-anchorage-86029.herokuapp.com') %>" method='get'>Confirmer</a>
+<% else %>
+<p>Bouton Local</p>
+	<a href="<%= subscribe_url(user.random_string, host: 'localhost:3000') %>" method='get'>confirmer </a>
+<% end %>
