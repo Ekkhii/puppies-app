@@ -105,7 +105,6 @@ Rails.application.configure do
    :domain         => 'https://agile-anchorage-86029.herokuapp.com/'
    }
 
-  config.action_mailer.default_url_options = { host: 'https://agile-anchorage-86029.herokuapp.com/' }
 
 
 

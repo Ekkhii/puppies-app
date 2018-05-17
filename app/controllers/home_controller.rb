@@ -27,6 +27,13 @@ class HomeController < ApplicationController
 
     end
 
+    def insta
+    	BotInsta.new.perform
+    end
+
+    def services
+    	
+    end
 
   
 end
