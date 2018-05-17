@@ -1,0 +1,24 @@
+[0] [17:41:43 18-05-17] [LOGGER] -- : checking log files
+[1] [17:41:43 18-05-17] [CORE] -- : log files are checked
+[2] [17:41:43 18-05-17] [CORE] -- : Machine started
+[3] [17:41:43 18-05-17] [CREATE_PROTOCOL] -- : Protocol successfully created
+[4] [17:41:43 18-05-17] [CORE] -- : Processing successfully completed
+[5] [17:41:43 18-05-17] [LOGIN] -- : trying to login
+[6] [17:41:44 18-05-17] [LOGIN] -- : successfully logged in
+[7] [17:41:44 18-05-17] [MODES] -- : [Auto] mode is turned on
+[8] [17:41:44 18-05-17] [GRABBER] -- : Searching in hashtags [#dog]
+[9] [17:41:45 18-05-17] [GRABBER] -- : didn't find anything by hashtag #dog
+[10] [17:41:45 18-05-17] [GRABBER] -- : Total grabbed users(37) & Total grabbed medias(37)
+[11] [17:41:45 18-05-17] [GRABBER] -- : Trying to get media (Bi4krg5gG-S) information
+[12] [17:41:46 18-05-17] [ACTIONS] -- : trying to send a comment to media[1781334972561387410]
+[13] [17:41:46 18-05-17] [LOGIN] -- : checking loging status
+[14] [17:41:52 18-05-17] [GRABBER] -- : Trying to get user (2276657419) information
+[15] [17:41:54 18-05-17] [GRABBER] -- : Trying to get media (Bi4krIdFzo8) information
+[16] [17:41:54 18-05-17] [ACTIONS] -- : trying to send a comment to media[1781334946314926652]
+[17] [17:41:54 18-05-17] [LOGIN] -- : checking loging status
+[18] [17:42:00 18-05-17] [GRABBER] -- : Trying to get media (Bi4krGiF4-y) information
+[19] [17:42:01 18-05-17] [ACTIONS] -- : trying to like a media[1781334944251350962]
+[20] [17:42:01 18-05-17] [LOGIN] -- : checking loging status
+[21] [17:42:07 18-05-17] [GRABBER] -- : Trying to get user (2276657419) information
+[22] [17:42:09 18-05-17] [GRABBER] -- : Trying to get user (2276657419) information
+[23] [17:42:10 18-05-17] [GRABBER] -- : Trying to get user (2276657419) information

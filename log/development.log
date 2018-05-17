@@ -12575,3 +12575,212 @@ Processing by HomeController#index as HTML
 Completed 200 OK in 37ms (Views: 36.2ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-05-17 17:04:52 +0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 19ms (Views: 18.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-17 17:05:02 +0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 35ms (Views: 34.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/send_newsletter" for 127.0.0.1 at 2018-05-17 17:05:03 +0200
+Processing by HomeController#send_newsletter as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/home_controller.rb:19
+  Rendering weekly_newsletter/send_newsletter.html.erb within layouts/mailer
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "karinethp@thp.com"], ["LIMIT", 1]]
+  ↳ app/views/weekly_newsletter/send_newsletter.html.erb:6
+  Rendered weekly_newsletter/send_newsletter.html.erb within layouts/mailer (2.8ms)
+  Rendering weekly_newsletter/send_newsletter.text.erb within layouts/mailer
+  Rendered weekly_newsletter/send_newsletter.text.erb within layouts/mailer (0.3ms)
+WeeklyNewsletter#send_newsletter: processed outbound mail in 28.9ms
+Sent mail to karinethp@thp.com (14.9ms)
+Date: Thu, 17 May 2018 17:05:03 +0200
+From: martin.berangere@live.fr
+To: karinethp@thp.com
+Message-ID: <5afd9a1fc3ff6_5e391c3e69062960@BMHPOMEN.mail>
+Subject: Newsletter
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5afd9a1fc149a_5e391c3e69062821";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5afd9a1fc149a_5e391c3e69062821
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Newsletter
+
+wahou!
+
+----==_mimepart_5afd9a1fc149a_5e391c3e69062821
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Newsletter</h1>
+
+<p>
+	Wahou!
+</p>
+
+
+<a href="https://agile-anchorage-86029.herokuapp.com/user/unsubscribe/17">Se desinscrire </a>
+<br>
+
+  </body>
+</html>
+
+----==_mimepart_5afd9a1fc149a_5e391c3e69062821--
+
+Redirected to http://localhost:3000/
+Completed 302 Found in 65ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-17 17:05:03 +0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 36ms (Views: 34.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-17 17:05:30 +0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 21ms (Views: 19.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/services" for 127.0.0.1 at 2018-05-17 17:05:32 +0200
+Processing by HomeController#services as HTML
+  Rendering home/services.html.erb within layouts/application
+  Rendered home/services.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 17ms (Views: 15.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/insta" for 127.0.0.1 at 2018-05-17 17:05:35 +0200
+Processing by HomeController#insta as HTML
+  Parameters: {"authenticity_token"=>"sWU+QhM9rG5YuhtRQZ/tllRiSI4g3r+zxT84nHLRgsxHrvzNXuhcHnnufuC0INSmu3T3DmBydOrGtQuD10THRQ=="}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+
+LoadError - cannot load such file -- instabot:
+  app/services/bot_insta.rb:4:in `comment_insta'
+  app/services/bot_insta.rb:34:in `perform'
+  app/controllers/home_controller.rb:31:in `insta'
+
+Started POST "/__better_errors/89b1686685a70338/variables" for 127.0.0.1 at 2018-05-17 17:05:35 +0200
+Started POST "/insta" for 127.0.0.1 at 2018-05-17 17:06:23 +0200
+Processing by HomeController#insta as HTML
+  Parameters: {"authenticity_token"=>"sWU+QhM9rG5YuhtRQZ/tllRiSI4g3r+zxT84nHLRgsxHrvzNXuhcHnnufuC0INSmu3T3DmBydOrGtQuD10THRQ=="}
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
+
+
+
+LoadError - cannot load such file -- instabot:
+  app/services/bot_insta.rb:4:in `comment_insta'
+  app/services/bot_insta.rb:34:in `perform'
+  app/controllers/home_controller.rb:31:in `insta'
+
+Started POST "/__better_errors/639b27a603e9bde1/variables" for 127.0.0.1 at 2018-05-17 17:06:23 +0200
+Started POST "/insta" for 127.0.0.1 at 2018-05-17 17:06:40 +0200
+Processing by HomeController#insta as HTML
+  Parameters: {"authenticity_token"=>"sWU+QhM9rG5YuhtRQZ/tllRiSI4g3r+zxT84nHLRgsxHrvzNXuhcHnnufuC0INSmu3T3DmBydOrGtQuD10THRQ=="}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+
+LoadError - cannot load such file -- instabot:
+  app/services/bot_insta.rb:2:in `<class:BotInsta>'
+  app/services/bot_insta.rb:1:in `<main>'
+  app/controllers/home_controller.rb:31:in `insta'
+
+Started POST "/__better_errors/62eb00857394d0c9/variables" for 127.0.0.1 at 2018-05-17 17:06:40 +0200
+Started POST "/insta" for 127.0.0.1 at 2018-05-17 17:06:53 +0200
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ekkhi/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by HomeController#insta as HTML
+  Parameters: {"authenticity_token"=>"sWU+QhM9rG5YuhtRQZ/tllRiSI4g3r+zxT84nHLRgsxHrvzNXuhcHnnufuC0INSmu3T3DmBydOrGtQuD10THRQ=="}
+Started GET "/" for 127.0.0.1 at 2018-05-17 17:09:26 +0200
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ekkhi/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (122.0ms)
+Completed 200 OK in 145ms (Views: 139.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/services" for 127.0.0.1 at 2018-05-17 17:09:29 +0200
+Processing by HomeController#services as HTML
+  Rendering home/services.html.erb within layouts/application
+  Rendered home/services.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 24ms (Views: 23.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/send_newsletter" for 127.0.0.1 at 2018-05-17 17:09:33 +0200
+  
+ActionController::RoutingError (No route matches [POST] "/send_newsletter"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/insta" for 127.0.0.1 at 2018-05-17 17:11:22 +0200
+Processing by HomeController#insta as HTML
+  Parameters: {"authenticity_token"=>"cztByEcQiLzK4oo84+q3+UG+OZe9LUX0g8+M9XL4JJCF8INHCsV4zOu2740WVY7JrqiGF/2Bjq2ARb/q121hGQ=="}
+Completed 500 Internal Server Error in 1283ms (ActiveRecord: 0.0ms)
+
+
+
+SystemExit - exit:
+  app/services/bot_insta.rb:27:in `comment_insta'
+  app/services/bot_insta.rb:34:in `perform'
+  app/controllers/home_controller.rb:31:in `insta'
+
+Started POST "/__better_errors/f5fe31dc6b630c46/variables" for 127.0.0.1 at 2018-05-17 17:11:23 +0200
+Started POST "/insta" for 127.0.0.1 at 2018-05-17 17:19:43 +0200
+Processing by HomeController#insta as HTML
+  Parameters: {"authenticity_token"=>"cztByEcQiLzK4oo84+q3+UG+OZe9LUX0g8+M9XL4JJCF8INHCsV4zOu2740WVY7JrqiGF/2Bjq2ARb/q121hGQ=="}

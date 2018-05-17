@@ -1,0 +1,2 @@
+namespace :newsletter do
+end

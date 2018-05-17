@@ -1,0 +1,67 @@
+[0] [17:32:55 18-05-17] [LOGGER] -- : checking log files
+[1] [17:32:55 18-05-17] [CORE] -- : log files are checked
+[2] [17:32:55 18-05-17] [CORE] -- : Machine started
+[3] [17:32:55 18-05-17] [CREATE_PROTOCOL] -- : Protocol successfully created
+[4] [17:32:55 18-05-17] [CORE] -- : Processing successfully completed
+[5] [17:32:55 18-05-17] [LOGIN] -- : trying to login
+[6] [17:32:57 18-05-17] [LOGIN] -- : successfully logged in
+[7] [17:32:57 18-05-17] [MODES] -- : [Auto] mode is turned on
+[8] [17:32:57 18-05-17] [GRABBER] -- : Searching in hashtags [#dog]
+[9] [17:32:57 18-05-17] [GRABBER] -- : didn't find anything by hashtag #dog
+[10] [17:32:57 18-05-17] [GRABBER] -- : Total grabbed users(50) & Total grabbed medias(50)
+[11] [17:32:57 18-05-17] [GRABBER] -- : Trying to get media (Bi4jfX1HSyl) information
+[12] [17:32:58 18-05-17] [ACTIONS] -- : trying to send a comment to media[1781329740143864997]
+[13] [17:32:58 18-05-17] [LOGIN] -- : checking loging status
+[14] [17:33:04 18-05-17] [GRABBER] -- : Trying to get media (Bi4jrVhAV9k) information
+[15] [17:33:05 18-05-17] [ACTIONS] -- : trying to send a comment to media[1781330562292735844]
+[16] [17:33:05 18-05-17] [LOGIN] -- : checking loging status
+[17] [17:33:12 18-05-17] [GRABBER] -- : Trying to get media (Bi4jrMtFZRy) information
+[18] [17:33:12 18-05-17] [ACTIONS] -- : trying to like a media[1781330552831710322]
+[19] [17:33:12 18-05-17] [LOGIN] -- : checking loging status
+[20] [17:33:18 18-05-17] [GRABBER] -- : Trying to get user (7000077686) information
+[21] [17:33:20 18-05-17] [GRABBER] -- : Trying to get user (7000077686) information
+[22] [17:33:21 18-05-17] [GRABBER] -- : Trying to get user (7000077686) information
+[23] [17:33:22 18-05-17] [GRABBER] -- : Trying to get media (Bi4jrPYhXww) information
+[24] [17:33:22 18-05-17] [ACTIONS] -- : trying to like a media[1781330555707948080]
+[25] [17:33:23 18-05-17] [LOGIN] -- : checking loging status
+[26] [17:33:28 18-05-17] [GRABBER] -- : Trying to get media (Bi4jrPogBeZ) information
+[27] [17:33:29 18-05-17] [ACTIONS] -- : trying to like a media[1781330555976030105]
+[28] [17:33:29 18-05-17] [LOGIN] -- : checking loging status
+[29] [17:33:35 18-05-17] [GRABBER] -- : Trying to get media (Bi4jrOnA1B5) information
+[30] [17:33:35 18-05-17] [ACTIONS] -- : trying to like a media[1781330554877333625]
+[31] [17:33:35 18-05-17] [LOGIN] -- : checking loging status
+[32] [17:33:41 18-05-17] [GRABBER] -- : Trying to get media (Bi4jPCdl29y) information
+[33] [17:33:41 18-05-17] [ACTIONS] -- : trying to send a comment to media[1781328617689018226]
+[34] [17:33:41 18-05-17] [LOGIN] -- : checking loging status
+[35] [17:33:48 18-05-17] [GRABBER] -- : Trying to get media (Bi4jrEHFgWg) information
+[36] [17:33:48 18-05-17] [ACTIONS] -- : trying to send a comment to media[1781330543604270496]
+[37] [17:33:48 18-05-17] [LOGIN] -- : checking loging status
+[38] [17:33:55 18-05-17] [GRABBER] -- : Trying to get media (Bi4jjNghybC) information
+[39] [17:33:55 18-05-17] [ACTIONS] -- : trying to send a comment to media[1781330003938977474]
+[40] [17:33:55 18-05-17] [LOGIN] -- : checking loging status
+[41] [17:34:01 18-05-17] [GRABBER] -- : Trying to get media (Bi4jq7NHKRN) information
+[42] [17:34:02 18-05-17] [ACTIONS] -- : trying to send a comment to media[1781330534041691213]
+[43] [17:34:02 18-05-17] [LOGIN] -- : checking loging status
+[44] [17:34:07 18-05-17] [GRABBER] -- : Trying to get media (Bi4jqmiBA35) information
+[45] [17:34:08 18-05-17] [ACTIONS] -- : trying to like a media[1781330511843823097]
+[46] [17:34:08 18-05-17] [LOGIN] -- : checking loging status
+[47] [17:34:14 18-05-17] [GRABBER] -- : Trying to get user (7000077686) information
+[48] [17:34:15 18-05-17] [GRABBER] -- : Trying to get user (7000077686) information
+[49] [17:34:17 18-05-17] [GRABBER] -- : Trying to get media (Bi4jqkmH35d) information
+[50] [17:34:17 18-05-17] [ACTIONS] -- : trying to send a comment to media[1781330509765246557]
+[51] [17:34:17 18-05-17] [LOGIN] -- : checking loging status
+[52] [17:34:17 18-05-17] [GRABBER] -- : Trying to get media (Bi4jqkmH35d) information
+[53] [17:34:17 18-05-17] [ACTIONS] -- : trying to send a comment to media[1781330509765246557]
+[54] [17:34:17 18-05-17] [LOGIN] -- : checking loging status
+[55] [17:34:18 18-05-17] [GRABBER] -- : Trying to get media (Bi4jqkmH35d) information
+[56] [17:34:18 18-05-17] [ACTIONS] -- : trying to send a comment to media[1781330509765246557]
+[57] [17:34:18 18-05-17] [LOGIN] -- : checking loging status
+[58] [17:34:18 18-05-17] [GRABBER] -- : Trying to get media (Bi4jqkmH35d) information
+[59] [17:34:18 18-05-17] [ACTIONS] -- : trying to send a comment to media[1781330509765246557]
+[60] [17:34:18 18-05-17] [LOGIN] -- : checking loging status
+[61] [17:34:19 18-05-17] [GRABBER] -- : Trying to get media (Bi4jqkmH35d) information
+[62] [17:34:19 18-05-17] [ACTIONS] -- : trying to send a comment to media[1781330509765246557]
+[63] [17:34:19 18-05-17] [LOGIN] -- : checking loging status
+[64] [17:34:19 18-05-17] [GRABBER] -- : Trying to get media (Bi4jqkmH35d) information
+[65] [17:34:19 18-05-17] [ACTIONS] -- : trying to like a media[1781330509765246557]
+[66] [17:34:19 18-05-17] [LOGIN] -- : checking loging status
