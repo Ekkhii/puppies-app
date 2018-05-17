@@ -6,6 +6,5 @@
 <% user = User.find_by_email(@email) %>
 
 
-<a href="<%= unsubscribe_url(user.id, host: 'https://agile-anchorage-86029.herokuapp.com/') %>">Se desinscrire </a>
+<a href="<%= unsubscribe_url(user.id, host: 'https://agile-anchorage-86029.herokuapp.com') %>">Se desinscrire </a>
 <br>
-<%= link_to 'Se desinscrire', unsubscribe_url(user.id) %>

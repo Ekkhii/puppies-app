@@ -12501,3 +12501,77 @@ Processing by HomeController#index as HTML
 Completed 200 OK in 27ms (Views: 26.5ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/send_newsletter" for 127.0.0.1 at 2018-05-17 16:59:01 +0200
+Processing by HomeController#send_newsletter as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/home_controller.rb:19
+  Rendering weekly_newsletter/send_newsletter.html.erb within layouts/mailer
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "karinethp@thp.com"], ["LIMIT", 1]]
+  ↳ app/views/weekly_newsletter/send_newsletter.html.erb:6
+  Rendered weekly_newsletter/send_newsletter.html.erb within layouts/mailer (1.5ms)
+  Rendering weekly_newsletter/send_newsletter.text.erb within layouts/mailer
+  Rendered weekly_newsletter/send_newsletter.text.erb within layouts/mailer (0.2ms)
+WeeklyNewsletter#send_newsletter: processed outbound mail in 27.0ms
+Sent mail to karinethp@thp.com (16.3ms)
+Date: Thu, 17 May 2018 16:59:01 +0200
+From: martin.berangere@live.fr
+To: karinethp@thp.com
+Message-ID: <5afd98b558e84_5e391c3ed7062799@BMHPOMEN.mail>
+Subject: Newsletter
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5afd98b555fec_5e391c3ed70626b0";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5afd98b555fec_5e391c3ed70626b0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Newsletter
+
+wahou!
+
+----==_mimepart_5afd98b555fec_5e391c3ed70626b0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Newsletter</h1>
+
+<p>
+	Wahou!
+</p>
+
+
+<a href="https://agile-anchorage-86029.herokuapp.com//user/unsubscribe/17">Se desinscrire </a>
+<br>
+<a href="http://localhost/user/unsubscribe/17">Se desinscrire</a>
+  </body>
+</html>
+
+----==_mimepart_5afd98b555fec_5e391c3ed70626b0--
+
+Redirected to http://localhost:3000/
+Completed 302 Found in 47ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-17 16:59:01 +0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (18.0ms)
+Completed 200 OK in 37ms (Views: 36.2ms | ActiveRecord: 0.0ms)
+
+
