@@ -1,0 +1,11 @@
+[0] [17:46:10 18-05-17] [LOGGER] -- : checking log files
+[1] [17:46:10 18-05-17] [CORE] -- : log files are checked
+[2] [17:46:10 18-05-17] [CORE] -- : Machine started
+[3] [17:46:10 18-05-17] [CREATE_PROTOCOL] -- : Protocol successfully created
+[4] [17:46:10 18-05-17] [CORE] -- : Processing successfully completed
+[5] [17:46:10 18-05-17] [LOGIN] -- : trying to login
+[6] [17:46:12 18-05-17] [LOGIN] -- : checking loging status
+[7] [17:46:12 18-05-17] [LOGIN] -- : trying to login
+[8] [17:46:13 18-05-17] [LOGIN] -- : checking loging status
+[9] [17:46:13 18-05-17] [LOGIN] -- : trying to login
+[10] [17:46:14 18-05-17] [LOGIN] -- : checking loging status
