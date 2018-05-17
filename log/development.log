@@ -18052,3 +18052,10 @@ Processing by HomeController#thp as HTML
 Completed 200 OK in 27ms (Views: 26.3ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/thp" for 127.0.0.1 at 2018-05-17 21:04:54 +0200
+Processing by HomeController#thp as HTML
+  Rendering home/thp.html.erb within layouts/application
+  Rendered home/thp.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 25ms (Views: 23.8ms | ActiveRecord: 0.0ms)
+
+
