@@ -15,7 +15,6 @@ class HomeController < ApplicationController
     	@users.each do |user|
     		if user.newsletter
 	    		@email = user.email
-	    		puts @email
 	    		WeeklyNewsletter.send_newsletter(@email).deliver_now
 	    	end
     	end
