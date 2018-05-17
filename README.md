@@ -29,7 +29,7 @@
 
 <p>Lance ``` bundle install ```</p>
 
-<p>Lance ```rails db:seed```</p>
+<p>Lance</p> ```rails db:seed```
 
 #### Navigation
 <p>
@@ -37,9 +37,8 @@
 </p>
 
 #### Acquisition
-- l'acquisition : nous avons mis un formulaire sur la landing page dans lequel l'utilisateur peut renseigner son email afin d'obtenir une base mail depuis Mailchimp. 
-    
-- les metrics : Google analytics est installé sur la version statique du site Heroku permettant d'obtenir des stats sur les visiteurs en cours ainsi que les sessions passées sur notre landing page. 
+
+- Bot Instagram : Il commente les photos ayant un #dog . Il comment avec le lien de la page Puppies .
     
 #### Piste d'amélioration
 
