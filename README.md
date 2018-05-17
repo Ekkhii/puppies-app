@@ -11,8 +11,8 @@
 
 ### Version de prod
 
-**https://agile-anchorage-86029.herokuapp.com/**
-<p>Par ici pour la LP de Puppies ! Super site de recherche de dog sitter</p>
+****
+<p>Par [ici](https://agile-anchorage-86029.herokuapp.com/) pour la LP de Puppies ! Super site de recherche de dog sitter</p>
 
 **https://agile-anchorage-86029.herokuapp.com/city**
 <p>Par ici pour la LP de Toulon ! Super site de la ville de Toulon</p>
@@ -27,9 +27,9 @@
 
 <p>Clone de repos sur ton poste</p>
 
-<p>Lance ``` bundle install ```</p>
+<p>Lance ` bundle install `</p>
 
-<p>Lance</p> ```rails db:seed```
+<p>Lance `rails db:seed` </p>
 
 #### Navigation
 <p>
