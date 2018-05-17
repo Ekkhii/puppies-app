@@ -3,12 +3,12 @@
 		<div class="row">
 			<h1 class="title text-center header_title">Puppies</h1>
 			<h2 class="text-center header_info">Trouvez votre dog sitter</h2>
-			<%= link_to 'send mail', action: :send_mail %>
+			<a href="<%= send_newsletter_path %>" class="btn btn-lg">Envoyer newsletter</a>
 		</div>
 		<div class="row">
 			<div class="col-lg-offset-7 col-lg-4 contact_form ">
 	
-				<form class="form-horizontal" action="<%= send_mail_path %>" method="get">
+				<form class="form-horizontal" action="<%= subscribe_path %>" method="get">
 			        <fieldset>
 			           <legend class="text-center title text-center form_title">S'inscrire</legend>
 			    
