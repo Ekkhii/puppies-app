@@ -10284,3 +10284,146 @@ Processing by HomeController#index as HTML
 Completed 200 OK in 18ms (Views: 17.4ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-05-17 13:24:23 +0200
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ekkhi/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (103.9ms)
+Completed 200 OK in 127ms (Views: 121.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user/unsubscribe/13" for 127.0.0.1 at 2018-05-17 13:24:38 +0200
+
+AbstractController::ActionNotFound - The action 'unsubscribe' could not be found for UserController:
+
+Started POST "/__better_errors/3f241e33de6fbc60/variables" for 127.0.0.1 at 2018-05-17 13:24:38 +0200
+Started GET "/user/unsubscribe/13" for 127.0.0.1 at 2018-05-17 13:25:45 +0200
+Processing by UserController#unsubscribe as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/user_controller.rb:19
+Completed 404 Not Found in 4ms (ActiveRecord: 0.7ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find User with 'id'=id:
+  app/controllers/user_controller.rb:19:in `unsubscribe'
+
+Started POST "/__better_errors/40901510b5504396/variables" for 127.0.0.1 at 2018-05-17 13:25:56 +0200
+Started GET "/user/unsubscribe/13" for 127.0.0.1 at 2018-05-17 13:26:23 +0200
+Processing by UserController#unsubscribe as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/user_controller.rb:20
+Completed 404 Not Found in 4ms (ActiveRecord: 0.6ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find User with 'id'=id:
+  app/controllers/user_controller.rb:20:in `unsubscribe'
+
+Started POST "/__better_errors/0b8a0fd81c191ab2/variables" for 127.0.0.1 at 2018-05-17 13:26:23 +0200
+Started GET "/user/unsubscribe/13" for 127.0.0.1 at 2018-05-17 13:26:59 +0200
+Processing by UserController#unsubscribe as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/user_controller.rb:20
+Completed 406 Not Acceptable in 21ms (ActiveRecord: 0.6ms)
+
+
+
+ActionController::UnknownFormat - UserController#unsubscribe is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.:
+
+Started POST "/__better_errors/7939d0ba16af374f/variables" for 127.0.0.1 at 2018-05-17 13:26:59 +0200
+Started GET "/user/unsubscribe/13" for 127.0.0.1 at 2018-05-17 13:27:10 +0200
+Processing by UserController#unsubscribe as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/user_controller.rb:20
+Completed 406 Not Acceptable in 23ms (ActiveRecord: 0.6ms)
+
+
+
+ActionController::UnknownFormat - UserController#unsubscribe is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.:
+
+Started POST "/__better_errors/3333054f57dba7c7/variables" for 127.0.0.1 at 2018-05-17 13:27:10 +0200
+Started GET "/user/unsubscribe/13" for 127.0.0.1 at 2018-05-17 13:28:44 +0200
+Processing by UserController#unsubscribe as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/user_controller.rb:20
+  Rendering user/unsubscribe.html.erb within layouts/application
+  Rendered user/unsubscribe.html.erb within layouts/application (199.4ms)
+Completed 500 Internal Server Error in 203ms (ActiveRecord: 0.1ms)
+
+
+
+NameError - undefined local variable or method `user' for #<#<Class:0x00007f2d731049e0>:0x00007f2d730bb1a0>:
+  app/views/user/unsubscribe.html.erb:3:in `_app_views_user_unsubscribe_html_erb__2303454408951287355_69916590352640'
+
+Started POST "/__better_errors/b5ffc657bb6e91ce/variables" for 127.0.0.1 at 2018-05-17 13:28:45 +0200
+Started GET "/user/unsubscribe/13" for 127.0.0.1 at 2018-05-17 13:29:04 +0200
+Processing by UserController#unsubscribe as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/user_controller.rb:20
+  Rendering user/unsubscribe.html.erb within layouts/application
+  Rendered user/unsubscribe.html.erb within layouts/application (239.4ms)
+Completed 500 Internal Server Error in 246ms (ActiveRecord: 0.5ms)
+
+
+
+NameError - undefined local variable or method `user' for #<#<Class:0x00007f2d7250c070>:0x00007f2d7261db30>
+Did you mean?  @user:
+  app/views/user/unsubscribe.html.erb:3:in `_app_views_user_unsubscribe_html_erb__2303454408951287355_69916584076420'
+
+Started POST "/__better_errors/3d0322112c07636a/variables" for 127.0.0.1 at 2018-05-17 13:29:05 +0200
+Started GET "/user/unsubscribe/13" for 127.0.0.1 at 2018-05-17 13:29:18 +0200
+Processing by UserController#unsubscribe as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/user_controller.rb:20
+  Rendering user/unsubscribe.html.erb within layouts/application
+  Rendered user/unsubscribe.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 16ms (Views: 14.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/user/unsubscribe/13" for 127.0.0.1 at 2018-05-17 13:29:48 +0200
+Processing by UserController#unsubscribe as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/user_controller.rb:20
+  Rendering user/unsubscribe.html.erb within layouts/application
+  Rendered user/unsubscribe.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 21ms (Views: 14.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/user/unsubscribe/13" for 127.0.0.1 at 2018-05-17 13:30:12 +0200
+Processing by UserController#unsubscribe as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/user_controller.rb:20
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/user_controller.rb:24
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."id" != ? LIMIT ?[0m  [["email", "martin.berangere0@gmail.com"], ["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/user_controller.rb:24
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "newsletter" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["newsletter", 0], ["updated_at", "2018-05-17 11:30:12.834264"], ["id", 13]]
+  ↳ app/controllers/user_controller.rb:24
+  [1m[35m (4.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/user_controller.rb:24
+  Rendering user/unsubscribe.html.erb within layouts/application
+  Rendered user/unsubscribe.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 25ms (Views: 11.6ms | ActiveRecord: 5.1ms)
+
+

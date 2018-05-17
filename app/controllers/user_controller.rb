@@ -13,4 +13,11 @@ class UserController < ApplicationController
     	end
     	redirect_to root_path
     end
+
+    def unsubscribe
+
+        @user = User.find(params[:id])
+        @user.newsletter = false
+        @user.save
+    end
 end
