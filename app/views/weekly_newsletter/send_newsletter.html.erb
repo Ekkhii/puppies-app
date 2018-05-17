@@ -6,7 +6,10 @@
 <% user = User.find_by_email(@email) %>
 
 
-<a href="<%= unsubscribe_url(user.id, host: 'localhost') %>" method='get'>Se desinscrire </a>
-<br>
-
-
+<% if Rails.env.production? %>
+<p>Bouton prod</p>
+	<a href="<%= unsubscribe_url(user.id, host: 'https://agile-anchorage-86029.herokuapp.com') %>" method='get'>Se désinscrire</a>
+<% else %>
+<p>Bouton Local</p>
+	<a href="<%= unsubscribe_url(user.id, host: 'localhost:3000') %>" method='get'>Se desinscrire </a>
+<% end %>
