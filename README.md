@@ -11,9 +11,6 @@
 
 ### Version de prod
 
-**https://thpeastcoast.herokuapp.com/index.html**
-<p>C'est par ici si tu veux voir notre superbe landing page !</p>
-
 **https://agile-anchorage-86029.herokuapp.com/**
 <p>Par ici pour la LP de Puppies ! Super site de recherche de dog sitter</p>
 
@@ -26,12 +23,19 @@
 
 ------------
 
-### Informations 
+### Utilisation 
 
-#### Choix du design
+<p>Clone de repos sur ton poste</p>
+
+<p>Lance ``` bundle install ```</p>
+
+<p>Lance ```rails db:seed```</p>
+
+#### Navigation
 <p>
-	
+	Tu peux atteindre la page de lancement des services depuis la page d'accueil de Puppies
 </p>
+
 #### Acquisition
 - l'acquisition : nous avons mis un formulaire sur la landing page dans lequel l'utilisateur peut renseigner son email afin d'obtenir une base mail depuis Mailchimp. 
     
@@ -40,10 +44,9 @@
 #### Piste d'amélioration
 
     
-   - ajout d'un google tag manager sur le CTA afin de voir le taux de clic sur le bouton subscribe. 
-   - récupération d'un annuaire / scrapper récupérant les adresses mail d'étudiants d'écoles afin de pouvoir partager l'ensemble de la landing page à un public plus ciblé. 
-   - la véritable amélioration aurait été d'avoir une base Mailchimp contenant une vraie newsletter THP 
-   - assez chaud d'utiliser google analytics sur une app rails. 
+   - Si on avait été plus de deux sur le projet, on aurais surement developper les outils marketing pour toucher plus de personnes.
+   - Brancher un outil de metrics
+
 
 
 ## Merci pour la correction ! 
