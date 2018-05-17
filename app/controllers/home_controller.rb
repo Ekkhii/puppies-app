@@ -6,6 +6,10 @@ class HomeController < ApplicationController
 		
 	end
 
+    def thp
+        
+    end
+
     def check_mail
         
     end

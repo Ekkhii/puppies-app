@@ -5,6 +5,8 @@ Rails.application.routes.draw do
 
   get '/city', to: 'home#city', as: :city
 
+  get '/thp', to: 'home#thp', as: :thp
+
   get '/check_mail', to: 'home#check_mail', as: :check_mail
 
   get :send_mail, to: 'home#send_mail', as: :send_mail

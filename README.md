@@ -12,13 +12,13 @@
 ### Version de prod
 
 ****
-<https://agile-anchorage-86029.herokuapp.com>
+< **https://agile-anchorage-86029.herokuapp.com** >
 <p>Par ici pour la LP de Puppies ! Super site de recherche de dog sitter</p>
 
-**https://agile-anchorage-86029.herokuapp.com/city**
+< **https://agile-anchorage-86029.herokuapp.com/city** >
 <p>Par ici pour la LP de Toulon ! Super site de la ville de Toulon</p>
 
-**https://agile-anchorage-86029.herokuapp.com/thp**
+< **https://agile-anchorage-86029.herokuapp.com/thp** >
 <p>Par ici pour la LP de The Hack Project</p>
 
 
@@ -28,9 +28,13 @@
 
 <p>Clone de repos sur ton poste</p>
 
-<p>Lance ` bundle install `</p>
+<p>Lance `bundle install`</p>
 
 <p>Lance `rails db:seed` </p>
+
+<p>
+	En plus on a mis la task du commentaire instragram sur le Scheduler Heroku pour qu'elle se lance tous les jours.
+</p>
 
 #### Navigation
 <p>
@@ -39,7 +43,7 @@
 
 #### Acquisition
 
-- Bot Instagram : Il commente les photos ayant un #dog . Il comment avec le lien de la page Puppies .
+- Bot Instagram : Il commente les photos ayant un #dog . Il commente avec le lien de la page Puppies .
     
 #### Piste d'amélioration
 
