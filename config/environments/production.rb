@@ -104,4 +104,13 @@ Rails.application.configure do
    :password       => ENV['MAILJET_SECRET_KEY'],
    :domain         => 'https://agile-anchorage-86029.herokuapp.com/'
    }
+
+
+   Mailjet.configure do |config|
+
+      config.api_key = ENV['MAILJET_API_KEY']
+
+      config.secret_key = ENV['MAILJET_SECRET_KEY']
+
+    end
 end
