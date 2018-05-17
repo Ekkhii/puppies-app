@@ -11746,3 +11746,75 @@ Processing by UserController#unsubscribe as HTML
 Completed 200 OK in 23ms (Views: 19.4ms | ActiveRecord: 0.3ms)
 
 
+Started GET "/city" for 127.0.0.1 at 2018-05-17 14:15:13 +0200
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ekkhi/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by HomeController#city as HTML
+  Rendering home/city.html.erb within layouts/application
+  Rendered home/city.html.erb within layouts/application (110.3ms)
+Completed 200 OK in 162ms (Views: 156.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/city" for 127.0.0.1 at 2018-05-17 14:23:12 +0200
+Processing by HomeController#city as HTML
+  Rendering home/city.html.erb within layouts/application
+  Rendered home/city.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 84ms (Views: 83.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/city" for 127.0.0.1 at 2018-05-17 14:23:58 +0200
+Processing by HomeController#city as HTML
+  Rendering home/city.html.erb within layouts/application
+  Rendered home/city.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 49ms (Views: 47.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/city" for 127.0.0.1 at 2018-05-17 14:25:31 +0200
+Processing by HomeController#city as HTML
+  Rendering home/city.html.erb within layouts/application
+  Rendered home/city.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 26ms (Views: 24.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/city" for 127.0.0.1 at 2018-05-17 14:26:21 +0200
+Processing by HomeController#city as HTML
+  Rendering home/city.html.erb within layouts/application
+  Rendered home/city.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 25ms (Views: 24.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/city" for 127.0.0.1 at 2018-05-17 14:27:02 +0200
+Processing by HomeController#city as HTML
+  Rendering home/city.html.erb within layouts/application
+  Rendered home/city.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 31ms (Views: 30.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/city" for 127.0.0.1 at 2018-05-17 14:33:25 +0200
+Processing by HomeController#city as HTML
+  Rendering home/city.html.erb within layouts/application
+  Rendered home/city.html.erb within layouts/application (45.8ms)
+Completed 200 OK in 72ms (Views: 71.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/city" for 127.0.0.1 at 2018-05-17 14:39:21 +0200
+Processing by HomeController#city as HTML
+  Rendering home/city.html.erb within layouts/application
+  Rendered home/city.html.erb within layouts/application (55.9ms)
+Completed 200 OK in 82ms (Views: 81.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/city" for 127.0.0.1 at 2018-05-17 14:39:51 +0200
+Processing by HomeController#city as HTML
+  Rendering home/city.html.erb within layouts/application
+  Rendered home/city.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 27ms (Views: 26.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-17 14:39:57 +0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 18ms (Views: 17.4ms | ActiveRecord: 0.0ms)
+
+

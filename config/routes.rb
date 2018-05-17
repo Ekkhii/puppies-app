@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   root 'home#index'
 
+  get '/city', to: 'home#city', as: :city
+
   get :send_mail, to: 'home#send_mail', as: :send_mail
 
   get :subscribe , to: 'user#subscribe', as: :subscribe

@@ -1,0 +1,171 @@
+<div class="bg_city">
+	<header class="container-fluid">
+		<div class="row">
+			<h1 class="title text-center header_title">Toulon</h1>
+			<h2 class="text-center header_info">Découvrez la Radieuse</h2>
+			<a href="<%= send_newsletter_path %>" class="btn btn-lg">Envoyer newsletter</a>
+		</div>
+		<div class="row">
+			<div class="col-lg-offset-7 col-lg-4 contact_form ">
+	
+				<form class="form-horizontal" action="<%= subscribe_path %>" method="get">
+			        <fieldset>
+			           <legend class="text-center title text-center form_title_city">S'inscrire</legend>
+			    
+			            <!-- Name input-->
+			            <div class="form-group">
+			              <label class="col-md-3 control-label" for="name">Nom</label>
+			              <div class="col-md-6">
+			                <input id="name" name="name" type="text" placeholder="Entrez votre nom" class="form-control">
+			              </div>
+			            </div>
+			    
+			            <!-- Email input-->
+			            <div class="form-group">
+			              <label class="col-md-3 control-label" for="email">Mail</label>
+			              <div class="col-md-6">
+			                <input id="email" name="email" type="text" placeholder="Entrez votre adresse email" class="form-control">
+			              </div>
+			            </div>
+			    
+			            <!-- Form actions -->
+			            <div class="form-group">
+			              <div class="col-md-9 text-right">
+			              	<button type="submit" class="btn btn-default btn-lg title">S'inscrire</button>
+			              </div>
+			            </div>
+			        </fieldset>
+			    </form>
+				
+			</div>
+		</div>
+	</header>
+
+
+</div>
+
+<div class="index-content">
+    <div class="container">
+    	<div class="row">
+    		<h1 class="title text-center">Les quartiers</h1>
+    	</div>
+        <a href="#">
+            <div class="col-lg-4">
+                <div class="card">
+                    <%= image_tag "city1.jpg" %>
+                    <h4 class="title text-center">Le Mourillon</h4>
+                    <p class="text-justify">Nihil est enim virtute amabilius, nihil quod magis adliciat ad diligendum, quippe cum propter virtutem et probitatem etiam eos, quos numquam vidimus, quodam modo diligamus. Quis est qui C. Fabrici, M'. Curi non cum caritate aliqua benevola memoriam usurpet, quos numquam viderit? quis autem est, qui Tarquinium Superbum, qui Sp. Cassium, Sp.</p>
+                    <a href="#" class="btn btn-info">En savoir plus</a>
+                </div>
+            </div>
+        </a>
+        <a href="#">
+            <div class="col-lg-4">
+                <div class="card">
+                    <%= image_tag "city2.jpg" %>
+                    <h4 class="title text-center">Le Mont Faron</h4>
+                    <p class="text-justify">Nihil est enim virtute amabilius, nihil quod magis adliciat ad diligendum, quippe cum propter virtutem et probitatem etiam eos, quos numquam vidimus, quodam modo diligamus. Quis est qui C. Fabrici, M'. Curi non cum caritate aliqua benevola memoriam usurpet, quos numquam viderit? quis autem est, qui Tarquinium Superbum, qui Sp. Cassium, Sp.</p>
+                    <a href="#" class="btn btn-info">En savoir plus</a>
+                </div>
+            </div>
+        </a>
+        <a href="#">
+            <div class="col-lg-4">
+                <div class="card">
+                    <%= image_tag "city3.jpg" %>
+                    <h4 class="title text-center">Le Cap Brun</h4>
+                    <p class="text-justify">Nihil est enim virtute amabilius, nihil quod magis adliciat ad diligendum, quippe cum propter virtutem et probitatem etiam eos, quos numquam vidimus, quodam modo diligamus. Quis est qui C. Fabrici, M'. Curi non cum caritate aliqua benevola memoriam usurpet, quos numquam viderit? quis autem est, qui Tarquinium Superbum, qui Sp. Cassium, Sp.</p>
+                    <a href="#" class="btn btn-info">En savoir plus</a>
+                </div>
+            </div>
+        </a>
+    </div>
+</div>
+
+<div class="avis">
+    <div class="container">
+    	<div class="row">
+    		<h1 class="title text-center">Les meilleurs restaurants</h1>
+    	</div>
+    	<div class="row">
+            
+            <div class="col-lg-4">
+                <div class="card">
+                    <%= image_tag "food1.jpg" %>
+                    <h4 class="title text-center">La Tortue</h4>
+                    <p class="text-justify">Nihil est enim virtute amabilius, nihil quod magis adliciat ad diligendum, quippe cum propter virtutem et probitatem etiam eos, quos numquam vidimus, quodam modo diligamus. Quis est qui C. Fabrici, M'. Curi non cum caritate aliqua benevola memoriam usurpet, quos numquam viderit? quis autem est, qui Tarquinium Superbum, qui Sp. Cassium, Sp.</p>
+                </div>
+            </div>
+        
+            <div class="col-lg-4">
+                <div class="card">
+                    <%= image_tag "food2.jpg" %>
+                    <h4 class="title text-center">Le Lido</h4>
+                    <p class="text-justify">Nihil est enim virtute amabilius, nihil quod magis adliciat ad diligendum, quippe cum propter virtutem et probitatem etiam eos, quos numquam vidimus, quodam modo diligamus. Quis est qui C. Fabrici, M'. Curi non cum caritate aliqua benevola memoriam usurpet, quos numquam viderit? quis autem est, qui Tarquinium Superbum, qui Sp. Cassium, Sp.</p>
+                </div>
+            </div>
+        
+            <div class="col-lg-4">
+                <div class="card">
+                    <%= image_tag "food3.jpg" %>
+                    <h4 class="title text-center">La rotonde</h4>
+                    <p class="text-justify">Nihil est enim virtute amabilius, nihil quod magis adliciat ad diligendum, quippe cum propter virtutem et probitatem etiam eos, quos numquam vidimus, quodam modo diligamus. Quis est qui C. Fabrici, M'. Curi non cum caritate aliqua benevola memoriam usurpet, quos numquam viderit? quis autem est, qui Tarquinium Superbum, qui Sp. Cassium, Sp.</p>
+                </div>
+            </div>
+        
+		</div>
+    </div>
+</div>
+
+
+
+<footer class="footer-bs">
+    <div class="row">
+    	<div class="col-md-3 footer-brand">
+        	<h2 class="title">Toulon</h2>
+            <p>Suspendisse hendrerit tellus laoreet luctus pharetra. Aliquam porttitor vitae orci nec ultricies. Curabitur vehicula, libero eget faucibus faucibus, purus erat eleifend enim, porta pellentesque ex mi ut sem.</p>
+            <p>© 2018 Ekkhi Design, Tous droits reservés</p>
+        </div>
+    	<div class="col-md-4 footer-nav">
+        	<h4>Menu —</h4>
+        	<div class="col-md-6">
+                <ul class="pages">
+                    <li><a href="#">Toulon</a></li>
+                    <li><a href="#">Quartiers</a></li>
+                    <li><a href="#">Restaurants</a></li>
+                    <li><a href="#">Shopping</a></li>
+                    <li><a href="#">Activités</a></li>
+                </ul>
+            </div>
+        	<div class="col-md-6">
+                <ul class="list">
+                    <li><a href="#">A propos</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Conditions</a></li>
+                    <li><a href="#">Politique de Confidentialité</a></li>
+                </ul>
+            </div>
+        </div>
+    	<div class="col-md-2 footer-social">
+        	<h4>Follow Us</h4>
+        	<ul>
+            	<li><a href="#">Facebook</a></li>
+            	<li><a href="#">Twitter</a></li>
+            	<li><a href="#">Instagram</a></li>
+            	<li><a href="#">RSS</a></li>
+            </ul>
+        </div>
+    	<div class="col-md-3 footer-ns">
+        	<h4>Newsletter</h4>
+            <p>Recevoir toutes les actualites de Toulon</p>
+            <p>
+                <div class="input-group">
+                  <input type="text" class="form-control" placeholder="S'inscrire">
+                  <span class="input-group-btn">
+                    <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-envelope"></span></button>
+                  </span>
+                </div>
+             </p>
+        </div>
+    </div>
+</footer>
