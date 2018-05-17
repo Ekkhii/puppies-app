@@ -7,18 +7,6 @@
 - Berangere (@ekkhi)
 - Manu (@tinoun)
 
--------------
-
-### Arborescence du projet
-
-- Dossier **landingpage** : dossier pour la réalisation d'une landing page The Hacking Project
-- Dossier **mailer** : dossier pour la recuperation d'adresse mail et l'envoi de mail
-	- Fichier **mailer.rb** : fichier permettant l'envoi de mail à toute les mairies
-	- Fichier **mailer-test** : fichier vous permettant de tester l'envoi d'email en renseignant votre propre adresse mail dans le hash de la méthode ```gethtml```
-
-
-- Fichier **README.md** : Retrouvez ici toutes les informations necessaire
-
 ------------
 
 ### Version de prod
@@ -26,25 +14,23 @@
 **https://thpeastcoast.herokuapp.com/index.html**
 <p>C'est par ici si tu veux voir notre superbe landing page !</p>
 
+**https://agile-anchorage-86029.herokuapp.com/**
+<p>Par ici pour la LP de Puppies ! Super site de recherche de dog sitter</p>
+
+**https://agile-anchorage-86029.herokuapp.com/city**
+<p>Par ici pour la LP de Toulon ! Super site de la ville de Toulon</p>
+
+**https://agile-anchorage-86029.herokuapp.com/thp**
+<p>Par ici pour la LP de The Hack Project</p>
+
 
 ------------
 
 ### Informations 
 
 #### Choix du design
-<p>Nous avons choisi un design sobre. Berangere s'est occupé de faire toute la partie front avec l'utilisation de Bootstrap. </p>
 <p>
-	Le header contient une belle image facon workingspace, et du texte . En jouant avec position relative/absolute , nous avons pu inclure le texte directement sur l'image.<br>
-	Le premiere bouton CAT est crée à l'aide de bootstrap et personnalisé dans le css.
-</p>
-<p>
-	L'utilisation d'un paragraphe simple reprennant la philosophie de THP permet d'accrocher le visiteur.
-</p>
-<p>
-	Quelques images et d'autres informations sur THP pour renseigner le visiteur.
-</p>
-<p>
-	Le second bouton CAT sur lequel va cliquer le visiteur si nous avons réussi à le convaincre!
+	
 </p>
 #### Acquisition
 - l'acquisition : nous avons mis un formulaire sur la landing page dans lequel l'utilisateur peut renseigner son email afin d'obtenir une base mail depuis Mailchimp. 

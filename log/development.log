@@ -11818,3 +11818,37 @@ Processing by HomeController#index as HTML
 Completed 200 OK in 18ms (Views: 17.4ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/city" for 127.0.0.1 at 2018-05-17 14:42:18 +0200
+Processing by HomeController#city as HTML
+  Rendering home/city.html.erb within layouts/application
+  Rendered home/city.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 17ms (Views: 15.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/city" for 127.0.0.1 at 2018-05-17 16:02:33 +0200
+Processing by HomeController#city as HTML
+  Rendering home/city.html.erb within layouts/application
+  Rendered home/city.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 18ms (Views: 17.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/send_newsletter" for 127.0.0.1 at 2018-05-17 16:02:36 +0200
+Processing by HomeController#send_newsletter as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/home_controller.rb:19
+  Rendering weekly_newsletter/send_newsletter.html.erb within layouts/mailer
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "rachidpaul@thp.com"], ["LIMIT", 1]]
+  ↳ app/views/weekly_newsletter/send_newsletter.html.erb:6
+  Rendered weekly_newsletter/send_newsletter.html.erb within layouts/mailer (3.0ms)
+WeeklyNewsletter#send_newsletter: processed outbound mail in 9.5ms
+Completed 500 Internal Server Error in 104ms (ActiveRecord: 0.8ms)
+
+
+
+ActionController::UrlGenerationError - No route matches {:action=>"unsubscribe", :controller=>"user"}:
+  app/views/weekly_newsletter/send_newsletter.html.erb:11:in `_app_views_weekly_newsletter_send_newsletter_html_erb__2666032773670438963_70087424325540'
+  app/services/weekly_newsletter.rb:5:in `send_newsletter'
+  app/controllers/home_controller.rb:22:in `block in send_newsletter'
+  app/controllers/home_controller.rb:19:in `send_newsletter'
+
+Started POST "/__better_errors/6e64694b8a4e7fe6/variables" for 127.0.0.1 at 2018-05-17 16:02:36 +0200
